@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories - Moon*</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/blogs.css">
+</head>
+<body>
+    <!-- Navbar Component -->
+    <div data-component="navbar"></div>
+
+    <!-- Header -->
+    <div class="blog-header">
+        <div class="container">
+            <h1 class="blog-title">Success Stories</h1>
+            <p class="blog-subtitle">Discover real success stories from the Moon* community</p>
+        </div>
+    </div>
+
+    <!-- Blog Content -->
+    <div class="container">
+        <div class="blog-grid" id="blog-grid">
+            <!-- Blog posts will be populated by JavaScript -->
+        </div>
+        
+        <!-- Pagination -->
+        <div class="pagination-container" id="pagination-container">
+            <!-- Pagination will be populated by JavaScript -->
+        </div>
+        
+        <a href="../../index.html" class="back-button">
+            ← Back to Home
+        </a>
+    </div>
+
+    <!-- Modal for reading full story -->
+    <div id="story-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content" style="max-width: 800px; max-height: 90vh; overflow-y: auto">
+            <div class="modal-header">
+                <h2 class="modal-title" id="story-modal-title">Story Title</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" style="padding: 0">
+                <!-- Story Image -->
+                <div id="story-modal-image-container" style="
+                    width: 100%;
+                    height: 300px;
+                    background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 2rem;
+                    border-radius: 8px;
+                ">
+                    <img id="story-modal-image" alt="Story" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.9" />
+                    <div id="story-modal-category" style="
+                        position: absolute;
+                        top: 16px;
+                        left: 16px;
+                        background: rgba(0, 188, 212, 0.95);
+                        color: white;
+                        padding: 0.5rem 1rem;
+                        border-radius: 6px;
+                        font-size: 0.875rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                    "></div>
+                </div>
+
+                <!-- Story Meta -->
+                <div style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 2rem;
+                    margin-bottom: 1.5rem;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                ">
+                    <div>
+                        <div id="story-modal-author" style="
+                            font-size: 1.125rem;
+                            font-weight: 600;
+                            color: #263238;
+                            margin-bottom: 0.25rem;
+                        "></div>
+                        <div id="story-modal-role" style="font-size: 0.9375rem; color: #78909c"></div>
+                    </div>
+                    <div style="
+                        display: flex;
+                        gap: 1.5rem;
+                        font-size: 0.875rem;
+                        color: #78909c;
+                    ">
+                        <span id="story-modal-date"></span>
+                        <span id="story-modal-readtime"></span>
+                    </div>
+                </div>
+
+                <!-- Story Content -->
+                <div id="story-modal-content" style="
+                    padding: 0 2rem 2rem 2rem;
+                    color: #37474f;
+                    font-size: 1.0625rem;
+                    line-height: 1.8;
+                "></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import blog module -->
+
+    <!-- Footer Component -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <div class="footer-brand">
+              <svg
+                class="icon icon-lg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+              </svg>
+              <span class="brand-text"
+                >Moon<span class="brand-accent">*</span></span
+              >
+            </div>
+            <p class="footer-description">
+              Connecting IT students with their dream careers.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Platform</h4>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Find Jobs</a></li>
+              <li><a href="#" class="footer-link">For Companies</a></li>
+              <li><a href="#" class="footer-link">How It Works</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Company</h4>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">About Us</a></li>
+              <li><a href="#" class="footer-link">Blog</a></li>
+              <li><a href="#" class="footer-link">Contact</a></li>
+              <li><a href="#" class="footer-link">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4 class="footer-heading">Legal</h4>
+            <ul class="footer-links">
+              <li><a href="#" class="footer-link">Privacy Policy</a></li>
+              <li><a href="#" class="footer-link">Terms of Service</a></li>
+              <li><a href="#" class="footer-link">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">© 2025 Moon*. All rights reserved.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                ></path>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
+    
