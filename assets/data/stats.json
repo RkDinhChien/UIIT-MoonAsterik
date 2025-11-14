@@ -1,0 +1,208 @@
+{
+  "totals": {
+    "jobs": 800,
+    "companies": 113,
+    "candidates": 5123,
+    "applications": 2200
+  },
+  "jobsByCategory": [
+    {
+      "category": "Development/Full-Stack",
+      "count": 88
+    },
+    {
+      "category": "Data/ML",
+      "count": 68
+    },
+    {
+      "category": "Product/BA",
+      "count": 91
+    },
+    {
+      "category": "Design/UI",
+      "count": 85
+    },
+    {
+      "category": "QA/Automation",
+      "count": 85
+    },
+    {
+      "category": "DevOps",
+      "count": 78
+    },
+    {
+      "category": "Development/Mobile",
+      "count": 82
+    },
+    {
+      "category": "Security",
+      "count": 66
+    },
+    {
+      "category": "Development/Back-End",
+      "count": 88
+    },
+    {
+      "category": "Development/Front-End",
+      "count": 69
+    }
+  ],
+  "topTags": [
+    {
+      "tag": "React",
+      "count": 97
+    },
+    {
+      "tag": "MLOps",
+      "count": 93
+    },
+    {
+      "tag": "Computer Vision",
+      "count": 90
+    },
+    {
+      "tag": "Angular",
+      "count": 89
+    },
+    {
+      "tag": "PHP",
+      "count": 88
+    },
+    {
+      "tag": "Kafka",
+      "count": 88
+    },
+    {
+      "tag": "FastAPI",
+      "count": 88
+    },
+    {
+      "tag": "Scikit-learn",
+      "count": 88
+    },
+    {
+      "tag": "Agile",
+      "count": 87
+    },
+    {
+      "tag": "Next.js",
+      "count": 86
+    },
+    {
+      "tag": "C++",
+      "count": 86
+    },
+    {
+      "tag": "Spring",
+      "count": 86
+    },
+    {
+      "tag": "UX Research",
+      "count": 84
+    },
+    {
+      "tag": "UI",
+      "count": 84
+    },
+    {
+      "tag": "Flask",
+      "count": 84
+    },
+    {
+      "tag": "Kotlin",
+      "count": 84
+    },
+    {
+      "tag": "React Native",
+      "count": 84
+    },
+    {
+      "tag": "Node.js",
+      "count": 83
+    },
+    {
+      "tag": "MongoDB",
+      "count": 82
+    },
+    {
+      "tag": "Flutter",
+      "count": 81
+    },
+    {
+      "tag": "Vue",
+      "count": 81
+    },
+    {
+      "tag": "iOS",
+      "count": 80
+    },
+    {
+      "tag": "MySQL",
+      "count": 80
+    },
+    {
+      "tag": "PyTest",
+      "count": 80
+    },
+    {
+      "tag": "PostgreSQL",
+      "count": 80
+    }
+  ],
+  "dailySignups": [
+    {
+      "date": "2025-10-29",
+      "candidates": 28,
+      "companies": 1
+    },
+    {
+      "date": "2025-10-30",
+      "candidates": 60,
+      "companies": 3
+    },
+    {
+      "date": "2025-10-31",
+      "candidates": 42,
+      "companies": 2
+    },
+    {
+      "date": "2025-11-01",
+      "candidates": 19,
+      "companies": 3
+    },
+    {
+      "date": "2025-11-02",
+      "candidates": 58,
+      "companies": 2
+    },
+    {
+      "date": "2025-11-03",
+      "candidates": 60,
+      "companies": 1
+    },
+    {
+      "date": "2025-11-04",
+      "candidates": 21,
+      "companies": 3
+    },
+    {
+      "date": "2025-11-05",
+      "candidates": 49,
+      "companies": 3
+    },
+    {
+      "date": "2025-11-06",
+      "candidates": 42,
+      "companies": 5
+    },
+    {
+      "date": "2025-11-07",
+      "candidates": 45,
+      "companies": 3
+    }
+  ],
+  "growth": {
+    "jobsMoM": 0.23,
+    "applicationsMoM": 0.26
+  }
+}

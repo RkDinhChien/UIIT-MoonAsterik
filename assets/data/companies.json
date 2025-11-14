@@ -1,0 +1,4062 @@
+[
+  {
+    "id": "vng",
+    "name": "VNG",
+    "logo": "assets/logos/vng.png",
+    "website": "https://www.vng.com",
+    "about": "VNG là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2016,
+    "size": "11-50",
+    "locations": [
+      "Da Nang",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Flutter",
+      "Agile",
+      "QA",
+      "Node.js",
+      "React",
+      "Docker",
+      "Airflow"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/vng"
+    },
+    "contacts": {
+      "email": "hr@vng.com",
+      "phone": "+84 923419256"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1080,
+      1079,
+      1775,
+      1735,
+      1132,
+      1616
+    ]
+  },
+  {
+    "id": "fpt",
+    "name": "FPT Software",
+    "logo": "assets/logos/fpt.png",
+    "website": "https://www.fpt.com",
+    "about": "FPT Software là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2003,
+    "size": "1000+",
+    "locations": [
+      "Da Nang",
+      "Hanoi"
+    ],
+    "techStack": [
+      "UX Research",
+      "C++",
+      "Objective-C",
+      "PHP"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/fpt"
+    },
+    "contacts": {
+      "email": "hr@fpt.com",
+      "phone": "+84 968812137"
+    },
+    "rating": 4.5,
+    "openJobs": [
+      1277,
+      1613,
+      1184
+    ]
+  },
+  {
+    "id": "viettel",
+    "name": "Viettel Solutions",
+    "logo": "assets/logos/viettel.png",
+    "website": "https://www.viettel.com",
+    "about": "Viettel Solutions là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2001,
+    "size": "1000+",
+    "locations": [
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "Agile",
+      "TensorFlow",
+      "Python",
+      "UX Research",
+      "Flask",
+      "C#"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/viettel"
+    },
+    "contacts": {
+      "email": "hr@viettel.com",
+      "phone": "+84 924366125"
+    },
+    "rating": 3.7,
+    "openJobs": [
+      1520,
+      1791,
+      1709,
+      1159,
+      1067
+    ]
+  },
+  {
+    "id": "vnpt",
+    "name": "VNPT Technology",
+    "logo": "assets/logos/vnpt.png",
+    "website": "https://www.vnpt.com",
+    "about": "VNPT Technology là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2025,
+    "size": "11-50",
+    "locations": [
+      "Can Tho",
+      "Hanoi"
+    ],
+    "techStack": [
+      "React Native",
+      "Go",
+      "PyTorch",
+      "Spark",
+      "Jest",
+      "C#",
+      "Linux",
+      "Terraform",
+      "Figma"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/vnpt"
+    },
+    "contacts": {
+      "email": "hr@vnpt.com",
+      "phone": "+84 916818112"
+    },
+    "rating": 4.4,
+    "openJobs": [
+      1086,
+      1519,
+      1274,
+      1657
+    ]
+  },
+  {
+    "id": "momo",
+    "name": "MoMo",
+    "logo": "assets/logos/momo.png",
+    "website": "https://www.momo.com",
+    "about": "MoMo là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2012,
+    "size": "501-1000",
+    "locations": [
+      "HCMC"
+    ],
+    "techStack": [
+      "Selenium",
+      "Flask",
+      "Spark",
+      "C#",
+      "Java",
+      "MLOps"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/momo"
+    },
+    "contacts": {
+      "email": "hr@momo.com",
+      "phone": "+84 984045292"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1431,
+      1401,
+      1759
+    ]
+  },
+  {
+    "id": "tiki",
+    "name": "Tiki",
+    "logo": "assets/logos/tiki.png",
+    "website": "https://www.tiki.com",
+    "about": "Tiki là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2011,
+    "size": "11-50",
+    "locations": [
+      "HCMC"
+    ],
+    "techStack": [
+      "UI",
+      "FastAPI",
+      "MySQL",
+      "Angular",
+      "Playwright",
+      "Objective-C",
+      "Redis",
+      "PostgreSQL",
+      "Agile"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/tiki"
+    },
+    "contacts": {
+      "email": "hr@tiki.com",
+      "phone": "+84 927105448"
+    },
+    "rating": 3.9,
+    "openJobs": [
+      1646,
+      1650,
+      1566,
+      1705
+    ]
+  },
+  {
+    "id": "shopee",
+    "name": "Shopee Vietnam",
+    "logo": "assets/logos/shopee.png",
+    "website": "https://www.shopee.com",
+    "about": "Shopee Vietnam là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2022,
+    "size": "501-1000",
+    "locations": [
+      "Da Nang"
+    ],
+    "techStack": [
+      "PyTorch",
+      "C++",
+      "TensorFlow",
+      "Python",
+      "Swift"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/shopee"
+    },
+    "contacts": {
+      "email": "hr@shopee.com",
+      "phone": "+84 985146293"
+    },
+    "rating": 4.9,
+    "openJobs": [
+      1633,
+      1542
+    ]
+  },
+  {
+    "id": "lazada",
+    "name": "Lazada Vietnam",
+    "logo": "assets/logos/lazada.png",
+    "website": "https://www.lazada.com",
+    "about": "Lazada Vietnam là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2008,
+    "size": "51-200",
+    "locations": [
+      "Hanoi"
+    ],
+    "techStack": [
+      "UX Research",
+      "AWS",
+      "Vue",
+      "Spring",
+      "MLOps"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/lazada"
+    },
+    "contacts": {
+      "email": "hr@lazada.com",
+      "phone": "+84 965259205"
+    },
+    "rating": 3.9,
+    "openJobs": [
+      1370,
+      1228,
+      1525,
+      1550,
+      1663,
+      1636,
+      1339,
+      1267
+    ]
+  },
+  {
+    "id": "grab",
+    "name": "Grab Vietnam",
+    "logo": "assets/logos/grab.png",
+    "website": "https://www.grab.com",
+    "about": "Grab Vietnam là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2023,
+    "size": "51-200",
+    "locations": [
+      "Hai Phong",
+      "HCMC"
+    ],
+    "techStack": [
+      "Rust",
+      "Kotlin",
+      "PyTest",
+      "Docker",
+      "Swift",
+      "Laravel",
+      "Product Management"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/grab"
+    },
+    "contacts": {
+      "email": "hr@grab.com",
+      "phone": "+84 940547349"
+    },
+    "rating": 3.5,
+    "openJobs": [
+      1313,
+      1755,
+      1794,
+      1743,
+      1532,
+      1089
+    ]
+  },
+  {
+    "id": "zalopay",
+    "name": "ZaloPay",
+    "logo": "assets/logos/zalopay.png",
+    "website": "https://www.zalopay.com",
+    "about": "ZaloPay là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2018,
+    "size": "501-1000",
+    "locations": [
+      "Hai Phong"
+    ],
+    "techStack": [
+      ".NET",
+      "Figma",
+      "Node.js",
+      "Selenium",
+      "Scrum",
+      "Swift"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/zalopay"
+    },
+    "contacts": {
+      "email": "hr@zalopay.com",
+      "phone": "+84 978371272"
+    },
+    "rating": 4.5,
+    "openJobs": [
+      1792,
+      1051,
+      1751,
+      1191,
+      1101
+    ]
+  },
+  {
+    "id": "be",
+    "name": "Be Group",
+    "logo": "assets/logos/be.png",
+    "website": "https://www.be.com",
+    "about": "Be Group là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2011,
+    "size": "201-500",
+    "locations": [
+      "Da Nang",
+      "HCMC"
+    ],
+    "techStack": [
+      "Spring",
+      "Redis",
+      "C#",
+      "Angular",
+      "Python",
+      "Kafka"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/be"
+    },
+    "contacts": {
+      "email": "hr@be.com",
+      "phone": "+84 956397338"
+    },
+    "rating": 4.1,
+    "openJobs": [
+      1319,
+      1240,
+      1386
+    ]
+  },
+  {
+    "id": "vinai",
+    "name": "VinAI",
+    "logo": "assets/logos/vinai.png",
+    "website": "https://www.vinai.com",
+    "about": "VinAI là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2014,
+    "size": "51-200",
+    "locations": [
+      "Can Tho",
+      "Hai Phong",
+      "HCMC"
+    ],
+    "techStack": [
+      "C#",
+      "Angular",
+      "NLP",
+      "Azure",
+      "React"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/vinai"
+    },
+    "contacts": {
+      "email": "hr@vinai.com",
+      "phone": "+84 982269803"
+    },
+    "rating": 4.0,
+    "openJobs": [
+      1579,
+      1099,
+      1482,
+      1421
+    ]
+  },
+  {
+    "id": "cinnamon",
+    "name": "Cinnamon AI",
+    "logo": "assets/logos/cinnamon.png",
+    "website": "https://www.cinnamon.com",
+    "about": "Cinnamon AI là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2019,
+    "size": "201-500",
+    "locations": [
+      "Da Nang"
+    ],
+    "techStack": [
+      "Flutter",
+      "TensorFlow",
+      "Jest",
+      "Django",
+      "Computer Vision",
+      "Laravel",
+      "Linux",
+      "Figma"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/cinnamon"
+    },
+    "contacts": {
+      "email": "hr@cinnamon.com",
+      "phone": "+84 964813568"
+    },
+    "rating": 4.1,
+    "openJobs": [
+      1770,
+      1075
+    ]
+  },
+  {
+    "id": "kms",
+    "name": "KMS Technology",
+    "logo": "assets/logos/kms.png",
+    "website": "https://www.kms.com",
+    "about": "KMS Technology là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2021,
+    "size": "1000+",
+    "locations": [
+      "Can Tho",
+      "Hanoi"
+    ],
+    "techStack": [
+      "AWS",
+      "TensorFlow",
+      "Scrum",
+      "Android",
+      "PyTorch"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/kms"
+    },
+    "contacts": {
+      "email": "hr@kms.com",
+      "phone": "+84 933357554"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1053,
+      1044,
+      1058
+    ]
+  },
+  {
+    "id": "nashtech",
+    "name": "NashTech",
+    "logo": "assets/logos/nashtech.png",
+    "website": "https://www.nashtech.com",
+    "about": "NashTech là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2018,
+    "size": "501-1000",
+    "locations": [
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "PHP",
+      "Go",
+      "Azure",
+      "Cypress",
+      "Redis",
+      "Kafka"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/nashtech"
+    },
+    "contacts": {
+      "email": "hr@nashtech.com",
+      "phone": "+84 953251559"
+    },
+    "rating": 4.1,
+    "openJobs": [
+      1681,
+      1134,
+      1100,
+      1347,
+      1328,
+      1611,
+      1047
+    ]
+  },
+  {
+    "id": "tma",
+    "name": "TMA Solutions",
+    "logo": "assets/logos/tma.png",
+    "website": "https://www.tma.com",
+    "about": "TMA Solutions là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2000,
+    "size": "201-500",
+    "locations": [
+      "Can Tho",
+      "Hai Phong",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Java",
+      "TensorFlow",
+      "Express",
+      "PHP",
+      "Linux",
+      "Agile",
+      "Spark",
+      "Airflow",
+      "React Native"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/tma"
+    },
+    "contacts": {
+      "email": "hr@tma.com",
+      "phone": "+84 941523529"
+    },
+    "rating": 3.8,
+    "openJobs": [
+      1327,
+      1006,
+      1150
+    ]
+  },
+  {
+    "id": "dek",
+    "name": "DEK Technologies",
+    "logo": "assets/logos/dek.png",
+    "website": "https://www.dek.com",
+    "about": "DEK Technologies là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2025,
+    "size": "501-1000",
+    "locations": [
+      "Hanoi"
+    ],
+    "techStack": [
+      "Angular",
+      "C++",
+      "Kubernetes",
+      "Airflow"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/dek"
+    },
+    "contacts": {
+      "email": "hr@dek.com",
+      "phone": "+84 919774839"
+    },
+    "rating": 4.1,
+    "openJobs": [
+      1763,
+      1682,
+      1543,
+      1340,
+      1400,
+      1189,
+      1316
+    ]
+  },
+  {
+    "id": "netcompany",
+    "name": "Netcompany",
+    "logo": "assets/logos/netcompany.png",
+    "website": "https://www.netcompany.com",
+    "about": "Netcompany là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2025,
+    "size": "501-1000",
+    "locations": [
+      "Can Tho",
+      "Hai Phong",
+      "Hanoi"
+    ],
+    "techStack": [
+      "iOS",
+      "C++",
+      "FastAPI",
+      "Hadoop",
+      "Scikit-learn",
+      "React",
+      "QA"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/netcompany"
+    },
+    "contacts": {
+      "email": "hr@netcompany.com",
+      "phone": "+84 924305904"
+    },
+    "rating": 3.8,
+    "openJobs": [
+      1771,
+      1698
+    ]
+  },
+  {
+    "id": "dxc",
+    "name": "DXC Technology",
+    "logo": "assets/logos/dxc.png",
+    "website": "https://www.dxc.com",
+    "about": "DXC Technology là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2019,
+    "size": "1000+",
+    "locations": [
+      "HCMC",
+      "Can Tho",
+      "Hai Phong"
+    ],
+    "techStack": [
+      "C++",
+      "Product Management",
+      "Jest",
+      "Django",
+      "Docker",
+      "Flask",
+      "JUnit",
+      "UX Research"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/dxc"
+    },
+    "contacts": {
+      "email": "hr@dxc.com",
+      "phone": "+84 981287314"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1336,
+      1262
+    ]
+  },
+  {
+    "id": "cmc",
+    "name": "CMC Global",
+    "logo": "assets/logos/cmc.png",
+    "website": "https://www.cmc.com",
+    "about": "CMC Global là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2012,
+    "size": "51-200",
+    "locations": [
+      "Can Tho"
+    ],
+    "techStack": [
+      "Playwright",
+      "Product Management",
+      "PostgreSQL",
+      "GCP",
+      "Java",
+      "MLOps",
+      "Kubernetes"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/cmc"
+    },
+    "contacts": {
+      "email": "hr@cmc.com",
+      "phone": "+84 944788100"
+    },
+    "rating": 4.7,
+    "openJobs": [
+      1769,
+      1618,
+      1477,
+      1734,
+      1422,
+      1702,
+      1443
+    ]
+  },
+  {
+    "id": "vnpay",
+    "name": "VNPAY",
+    "logo": "assets/logos/vnpay.png",
+    "website": "https://www.vnpay.com",
+    "about": "VNPAY là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2008,
+    "size": "11-50",
+    "locations": [
+      "Can Tho",
+      "Hai Phong"
+    ],
+    "techStack": [
+      "C++",
+      ".NET",
+      "GCP",
+      "Node.js",
+      "NLP",
+      "PHP",
+      "Scrum",
+      "Agile",
+      "React Native"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/vnpay"
+    },
+    "contacts": {
+      "email": "hr@vnpay.com",
+      "phone": "+84 982498004"
+    },
+    "rating": 3.7,
+    "openJobs": [
+      1352,
+      1126,
+      1455,
+      1783,
+      1610
+    ]
+  },
+  {
+    "id": "tpbank",
+    "name": "TPBank Digital",
+    "logo": "assets/logos/tpbank.png",
+    "website": "https://www.tpbank.com",
+    "about": "TPBank Digital là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2011,
+    "size": "51-200",
+    "locations": [
+      "Hai Phong"
+    ],
+    "techStack": [
+      "FastAPI",
+      "NLP",
+      "Go",
+      "Node.js",
+      "AWS",
+      "UX Research",
+      "React Native",
+      "MySQL",
+      "Docker"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/tpbank"
+    },
+    "contacts": {
+      "email": "hr@tpbank.com",
+      "phone": "+84 918357162"
+    },
+    "rating": 4.7,
+    "openJobs": [
+      1389,
+      1396,
+      1255
+    ]
+  },
+  {
+    "id": "techcombank",
+    "name": "Techcombank Digital",
+    "logo": "assets/logos/techcombank.png",
+    "website": "https://www.techcombank.com",
+    "about": "Techcombank Digital là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2011,
+    "size": "1000+",
+    "locations": [
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "Android",
+      "Kubernetes",
+      "React",
+      "Swift",
+      "Laravel",
+      "QA",
+      "Scrum",
+      "Playwright"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/techcombank"
+    },
+    "contacts": {
+      "email": "hr@techcombank.com",
+      "phone": "+84 982238741"
+    },
+    "rating": 4.6,
+    "openJobs": [
+      1478,
+      1199
+    ]
+  },
+  {
+    "id": "vpbank",
+    "name": "VPBank Digital",
+    "logo": "assets/logos/vpbank.png",
+    "website": "https://www.vpbank.com",
+    "about": "VPBank Digital là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2008,
+    "size": "501-1000",
+    "locations": [
+      "Hai Phong"
+    ],
+    "techStack": [
+      ".NET",
+      "Azure",
+      "Terraform",
+      "Vue",
+      "Android"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/vpbank"
+    },
+    "contacts": {
+      "email": "hr@vpbank.com",
+      "phone": "+84 999774697"
+    },
+    "rating": 4.5,
+    "openJobs": [
+      1195,
+      1069,
+      1588
+    ]
+  },
+  {
+    "id": "vib",
+    "name": "VIB Digital",
+    "logo": "assets/logos/vib.png",
+    "website": "https://www.vib.com",
+    "about": "VIB Digital là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2018,
+    "size": "51-200",
+    "locations": [
+      "Can Tho",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Vue",
+      "Product Management",
+      "iOS",
+      "Redis",
+      "MongoDB",
+      "TensorFlow",
+      "Scrum",
+      "Express"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/vib"
+    },
+    "contacts": {
+      "email": "hr@vib.com",
+      "phone": "+84 967527432"
+    },
+    "rating": 4.7,
+    "openJobs": [
+      1725,
+      1398,
+      1169,
+      1452,
+      1381
+    ]
+  },
+  {
+    "id": "mbbank",
+    "name": "MB Digital",
+    "logo": "assets/logos/mbbank.png",
+    "website": "https://www.mbbank.com",
+    "about": "MB Digital là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2022,
+    "size": "201-500",
+    "locations": [
+      "HCMC"
+    ],
+    "techStack": [
+      "Android",
+      "Flutter",
+      "Go",
+      "Docker",
+      "Agile",
+      "React Native"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/mbbank"
+    },
+    "contacts": {
+      "email": "hr@mbbank.com",
+      "phone": "+84 960885459"
+    },
+    "rating": 4.6,
+    "openJobs": [
+      1225,
+      1083,
+      1074
+    ]
+  },
+  {
+    "id": "ssivn",
+    "name": "SSI Securities",
+    "logo": "assets/logos/ssivn.png",
+    "website": "https://www.ssivn.com",
+    "about": "SSI Securities là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2000,
+    "size": "11-50",
+    "locations": [
+      "Da Nang",
+      "HCMC"
+    ],
+    "techStack": [
+      "Vue",
+      "MLOps",
+      "MySQL",
+      "Next.js",
+      "Swift",
+      "Rust",
+      "Hadoop"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/ssivn"
+    },
+    "contacts": {
+      "email": "hr@ssivn.com",
+      "phone": "+84 997477029"
+    },
+    "rating": 4.6,
+    "openJobs": [
+      1365,
+      1620,
+      1799,
+      1753,
+      1513
+    ]
+  },
+  {
+    "id": "vndirect",
+    "name": "VNDirect",
+    "logo": "assets/logos/vndirect.png",
+    "website": "https://www.vndirect.com",
+    "about": "VNDirect là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2013,
+    "size": "11-50",
+    "locations": [
+      "Hanoi"
+    ],
+    "techStack": [
+      "Airflow",
+      "FastAPI",
+      "C++",
+      "Flask"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/vndirect"
+    },
+    "contacts": {
+      "email": "hr@vndirect.com",
+      "phone": "+84 999853245"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1449,
+      1413
+    ]
+  },
+  {
+    "id": "tcbs",
+    "name": "Techcom Securities",
+    "logo": "assets/logos/tcbs.png",
+    "website": "https://www.tcbs.com",
+    "about": "Techcom Securities là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2022,
+    "size": "201-500",
+    "locations": [
+      "Hai Phong"
+    ],
+    "techStack": [
+      "C#",
+      "Selenium",
+      "Objective-C",
+      "Java",
+      "Kafka",
+      "UX Research",
+      "MLOps",
+      "NLP",
+      "Django"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/tcbs"
+    },
+    "contacts": {
+      "email": "hr@tcbs.com",
+      "phone": "+84 931980274"
+    },
+    "rating": 3.7,
+    "openJobs": [
+      1402
+    ]
+  },
+  {
+    "id": "amanotes",
+    "name": "Amanotes",
+    "logo": "assets/logos/amanotes.png",
+    "website": "https://www.amanotes.com",
+    "about": "Amanotes là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2020,
+    "size": "51-200",
+    "locations": [
+      "Da Nang"
+    ],
+    "techStack": [
+      "PyTorch",
+      "Product Management",
+      "Android",
+      "iOS",
+      "NLP",
+      "Kotlin",
+      "Node.js",
+      "Redis"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/amanotes"
+    },
+    "contacts": {
+      "email": "hr@amanotes.com",
+      "phone": "+84 994187049"
+    },
+    "rating": 3.6,
+    "openJobs": [
+      1030,
+      1591,
+      1377,
+      1317,
+      1524
+    ]
+  },
+  {
+    "id": "gameloft",
+    "name": "Gameloft Vietnam",
+    "logo": "assets/logos/gameloft.png",
+    "website": "https://www.gameloft.com",
+    "about": "Gameloft Vietnam là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2014,
+    "size": "201-500",
+    "locations": [
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "Cypress",
+      "Angular",
+      "Swift",
+      "MySQL",
+      "Azure",
+      "TensorFlow",
+      "Objective-C",
+      "Node.js"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/gameloft"
+    },
+    "contacts": {
+      "email": "hr@gameloft.com",
+      "phone": "+84 996911784"
+    },
+    "rating": 3.5,
+    "openJobs": [
+      1556,
+      1002
+    ]
+  },
+  {
+    "id": "gear",
+    "name": "Gear Inc",
+    "logo": "assets/logos/gear.png",
+    "website": "https://www.gear.com",
+    "about": "Gear Inc là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2011,
+    "size": "1000+",
+    "locations": [
+      "Hai Phong",
+      "HCMC"
+    ],
+    "techStack": [
+      "Objective-C",
+      "Spark",
+      "UI",
+      "Playwright",
+      "Docker",
+      "NLP",
+      "FastAPI"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/gear"
+    },
+    "contacts": {
+      "email": "hr@gear.com",
+      "phone": "+84 933640702"
+    },
+    "rating": 4.9,
+    "openJobs": [
+      1152,
+      1764,
+      1724,
+      1406
+    ]
+  },
+  {
+    "id": "topebox",
+    "name": "Topebox",
+    "logo": "assets/logos/topebox.png",
+    "website": "https://www.topebox.com",
+    "about": "Topebox là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2025,
+    "size": "11-50",
+    "locations": [
+      "Can Tho"
+    ],
+    "techStack": [
+      "Docker",
+      "Azure",
+      "PyTest",
+      "Computer Vision",
+      "Redis",
+      ".NET",
+      "Flutter"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/topebox"
+    },
+    "contacts": {
+      "email": "hr@topebox.com",
+      "phone": "+84 942949803"
+    },
+    "rating": 3.9,
+    "openJobs": [
+      1231,
+      1239,
+      1711
+    ]
+  },
+  {
+    "id": "geekup",
+    "name": "GEEK Up",
+    "logo": "assets/logos/geekup.png",
+    "website": "https://www.geekup.com",
+    "about": "GEEK Up là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2003,
+    "size": "51-200",
+    "locations": [
+      "Hai Phong",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Airflow",
+      "TensorFlow",
+      "Android",
+      "React Native",
+      "Vue",
+      "Terraform",
+      "Jest",
+      "Flutter"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/geekup"
+    },
+    "contacts": {
+      "email": "hr@geekup.com",
+      "phone": "+84 975437844"
+    },
+    "rating": 4.0,
+    "openJobs": [
+      1535,
+      1063
+    ]
+  },
+  {
+    "id": "base",
+    "name": "Base.vn",
+    "logo": "assets/logos/base.png",
+    "website": "https://www.base.com",
+    "about": "Base.vn là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2005,
+    "size": "501-1000",
+    "locations": [
+      "Da Nang"
+    ],
+    "techStack": [
+      "Scikit-learn",
+      "UX Research",
+      ".NET",
+      "PostgreSQL",
+      "React",
+      "CI/CD",
+      "Kotlin",
+      "Express"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/base"
+    },
+    "contacts": {
+      "email": "hr@base.com",
+      "phone": "+84 964549859"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1469,
+      1276,
+      1484
+    ]
+  },
+  {
+    "id": "stringee",
+    "name": "Stringee",
+    "logo": "assets/logos/stringee.png",
+    "website": "https://www.stringee.com",
+    "about": "Stringee là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2020,
+    "size": "201-500",
+    "locations": [
+      "Hai Phong"
+    ],
+    "techStack": [
+      "NLP",
+      "Terraform",
+      "GCP",
+      "Cypress",
+      "Vue",
+      "Express",
+      "PHP",
+      "Rust",
+      "iOS"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/stringee"
+    },
+    "contacts": {
+      "email": "hr@stringee.com",
+      "phone": "+84 942655866"
+    },
+    "rating": 4.4,
+    "openJobs": [
+      1309,
+      1022,
+      1045,
+      1265,
+      1242,
+      1012
+    ]
+  },
+  {
+    "id": "holistics",
+    "name": "Holistics",
+    "logo": "assets/logos/holistics.png",
+    "website": "https://www.holistics.com",
+    "about": "Holistics là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2006,
+    "size": "201-500",
+    "locations": [
+      "Can Tho",
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Swift",
+      "Azure",
+      "MLOps",
+      "PostgreSQL",
+      "React Native",
+      "Scrum",
+      "Scikit-learn",
+      "Docker"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/holistics"
+    },
+    "contacts": {
+      "email": "hr@holistics.com",
+      "phone": "+84 951154241"
+    },
+    "rating": 3.8,
+    "openJobs": [
+      1397,
+      1256,
+      1263,
+      1523,
+      1547,
+      1668,
+      1451,
+      1110
+    ]
+  },
+  {
+    "id": "katalon",
+    "name": "Katalon",
+    "logo": "assets/logos/katalon.png",
+    "website": "https://www.katalon.com",
+    "about": "Katalon là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2021,
+    "size": "1000+",
+    "locations": [
+      "Da Nang",
+      "HCMC",
+      "Hanoi"
+    ],
+    "techStack": [
+      "MySQL",
+      "QA",
+      "Scikit-learn",
+      "Spring",
+      "Kotlin",
+      "Go",
+      "MLOps",
+      "Kubernetes",
+      ".NET"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/katalon"
+    },
+    "contacts": {
+      "email": "hr@katalon.com",
+      "phone": "+84 989133014"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1304,
+      1249,
+      1333,
+      1433,
+      1786,
+      1631
+    ]
+  },
+  {
+    "id": "palexy",
+    "name": "Palexy",
+    "logo": "assets/logos/palexy.png",
+    "website": "https://www.palexy.com",
+    "about": "Palexy là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2015,
+    "size": "201-500",
+    "locations": [
+      "Hanoi"
+    ],
+    "techStack": [
+      "Rust",
+      "Objective-C",
+      "Spring",
+      "Laravel",
+      "React",
+      "NLP"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/palexy"
+    },
+    "contacts": {
+      "email": "hr@palexy.com",
+      "phone": "+84 926989677"
+    },
+    "rating": 3.6,
+    "openJobs": [
+      1206,
+      1237,
+      1072,
+      1430,
+      1586,
+      1258,
+      1015
+    ]
+  },
+  {
+    "id": "trusting",
+    "name": "Trusting Social",
+    "logo": "assets/logos/trusting.png",
+    "website": "https://www.trusting.com",
+    "about": "Trusting Social là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2001,
+    "size": "1000+",
+    "locations": [
+      "Can Tho"
+    ],
+    "techStack": [
+      "Scikit-learn",
+      "Flask",
+      "Spark",
+      "Figma",
+      "QA",
+      "Terraform"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/trusting"
+    },
+    "contacts": {
+      "email": "hr@trusting.com",
+      "phone": "+84 911646234"
+    },
+    "rating": 3.9,
+    "openJobs": [
+      1432,
+      1747,
+      1203,
+      1544,
+      1595
+    ]
+  },
+  {
+    "id": "viettelcs",
+    "name": "Viettel Cyber Security",
+    "logo": "assets/logos/viettelcs.png",
+    "website": "https://www.viettelcs.com",
+    "about": "Viettel Cyber Security là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2001,
+    "size": "501-1000",
+    "locations": [
+      "Da Nang",
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Next.js",
+      "C#",
+      "Scrum",
+      "Figma",
+      "Kubernetes"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/viettelcs"
+    },
+    "contacts": {
+      "email": "hr@viettelcs.com",
+      "phone": "+84 918770247"
+    },
+    "rating": 4.2,
+    "openJobs": [
+      1147,
+      1182,
+      1222,
+      1136
+    ]
+  },
+  {
+    "id": "bkav",
+    "name": "Bkav Security",
+    "logo": "assets/logos/bkav.png",
+    "website": "https://www.bkav.com",
+    "about": "Bkav Security là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2017,
+    "size": "1000+",
+    "locations": [
+      "HCMC",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Scrum",
+      "Laravel",
+      "Express",
+      "C++",
+      "Django",
+      "PostgreSQL",
+      "QA",
+      "AWS"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/bkav"
+    },
+    "contacts": {
+      "email": "hr@bkav.com",
+      "phone": "+84 990010790"
+    },
+    "rating": 3.8,
+    "openJobs": [
+      1117,
+      1694,
+      1510,
+      1055
+    ]
+  },
+  {
+    "id": "cyradar",
+    "name": "CyRadar",
+    "logo": "assets/logos/cyradar.png",
+    "website": "https://www.cyradar.com",
+    "about": "CyRadar là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 1999,
+    "size": "11-50",
+    "locations": [
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Figma",
+      "Redis",
+      "Azure",
+      "Laravel",
+      "MongoDB",
+      "Airflow"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/cyradar"
+    },
+    "contacts": {
+      "email": "hr@cyradar.com",
+      "phone": "+84 991823275"
+    },
+    "rating": 4.8,
+    "openJobs": [
+      1732,
+      1728,
+      1576,
+      1569
+    ]
+  },
+  {
+    "id": "vsec",
+    "name": "VSEC",
+    "logo": "assets/logos/vsec.png",
+    "website": "https://www.vsec.com",
+    "about": "VSEC là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2000,
+    "size": "11-50",
+    "locations": [
+      "Hanoi"
+    ],
+    "techStack": [
+      "TensorFlow",
+      "Express",
+      "Java",
+      "C++",
+      "Spring",
+      "PostgreSQL"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/vsec"
+    },
+    "contacts": {
+      "email": "hr@vsec.com",
+      "phone": "+84 931009452"
+    },
+    "rating": 4.1,
+    "openJobs": [
+      1124,
+      1580,
+      1368,
+      1057,
+      1603,
+      1009,
+      1281,
+      1363
+    ]
+  },
+  {
+    "id": "ncs",
+    "name": "NCS Vietnam",
+    "logo": "assets/logos/ncs.png",
+    "website": "https://www.ncs.com",
+    "about": "NCS Vietnam là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2025,
+    "size": "11-50",
+    "locations": [
+      "Da Nang",
+      "Can Tho",
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Rust",
+      "PHP",
+      "NLP",
+      "Scikit-learn"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/ncs"
+    },
+    "contacts": {
+      "email": "hr@ncs.com",
+      "phone": "+84 970939053"
+    },
+    "rating": 4.5,
+    "openJobs": [
+      1450,
+      1166,
+      1428
+    ]
+  },
+  {
+    "id": "astersoft",
+    "name": "AlphaSystems",
+    "logo": "assets/logos/astersoft.png",
+    "website": "https://www.astersoft.com",
+    "about": "AlphaSystems là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2002,
+    "size": "11-50",
+    "locations": [
+      "Can Tho",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Django",
+      "MySQL",
+      "Rust",
+      "Hadoop",
+      "FastAPI",
+      ".NET",
+      "PyTest"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/astersoft"
+    },
+    "contacts": {
+      "email": "hr@astersoft.com",
+      "phone": "+84 919584466"
+    },
+    "rating": 3.7,
+    "openJobs": [
+      1693,
+      1651,
+      1118,
+      1748,
+      1284,
+      1394
+    ]
+  },
+  {
+    "id": "skydata",
+    "name": "BrightSoft",
+    "logo": "assets/logos/skydata.png",
+    "website": "https://www.skydata.com",
+    "about": "BrightSoft là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2010,
+    "size": "1000+",
+    "locations": [
+      "Can Tho"
+    ],
+    "techStack": [
+      "GCP",
+      "Django",
+      "Docker",
+      "Scikit-learn",
+      "Laravel",
+      "UI"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/skydata"
+    },
+    "contacts": {
+      "email": "hr@skydata.com",
+      "phone": "+84 946540265"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1418,
+      1005,
+      1252,
+      1514,
+      1604,
+      1179
+    ]
+  },
+  {
+    "id": "pulseworks",
+    "name": "SunWare",
+    "logo": "assets/logos/pulseworks.png",
+    "website": "https://www.pulseworks.com",
+    "about": "SunWare là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2017,
+    "size": "11-50",
+    "locations": [
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "UX Research",
+      "Azure",
+      "MLOps",
+      "Flutter"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/pulseworks"
+    },
+    "contacts": {
+      "email": "hr@pulseworks.com",
+      "phone": "+84 943603811"
+    },
+    "rating": 3.6,
+    "openJobs": [
+      1322,
+      1762,
+      1414,
+      1035
+    ]
+  },
+  {
+    "id": "novatech",
+    "name": "HyperAI",
+    "logo": "assets/logos/novatech.png",
+    "website": "https://www.novatech.com",
+    "about": "HyperAI là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2018,
+    "size": "201-500",
+    "locations": [
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "PyTest",
+      ".NET",
+      "MongoDB",
+      "Angular",
+      "QA",
+      "UX Research",
+      "Spring",
+      "Kubernetes",
+      "CI/CD"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/novatech"
+    },
+    "contacts": {
+      "email": "hr@novatech.com",
+      "phone": "+84 969355025"
+    },
+    "rating": 3.8,
+    "openJobs": [
+      1330,
+      1114,
+      1440,
+      1522,
+      1238
+    ]
+  },
+  {
+    "id": "skytech",
+    "name": "ZenAI",
+    "logo": "assets/logos/skytech.png",
+    "website": "https://www.skytech.com",
+    "about": "ZenAI là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2003,
+    "size": "501-1000",
+    "locations": [
+      "Hai Phong",
+      "HCMC"
+    ],
+    "techStack": [
+      "Swift",
+      "AWS",
+      "React Native",
+      "Flutter",
+      "TensorFlow",
+      "Python",
+      "Jest"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/skytech"
+    },
+    "contacts": {
+      "email": "hr@skytech.com",
+      "phone": "+84 954265498"
+    },
+    "rating": 4.5,
+    "openJobs": [
+      1111,
+      1626,
+      1038
+    ]
+  },
+  {
+    "id": "nimbleware",
+    "name": "SkyForge",
+    "logo": "assets/logos/nimbleware.png",
+    "website": "https://www.nimbleware.com",
+    "about": "SkyForge là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2008,
+    "size": "501-1000",
+    "locations": [
+      "Can Tho",
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Docker",
+      "Express",
+      "Flutter",
+      "C#"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/nimbleware"
+    },
+    "contacts": {
+      "email": "hr@nimbleware.com",
+      "phone": "+84 925558733"
+    },
+    "rating": 4.7,
+    "openJobs": [
+      1460,
+      1091,
+      1707,
+      1703,
+      1659
+    ]
+  },
+  {
+    "id": "sunsystems",
+    "name": "AlphaCloud",
+    "logo": "assets/logos/sunsystems.png",
+    "website": "https://www.sunsystems.com",
+    "about": "AlphaCloud là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2013,
+    "size": "501-1000",
+    "locations": [
+      "Can Tho"
+    ],
+    "techStack": [
+      "AWS",
+      "Next.js",
+      "Kotlin",
+      "CI/CD",
+      "Objective-C",
+      "Airflow",
+      "QA"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/sunsystems"
+    },
+    "contacts": {
+      "email": "hr@sunsystems.com",
+      "phone": "+84 993940940"
+    },
+    "rating": 4.6,
+    "openJobs": [
+      1306,
+      1690,
+      1798,
+      1669,
+      1673,
+      1496
+    ]
+  },
+  {
+    "id": "brightai",
+    "name": "QuantumSoft",
+    "logo": "assets/logos/brightai.png",
+    "website": "https://www.brightai.com",
+    "about": "QuantumSoft là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 1998,
+    "size": "1000+",
+    "locations": [
+      "Da Nang"
+    ],
+    "techStack": [
+      "Flask",
+      "Agile",
+      "PHP",
+      "GCP",
+      "UX Research",
+      "Scikit-learn",
+      "Terraform",
+      "Django"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/brightai"
+    },
+    "contacts": {
+      "email": "hr@brightai.com",
+      "phone": "+84 994560158"
+    },
+    "rating": 4.6,
+    "openJobs": [
+      1736,
+      1059,
+      1410,
+      1050,
+      1143,
+      1654
+    ]
+  },
+  {
+    "id": "hyperhub",
+    "name": "SmartSolutions",
+    "logo": "assets/logos/hyperhub.png",
+    "website": "https://www.hyperhub.com",
+    "about": "SmartSolutions là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2024,
+    "size": "501-1000",
+    "locations": [
+      "Da Nang",
+      "Can Tho",
+      "Hanoi"
+    ],
+    "techStack": [
+      "PostgreSQL",
+      "AWS",
+      "Express",
+      "Rust"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/hyperhub"
+    },
+    "contacts": {
+      "email": "hr@hyperhub.com",
+      "phone": "+84 925228493"
+    },
+    "rating": 4.8,
+    "openJobs": [
+      1648,
+      1129,
+      1459
+    ]
+  },
+  {
+    "id": "metasystems",
+    "name": "NovaForge",
+    "logo": "assets/logos/metasystems.png",
+    "website": "https://www.metasystems.com",
+    "about": "NovaForge là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2015,
+    "size": "501-1000",
+    "locations": [
+      "Da Nang",
+      "Hai Phong",
+      "Hanoi"
+    ],
+    "techStack": [
+      "NLP",
+      ".NET",
+      "AWS",
+      "Playwright",
+      "Kubernetes",
+      "UX Research",
+      "C++",
+      "Docker"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/metasystems"
+    },
+    "contacts": {
+      "email": "hr@metasystems.com",
+      "phone": "+84 929413516"
+    },
+    "rating": 3.8,
+    "openJobs": [
+      1491,
+      1253,
+      1773,
+      1297,
+      1596,
+      1625,
+      1554
+    ]
+  },
+  {
+    "id": "zensoft",
+    "name": "NeoWorks",
+    "logo": "assets/logos/zensoft.png",
+    "website": "https://www.zensoft.com",
+    "about": "NeoWorks là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2014,
+    "size": "11-50",
+    "locations": [
+      "Can Tho",
+      "HCMC",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Selenium",
+      "Cypress",
+      "Jest",
+      "AWS",
+      "React Native",
+      "Agile"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/zensoft"
+    },
+    "contacts": {
+      "email": "hr@zensoft.com",
+      "phone": "+84 945859307"
+    },
+    "rating": 3.9,
+    "openJobs": [
+      1098,
+      1691
+    ]
+  },
+  {
+    "id": "zenstudio",
+    "name": "AsterSolutions",
+    "logo": "assets/logos/zenstudio.png",
+    "website": "https://www.zenstudio.com",
+    "about": "AsterSolutions là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2022,
+    "size": "501-1000",
+    "locations": [
+      "Can Tho"
+    ],
+    "techStack": [
+      "Terraform",
+      "Figma",
+      "FastAPI",
+      "GCP",
+      "MySQL",
+      "Kubernetes",
+      "Swift",
+      "React Native",
+      "PostgreSQL"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/zenstudio"
+    },
+    "contacts": {
+      "email": "hr@zenstudio.com",
+      "phone": "+84 982937948"
+    },
+    "rating": 4.1,
+    "openJobs": [
+      1780,
+      1174,
+      1671
+    ]
+  },
+  {
+    "id": "sunai",
+    "name": "NimbleWorks",
+    "logo": "assets/logos/sunai.png",
+    "website": "https://www.sunai.com",
+    "about": "NimbleWorks là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2013,
+    "size": "501-1000",
+    "locations": [
+      "Hanoi"
+    ],
+    "techStack": [
+      "Android",
+      "Rust",
+      "Jest",
+      "Selenium",
+      "AWS",
+      "Angular",
+      "Flutter",
+      "MLOps"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/sunai"
+    },
+    "contacts": {
+      "email": "hr@sunai.com",
+      "phone": "+84 961167978"
+    },
+    "rating": 4.9,
+    "openJobs": [
+      1302,
+      1670
+    ]
+  },
+  {
+    "id": "novadata",
+    "name": "DataWorks",
+    "logo": "assets/logos/novadata.png",
+    "website": "https://www.novadata.com",
+    "about": "DataWorks là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2025,
+    "size": "11-50",
+    "locations": [
+      "Hai Phong",
+      "HCMC",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Linux",
+      "Redis",
+      "React Native",
+      "Figma",
+      "Python"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/novadata"
+    },
+    "contacts": {
+      "email": "hr@novadata.com",
+      "phone": "+84 969096899"
+    },
+    "rating": 4.2,
+    "openJobs": [
+      1374,
+      1170,
+      1495,
+      1629,
+      1268
+    ]
+  },
+  {
+    "id": "skysoft",
+    "name": "NeoSystems",
+    "logo": "assets/logos/skysoft.png",
+    "website": "https://www.skysoft.com",
+    "about": "NeoSystems là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2008,
+    "size": "501-1000",
+    "locations": [
+      "HCMC",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Figma",
+      "Hadoop",
+      "FastAPI",
+      "Node.js",
+      "Kubernetes",
+      "Cypress",
+      "C#"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/skysoft"
+    },
+    "contacts": {
+      "email": "hr@skysoft.com",
+      "phone": "+84 993652460"
+    },
+    "rating": 4.4,
+    "openJobs": [
+      1585,
+      1173,
+      1215
+    ]
+  },
+  {
+    "id": "vertexsolution",
+    "name": "BlueSolutions",
+    "logo": "assets/logos/vertexsolution.png",
+    "website": "https://www.vertexsolution.com",
+    "about": "BlueSolutions là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2015,
+    "size": "1000+",
+    "locations": [
+      "Can Tho",
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Spark",
+      "NLP",
+      "UX Research",
+      "QA",
+      "Terraform",
+      "Figma"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/vertexsolution"
+    },
+    "contacts": {
+      "email": "hr@vertexsolution.com",
+      "phone": "+84 914818295"
+    },
+    "rating": 3.6,
+    "openJobs": [
+      1730,
+      1412,
+      1146,
+      1348,
+      1538,
+      1638,
+      1273,
+      1029
+    ]
+  },
+  {
+    "id": "metaai",
+    "name": "PulseSystems",
+    "logo": "assets/logos/metaai.png",
+    "website": "https://www.metaai.com",
+    "about": "PulseSystems là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2003,
+    "size": "11-50",
+    "locations": [
+      "Da Nang",
+      "HCMC",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Python",
+      "QA",
+      "Spark",
+      "NLP",
+      "Figma",
+      "Scrum",
+      "GCP"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/metaai"
+    },
+    "contacts": {
+      "email": "hr@metaai.com",
+      "phone": "+84 950193656"
+    },
+    "rating": 3.6,
+    "openJobs": [
+      1362,
+      1712,
+      1163,
+      1033,
+      1643,
+      1789,
+      1687
+    ]
+  },
+  {
+    "id": "nimbleworks",
+    "name": "MoonCloud",
+    "logo": "assets/logos/nimbleworks.png",
+    "website": "https://www.nimbleworks.com",
+    "about": "MoonCloud là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2016,
+    "size": "51-200",
+    "locations": [
+      "Da Nang"
+    ],
+    "techStack": [
+      "Objective-C",
+      "Azure",
+      "FastAPI",
+      "C++",
+      "CI/CD",
+      "AWS"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/nimbleworks"
+    },
+    "contacts": {
+      "email": "hr@nimbleworks.com",
+      "phone": "+84 934166826"
+    },
+    "rating": 3.7,
+    "openJobs": [
+      1244,
+      1343,
+      1409,
+      1161,
+      1039,
+      1176,
+      1250
+    ]
+  },
+  {
+    "id": "zendata",
+    "name": "BlueForge",
+    "logo": "assets/logos/zendata.png",
+    "website": "https://www.zendata.com",
+    "about": "BlueForge là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2012,
+    "size": "11-50",
+    "locations": [
+      "Can Tho",
+      "Hai Phong",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Product Management",
+      "Redis",
+      "FastAPI",
+      "Rust",
+      "Docker",
+      "Spark",
+      "C#"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/zendata"
+    },
+    "contacts": {
+      "email": "hr@zendata.com",
+      "phone": "+84 944269370"
+    },
+    "rating": 4.8,
+    "openJobs": [
+      1283,
+      1531,
+      1299,
+      1378,
+      1054
+    ]
+  },
+  {
+    "id": "neosystems",
+    "name": "AsterData",
+    "logo": "assets/logos/neosystems.png",
+    "website": "https://www.neosystems.com",
+    "about": "AsterData là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2007,
+    "size": "501-1000",
+    "locations": [
+      "Da Nang",
+      "Can Tho"
+    ],
+    "techStack": [
+      "Node.js",
+      "GCP",
+      "Scrum",
+      "Swift",
+      "Redis"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/neosystems"
+    },
+    "contacts": {
+      "email": "hr@neosystems.com",
+      "phone": "+84 995756900"
+    },
+    "rating": 4.5,
+    "openJobs": [
+      1177,
+      1641,
+      1761
+    ]
+  },
+  {
+    "id": "pulsenetworks",
+    "name": "NovaData",
+    "logo": "assets/logos/pulsenetworks.png",
+    "website": "https://www.pulsenetworks.com",
+    "about": "NovaData là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2016,
+    "size": "201-500",
+    "locations": [
+      "Da Nang",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Jest",
+      "Kubernetes",
+      "Python",
+      "C++",
+      "Android",
+      "MongoDB",
+      "Swift"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/pulsenetworks"
+    },
+    "contacts": {
+      "email": "hr@pulsenetworks.com",
+      "phone": "+84 949711319"
+    },
+    "rating": 3.5,
+    "openJobs": [
+      1505,
+      1160,
+      1546,
+      1438,
+      1578,
+      1692,
+      1180
+    ]
+  },
+  {
+    "id": "novanetworks",
+    "name": "NeoSystems",
+    "logo": "assets/logos/novanetworks.png",
+    "website": "https://www.novanetworks.com",
+    "about": "NeoSystems là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2024,
+    "size": "51-200",
+    "locations": [
+      "Da Nang",
+      "Hai Phong",
+      "HCMC"
+    ],
+    "techStack": [
+      "Figma",
+      "PyTorch",
+      "Selenium",
+      "MLOps",
+      "Next.js",
+      "Kafka",
+      "UI",
+      "Terraform"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/novanetworks"
+    },
+    "contacts": {
+      "email": "hr@novanetworks.com",
+      "phone": "+84 948412328"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1739,
+      1797,
+      1077,
+      1756,
+      1504,
+      1122,
+      1127
+    ]
+  },
+  {
+    "id": "hyperai",
+    "name": "SunNetworks",
+    "logo": "assets/logos/hyperai.png",
+    "website": "https://www.hyperai.com",
+    "about": "SunNetworks là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2002,
+    "size": "11-50",
+    "locations": [
+      "Hanoi"
+    ],
+    "techStack": [
+      "C#",
+      "PyTorch",
+      "QA",
+      "Computer Vision",
+      "Selenium",
+      "TensorFlow",
+      "Agile",
+      "Playwright"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/hyperai"
+    },
+    "contacts": {
+      "email": "hr@hyperai.com",
+      "phone": "+84 994322033"
+    },
+    "rating": 4.8,
+    "openJobs": [
+      1259,
+      1461,
+      1453,
+      1466,
+      1634
+    ]
+  },
+  {
+    "id": "greenloop",
+    "name": "NeoForge",
+    "logo": "assets/logos/greenloop.png",
+    "website": "https://www.greenloop.com",
+    "about": "NeoForge là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2000,
+    "size": "201-500",
+    "locations": [
+      "Da Nang",
+      "Hai Phong",
+      "HCMC"
+    ],
+    "techStack": [
+      "Redis",
+      "Objective-C",
+      "Computer Vision",
+      "Flask"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/greenloop"
+    },
+    "contacts": {
+      "email": "hr@greenloop.com",
+      "phone": "+84 949609054"
+    },
+    "rating": 4.5,
+    "openJobs": [
+      1358,
+      1717,
+      1750,
+      1494,
+      1354,
+      1423
+    ]
+  },
+  {
+    "id": "brightsystems",
+    "name": "BrightData",
+    "logo": "assets/logos/brightsystems.png",
+    "website": "https://www.brightsystems.com",
+    "about": "BrightData là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2014,
+    "size": "51-200",
+    "locations": [
+      "Hanoi"
+    ],
+    "techStack": [
+      "Cypress",
+      "MySQL",
+      "UX Research",
+      "Objective-C",
+      "CI/CD"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/brightsystems"
+    },
+    "contacts": {
+      "email": "hr@brightsystems.com",
+      "phone": "+84 946578001"
+    },
+    "rating": 3.9,
+    "openJobs": [
+      1624,
+      1506,
+      1164,
+      1305,
+      1645,
+      1512
+    ]
+  },
+  {
+    "id": "zensystems",
+    "name": "SunWare",
+    "logo": "assets/logos/zensystems.png",
+    "website": "https://www.zensystems.com",
+    "about": "SunWare là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2005,
+    "size": "1000+",
+    "locations": [
+      "Da Nang"
+    ],
+    "techStack": [
+      "Docker",
+      "Node.js",
+      "FastAPI",
+      "QA"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/zensystems"
+    },
+    "contacts": {
+      "email": "hr@zensystems.com",
+      "phone": "+84 963339667"
+    },
+    "rating": 4.0,
+    "openJobs": [
+      1744,
+      1210,
+      1555,
+      1527,
+      1787
+    ]
+  },
+  {
+    "id": "sunhub",
+    "name": "MetaData",
+    "logo": "assets/logos/sunhub.png",
+    "website": "https://www.sunhub.com",
+    "about": "MetaData là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2010,
+    "size": "201-500",
+    "locations": [
+      "Da Nang",
+      "HCMC"
+    ],
+    "techStack": [
+      "Django",
+      "Docker",
+      "Objective-C",
+      "PyTorch",
+      "MLOps",
+      "UI",
+      "C#",
+      "Redis"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/sunhub"
+    },
+    "contacts": {
+      "email": "hr@sunhub.com",
+      "phone": "+84 995704631"
+    },
+    "rating": 3.7,
+    "openJobs": [
+      1342,
+      1125,
+      1476,
+      1417
+    ]
+  },
+  {
+    "id": "brightloop",
+    "name": "HyperLabs",
+    "logo": "assets/logos/brightloop.png",
+    "website": "https://www.brightloop.com",
+    "about": "HyperLabs là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2008,
+    "size": "51-200",
+    "locations": [
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Airflow",
+      "UX Research",
+      "Scrum",
+      "PostgreSQL"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/brightloop"
+    },
+    "contacts": {
+      "email": "hr@brightloop.com",
+      "phone": "+84 991883846"
+    },
+    "rating": 4.4,
+    "openJobs": [
+      1593,
+      1094,
+      1454,
+      1660,
+      1434
+    ]
+  },
+  {
+    "id": "smartdigital",
+    "name": "AsterCloud",
+    "logo": "assets/logos/smartdigital.png",
+    "website": "https://www.smartdigital.com",
+    "about": "AsterCloud là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2013,
+    "size": "11-50",
+    "locations": [
+      "Da Nang",
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Flask",
+      "Angular",
+      "Scrum",
+      "Laravel"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/smartdigital"
+    },
+    "contacts": {
+      "email": "hr@smartdigital.com",
+      "phone": "+84 925585427"
+    },
+    "rating": 3.8,
+    "openJobs": [
+      1561,
+      1064,
+      1697,
+      1518,
+      1115,
+      1575,
+      1502
+    ]
+  },
+  {
+    "id": "pulseware",
+    "name": "MoonWorks",
+    "logo": "assets/logos/pulseware.png",
+    "website": "https://www.pulseware.com",
+    "about": "MoonWorks là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2021,
+    "size": "501-1000",
+    "locations": [
+      "Hai Phong",
+      "Hanoi"
+    ],
+    "techStack": [
+      "TensorFlow",
+      "MLOps",
+      "Scikit-learn",
+      "MySQL",
+      "AWS",
+      "Redis"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/pulseware"
+    },
+    "contacts": {
+      "email": "hr@pulseware.com",
+      "phone": "+84 930739712"
+    },
+    "rating": 4.4,
+    "openJobs": [
+      1026,
+      1112,
+      1456,
+      1757
+    ]
+  },
+  {
+    "id": "neohub",
+    "name": "MoonForge",
+    "logo": "assets/logos/neohub.png",
+    "website": "https://www.neohub.com",
+    "about": "MoonForge là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2005,
+    "size": "11-50",
+    "locations": [
+      "Can Tho",
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Angular",
+      "Scikit-learn",
+      "Objective-C",
+      "Go",
+      "GCP",
+      "UX Research"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/neohub"
+    },
+    "contacts": {
+      "email": "hr@neohub.com",
+      "phone": "+84 958678896"
+    },
+    "rating": 4.9,
+    "openJobs": [
+      1345,
+      1615,
+      1156,
+      1581,
+      1198,
+      1784,
+      1310,
+      1376
+    ]
+  },
+  {
+    "id": "rocketsystems",
+    "name": "ZenTech",
+    "logo": "assets/logos/rocketsystems.png",
+    "website": "https://www.rocketsystems.com",
+    "about": "ZenTech là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2025,
+    "size": "11-50",
+    "locations": [
+      "Da Nang",
+      "Can Tho"
+    ],
+    "techStack": [
+      "iOS",
+      ".NET",
+      "Kotlin",
+      "Django"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/rocketsystems"
+    },
+    "contacts": {
+      "email": "hr@rocketsystems.com",
+      "phone": "+84 971031132"
+    },
+    "rating": 4.4,
+    "openJobs": [
+      1193,
+      1700,
+      1314,
+      1168
+    ]
+  },
+  {
+    "id": "pulsesoft",
+    "name": "PulseSystems",
+    "logo": "assets/logos/pulsesoft.png",
+    "website": "https://www.pulsesoft.com",
+    "about": "PulseSystems là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2024,
+    "size": "51-200",
+    "locations": [
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "C++",
+      "Flask",
+      "Cypress",
+      "MongoDB",
+      "Go",
+      "Node.js"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/pulsesoft"
+    },
+    "contacts": {
+      "email": "hr@pulsesoft.com",
+      "phone": "+84 984384510"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1145,
+      1060,
+      1437,
+      1095,
+      1745
+    ]
+  },
+  {
+    "id": "asternetworks",
+    "name": "SmartStudio",
+    "logo": "assets/logos/asternetworks.png",
+    "website": "https://www.asternetworks.com",
+    "about": "SmartStudio là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2025,
+    "size": "51-200",
+    "locations": [
+      "Da Nang"
+    ],
+    "techStack": [
+      "Cypress",
+      "UI",
+      "Kafka",
+      "React",
+      ".NET"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/asternetworks"
+    },
+    "contacts": {
+      "email": "hr@asternetworks.com",
+      "phone": "+84 929419691"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1628,
+      1019,
+      1217,
+      1617
+    ]
+  },
+  {
+    "id": "orioncloud",
+    "name": "VertexTech",
+    "logo": "assets/logos/orioncloud.png",
+    "website": "https://www.orioncloud.com",
+    "about": "VertexTech là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2008,
+    "size": "51-200",
+    "locations": [
+      "HCMC"
+    ],
+    "techStack": [
+      "Figma",
+      "Vue",
+      "Flask",
+      "React",
+      "Swift",
+      "Cypress",
+      "Scrum",
+      "C++",
+      "Redis"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/orioncloud"
+    },
+    "contacts": {
+      "email": "hr@orioncloud.com",
+      "phone": "+84 912118101"
+    },
+    "rating": 3.9,
+    "openJobs": [
+      1425,
+      1220
+    ]
+  },
+  {
+    "id": "cloudcloud",
+    "name": "RocketSoft",
+    "logo": "assets/logos/cloudcloud.png",
+    "website": "https://www.cloudcloud.com",
+    "about": "RocketSoft là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2016,
+    "size": "501-1000",
+    "locations": [
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Django",
+      "MLOps",
+      "Node.js",
+      "Kubernetes",
+      "GCP",
+      "Selenium",
+      "Objective-C",
+      "Linux"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/cloudcloud"
+    },
+    "contacts": {
+      "email": "hr@cloudcloud.com",
+      "phone": "+84 924636981"
+    },
+    "rating": 4.2,
+    "openJobs": [
+      1201,
+      1081,
+      1594,
+      1162,
+      1200,
+      1360
+    ]
+  },
+  {
+    "id": "asterstudio",
+    "name": "AsterAI",
+    "logo": "assets/logos/asterstudio.png",
+    "website": "https://www.asterstudio.com",
+    "about": "AsterAI là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2019,
+    "size": "501-1000",
+    "locations": [
+      "Da Nang",
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "Hadoop",
+      "Vue",
+      "Next.js",
+      "Kubernetes",
+      "Jest",
+      "iOS",
+      "Azure"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/asterstudio"
+    },
+    "contacts": {
+      "email": "hr@asterstudio.com",
+      "phone": "+84 924490391"
+    },
+    "rating": 4.5,
+    "openJobs": [
+      1068,
+      1587,
+      1364
+    ]
+  },
+  {
+    "id": "brightsolution",
+    "name": "BlueTech",
+    "logo": "assets/logos/brightsolution.png",
+    "website": "https://www.brightsolution.com",
+    "about": "BlueTech là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2018,
+    "size": "1000+",
+    "locations": [
+      "HCMC"
+    ],
+    "techStack": [
+      "Kafka",
+      "FastAPI",
+      "Node.js",
+      "Flask",
+      ".NET",
+      "Airflow"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/brightsolution"
+    },
+    "contacts": {
+      "email": "hr@brightsolution.com",
+      "phone": "+84 988566318"
+    },
+    "rating": 4.5,
+    "openJobs": [
+      1551,
+      1185,
+      1065,
+      1181,
+      1733
+    ]
+  },
+  {
+    "id": "moonnetworks",
+    "name": "PixelTech",
+    "logo": "assets/logos/moonnetworks.png",
+    "website": "https://www.moonnetworks.com",
+    "about": "PixelTech là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2020,
+    "size": "1000+",
+    "locations": [
+      "Can Tho"
+    ],
+    "techStack": [
+      "Docker",
+      "Linux",
+      "Kafka",
+      "Azure",
+      "Python",
+      "Cypress"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/moonnetworks"
+    },
+    "contacts": {
+      "email": "hr@moonnetworks.com",
+      "phone": "+84 925356396"
+    },
+    "rating": 4.5,
+    "openJobs": [
+      1106,
+      1392,
+      1457,
+      1264,
+      1696
+    ]
+  },
+  {
+    "id": "smartsolutions",
+    "name": "DataData",
+    "logo": "assets/logos/smartsolutions.png",
+    "website": "https://www.smartsolutions.com",
+    "about": "DataData là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2011,
+    "size": "201-500",
+    "locations": [
+      "Hai Phong"
+    ],
+    "techStack": [
+      "UX Research",
+      "Rust",
+      "AWS",
+      "React Native",
+      "PyTest",
+      "Docker",
+      "iOS"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/smartsolutions"
+    },
+    "contacts": {
+      "email": "hr@smartsolutions.com",
+      "phone": "+84 922762205"
+    },
+    "rating": 4.1,
+    "openJobs": [
+      1356,
+      1148
+    ]
+  },
+  {
+    "id": "hyperloop",
+    "name": "HyperDigital",
+    "logo": "assets/logos/hyperloop.png",
+    "website": "https://www.hyperloop.com",
+    "about": "HyperDigital là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2021,
+    "size": "51-200",
+    "locations": [
+      "Da Nang",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Agile",
+      "Kubernetes",
+      "Node.js",
+      "Express",
+      "Playwright",
+      "UI",
+      "Figma",
+      "Azure",
+      "Python"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/hyperloop"
+    },
+    "contacts": {
+      "email": "hr@hyperloop.com",
+      "phone": "+84 960015814"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1207,
+      1714
+    ]
+  },
+  {
+    "id": "cloudware",
+    "name": "GreenAI",
+    "logo": "assets/logos/cloudware.png",
+    "website": "https://www.cloudware.com",
+    "about": "GreenAI là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2007,
+    "size": "201-500",
+    "locations": [
+      "Da Nang",
+      "Can Tho"
+    ],
+    "techStack": [
+      "Django",
+      "AWS",
+      "Swift",
+      "Figma",
+      "TensorFlow",
+      "QA",
+      "Azure",
+      "Computer Vision",
+      "Next.js"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/cloudware"
+    },
+    "contacts": {
+      "email": "hr@cloudware.com",
+      "phone": "+84 990585678"
+    },
+    "rating": 4.0,
+    "openJobs": [
+      1742,
+      1204,
+      1324,
+      1701
+    ]
+  },
+  {
+    "id": "nimblestudio",
+    "name": "NeoSolutions",
+    "logo": "assets/logos/nimblestudio.png",
+    "website": "https://www.nimblestudio.com",
+    "about": "NeoSolutions là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2022,
+    "size": "1000+",
+    "locations": [
+      "Can Tho",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Kubernetes",
+      "Rust",
+      "Jest",
+      "Python",
+      "Swift",
+      "Product Management",
+      "PostgreSQL",
+      "Objective-C",
+      "Django"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/nimblestudio"
+    },
+    "contacts": {
+      "email": "hr@nimblestudio.com",
+      "phone": "+84 947388792"
+    },
+    "rating": 3.8,
+    "openJobs": [
+      1338,
+      1312,
+      1489,
+      1020,
+      1361,
+      1066
+    ]
+  },
+  {
+    "id": "vertexforge",
+    "name": "SmartData",
+    "logo": "assets/logos/vertexforge.png",
+    "website": "https://www.vertexforge.com",
+    "about": "SmartData là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2006,
+    "size": "51-200",
+    "locations": [
+      "Can Tho"
+    ],
+    "techStack": [
+      "PyTorch",
+      "Hadoop",
+      "PostgreSQL",
+      "Vue",
+      "Kafka",
+      "TensorFlow",
+      "Playwright",
+      "Scikit-learn"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/vertexforge"
+    },
+    "contacts": {
+      "email": "hr@vertexforge.com",
+      "phone": "+84 913886030"
+    },
+    "rating": 3.9,
+    "openJobs": [
+      1154,
+      1559,
+      1640,
+      1076,
+      1371,
+      1474
+    ]
+  },
+  {
+    "id": "skyworks",
+    "name": "QuantumTech",
+    "logo": "assets/logos/skyworks.png",
+    "website": "https://www.skyworks.com",
+    "about": "QuantumTech là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2019,
+    "size": "11-50",
+    "locations": [
+      "Da Nang"
+    ],
+    "techStack": [
+      "Spring",
+      "Figma",
+      "FastAPI",
+      "MongoDB"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/skyworks"
+    },
+    "contacts": {
+      "email": "hr@skyworks.com",
+      "phone": "+84 963792364"
+    },
+    "rating": 3.7,
+    "openJobs": [
+      1357,
+      1468,
+      1003,
+      1565,
+      1731,
+      1795,
+      1537
+    ]
+  },
+  {
+    "id": "sundata",
+    "name": "SunData",
+    "logo": "assets/logos/sundata.png",
+    "website": "https://www.sundata.com",
+    "about": "SunData là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2009,
+    "size": "201-500",
+    "locations": [
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "Android",
+      "AWS",
+      "Docker",
+      "React Native",
+      "Java"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/sundata"
+    },
+    "contacts": {
+      "email": "hr@sundata.com",
+      "phone": "+84 951827259"
+    },
+    "rating": 4.6,
+    "openJobs": [
+      1331,
+      1266,
+      1772,
+      1188,
+      1637
+    ]
+  },
+  {
+    "id": "alphaworks",
+    "name": "NimbleLabs",
+    "logo": "assets/logos/alphaworks.png",
+    "website": "https://www.alphaworks.com",
+    "about": "NimbleLabs là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2000,
+    "size": "501-1000",
+    "locations": [
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "Java",
+      "QA",
+      "Airflow",
+      "Next.js",
+      "PyTorch"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/alphaworks"
+    },
+    "contacts": {
+      "email": "hr@alphaworks.com",
+      "phone": "+84 946521025"
+    },
+    "rating": 4.4,
+    "openJobs": [
+      1583,
+      1572,
+      1321,
+      1034,
+      1470,
+      1275
+    ]
+  },
+  {
+    "id": "hyperdata",
+    "name": "CloudLoop",
+    "logo": "assets/logos/hyperdata.png",
+    "website": "https://www.hyperdata.com",
+    "about": "CloudLoop là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2001,
+    "size": "1000+",
+    "locations": [
+      "Can Tho",
+      "Hai Phong"
+    ],
+    "techStack": [
+      ".NET",
+      "Go",
+      "QA",
+      "Linux",
+      "Django",
+      "Swift",
+      "Azure"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/hyperdata"
+    },
+    "contacts": {
+      "email": "hr@hyperdata.com",
+      "phone": "+84 948016697"
+    },
+    "rating": 4.2,
+    "openJobs": [
+      1493,
+      1612,
+      1499
+    ]
+  },
+  {
+    "id": "greendigital",
+    "name": "SunLoop",
+    "logo": "assets/logos/greendigital.png",
+    "website": "https://www.greendigital.com",
+    "about": "SunLoop là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2002,
+    "size": "201-500",
+    "locations": [
+      "Da Nang",
+      "HCMC",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Kafka",
+      "Next.js",
+      "React",
+      "Go",
+      "Laravel",
+      "UI",
+      "Selenium"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/greendigital"
+    },
+    "contacts": {
+      "email": "hr@greendigital.com",
+      "phone": "+84 944295247"
+    },
+    "rating": 4.0,
+    "openJobs": [
+      1113,
+      1511,
+      1010
+    ]
+  },
+  {
+    "id": "skyloop",
+    "name": "OrionAI",
+    "logo": "assets/logos/skyloop.png",
+    "website": "https://www.skyloop.com",
+    "about": "OrionAI là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2024,
+    "size": "201-500",
+    "locations": [
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Azure",
+      "Spring",
+      "Flask",
+      "Android",
+      "MySQL",
+      "NLP",
+      "Rust",
+      "Linux",
+      "PostgreSQL"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/skyloop"
+    },
+    "contacts": {
+      "email": "hr@skyloop.com",
+      "phone": "+84 999663907"
+    },
+    "rating": 3.6,
+    "openJobs": [
+      1235,
+      1016,
+      1623,
+      1584,
+      1411
+    ]
+  },
+  {
+    "id": "smartsoft",
+    "name": "PulseWare",
+    "logo": "assets/logos/smartsoft.png",
+    "website": "https://www.smartsoft.com",
+    "about": "PulseWare là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2010,
+    "size": "501-1000",
+    "locations": [
+      "Hai Phong",
+      "HCMC"
+    ],
+    "techStack": [
+      "Product Management",
+      "Node.js",
+      "Figma",
+      "Flutter",
+      "MongoDB",
+      "Azure",
+      "UX Research"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/smartsoft"
+    },
+    "contacts": {
+      "email": "hr@smartsoft.com",
+      "phone": "+84 995918360"
+    },
+    "rating": 3.9,
+    "openJobs": [
+      1192,
+      1465,
+      1675
+    ]
+  },
+  {
+    "id": "metaware",
+    "name": "OrionForge",
+    "logo": "assets/logos/metaware.png",
+    "website": "https://www.metaware.com",
+    "about": "OrionForge là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2020,
+    "size": "11-50",
+    "locations": [
+      "Da Nang",
+      "HCMC"
+    ],
+    "techStack": [
+      "JUnit",
+      "Scrum",
+      "Airflow",
+      "Docker",
+      "Playwright"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/metaware"
+    },
+    "contacts": {
+      "email": "hr@metaware.com",
+      "phone": "+84 958567046"
+    },
+    "rating": 4.1,
+    "openJobs": [
+      1226,
+      1509,
+      1686,
+      1738
+    ]
+  },
+  {
+    "id": "novasoft",
+    "name": "NovaHub",
+    "logo": "assets/logos/novasoft.png",
+    "website": "https://www.novasoft.com",
+    "about": "NovaHub là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2021,
+    "size": "51-200",
+    "locations": [
+      "Hanoi"
+    ],
+    "techStack": [
+      "Redis",
+      "iOS",
+      "CI/CD",
+      "Express",
+      "Agile",
+      "Figma",
+      "Laravel"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/novasoft"
+    },
+    "contacts": {
+      "email": "hr@novasoft.com",
+      "phone": "+84 955568701"
+    },
+    "rating": 4.0,
+    "openJobs": [
+      1087,
+      1463,
+      1027
+    ]
+  },
+  {
+    "id": "quantumsoft",
+    "name": "SkyAI",
+    "logo": "assets/logos/quantumsoft.png",
+    "website": "https://www.quantumsoft.com",
+    "about": "SkyAI là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2021,
+    "size": "51-200",
+    "locations": [
+      "HCMC"
+    ],
+    "techStack": [
+      "Spark",
+      "Django",
+      "CI/CD",
+      "Linux",
+      "Kotlin",
+      "Selenium",
+      "Swift",
+      "Jest"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/quantumsoft"
+    },
+    "contacts": {
+      "email": "hr@quantumsoft.com",
+      "phone": "+84 996629889"
+    },
+    "rating": 3.8,
+    "openJobs": [
+      1699,
+      1388,
+      1096
+    ]
+  },
+  {
+    "id": "greenforge",
+    "name": "BrightWare",
+    "logo": "assets/logos/greenforge.png",
+    "website": "https://www.greenforge.com",
+    "about": "BrightWare là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2000,
+    "size": "501-1000",
+    "locations": [
+      "Da Nang"
+    ],
+    "techStack": [
+      "Spring",
+      "Kafka",
+      "FastAPI",
+      "QA",
+      "Hadoop"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/greenforge"
+    },
+    "contacts": {
+      "email": "hr@greenforge.com",
+      "phone": "+84 933776150"
+    },
+    "rating": 4.1,
+    "openJobs": [
+      1614
+    ]
+  },
+  {
+    "id": "bluesystems",
+    "name": "VertexData",
+    "logo": "assets/logos/bluesystems.png",
+    "website": "https://www.bluesystems.com",
+    "about": "VertexData là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2013,
+    "size": "201-500",
+    "locations": [
+      "Can Tho",
+      "Hai Phong"
+    ],
+    "techStack": [
+      "Spark",
+      "Airflow",
+      "Flutter",
+      "Figma",
+      "Scrum",
+      "Product Management",
+      "FastAPI",
+      "GCP",
+      "Node.js"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/bluesystems"
+    },
+    "contacts": {
+      "email": "hr@bluesystems.com",
+      "phone": "+84 969352161"
+    },
+    "rating": 4.6,
+    "openJobs": [
+      1349,
+      1483,
+      1439,
+      1713
+    ]
+  },
+  {
+    "id": "hyperforge",
+    "name": "ZenSoft",
+    "logo": "assets/logos/hyperforge.png",
+    "website": "https://www.hyperforge.com",
+    "about": "ZenSoft là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 1999,
+    "size": "201-500",
+    "locations": [
+      "Da Nang",
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "Laravel",
+      "Docker",
+      "GCP",
+      "Angular"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/hyperforge"
+    },
+    "contacts": {
+      "email": "hr@hyperforge.com",
+      "phone": "+84 959491122"
+    },
+    "rating": 3.6,
+    "openJobs": [
+      1622,
+      1602,
+      1234,
+      1481,
+      1688
+    ]
+  },
+  {
+    "id": "blueware",
+    "name": "PixelLoop",
+    "logo": "assets/logos/blueware.png",
+    "website": "https://www.blueware.com",
+    "about": "PixelLoop là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2012,
+    "size": "51-200",
+    "locations": [
+      "Can Tho"
+    ],
+    "techStack": [
+      "Linux",
+      "Android",
+      "Docker",
+      "Redis",
+      "PostgreSQL",
+      "Cypress",
+      "MLOps",
+      "Angular"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/blueware"
+    },
+    "contacts": {
+      "email": "hr@blueware.com",
+      "phone": "+84 986726461"
+    },
+    "rating": 4.0,
+    "openJobs": [
+      1667,
+      1416,
+      1212,
+      1517,
+      1407,
+      1776,
+      1661,
+      1216
+    ]
+  },
+  {
+    "id": "greenhub",
+    "name": "NovaCloud",
+    "logo": "assets/logos/greenhub.png",
+    "website": "https://www.greenhub.com",
+    "about": "NovaCloud là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2024,
+    "size": "11-50",
+    "locations": [
+      "Can Tho",
+      "Hanoi"
+    ],
+    "techStack": [
+      "GCP",
+      "Python",
+      "JUnit",
+      "UI"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/greenhub"
+    },
+    "contacts": {
+      "email": "hr@greenhub.com",
+      "phone": "+84 956095437"
+    },
+    "rating": 4.2,
+    "openJobs": [
+      1379,
+      1704,
+      1684,
+      1108,
+      1278,
+      1487
+    ]
+  },
+  {
+    "id": "neotech",
+    "name": "NeoSystems",
+    "logo": "assets/logos/neotech.png",
+    "website": "https://www.neotech.com",
+    "about": "NeoSystems là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2009,
+    "size": "201-500",
+    "locations": [
+      "HCMC"
+    ],
+    "techStack": [
+      "NLP",
+      "GCP",
+      "CI/CD",
+      "Airflow",
+      "Java"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/neotech"
+    },
+    "contacts": {
+      "email": "hr@neotech.com",
+      "phone": "+84 960043345"
+    },
+    "rating": 4.0,
+    "openJobs": [
+      1353,
+      1424,
+      1447,
+      1653,
+      1516,
+      1754,
+      1247
+    ]
+  },
+  {
+    "id": "vertexstudio",
+    "name": "OrionLoop",
+    "logo": "assets/logos/vertexstudio.png",
+    "website": "https://www.vertexstudio.com",
+    "about": "OrionLoop là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2006,
+    "size": "1000+",
+    "locations": [
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "Hadoop",
+      "React Native",
+      "Node.js",
+      "Agile",
+      "Python",
+      "PostgreSQL",
+      "PyTorch",
+      "Android",
+      "PHP"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/vertexstudio"
+    },
+    "contacts": {
+      "email": "hr@vertexstudio.com",
+      "phone": "+84 998122539"
+    },
+    "rating": 4.7,
+    "openJobs": [
+      1485,
+      1758,
+      1270,
+      1301,
+      1548,
+      1647,
+      1359
+    ]
+  },
+  {
+    "id": "novalabs",
+    "name": "QuantumLabs",
+    "logo": "assets/logos/novalabs.png",
+    "website": "https://www.novalabs.com",
+    "about": "QuantumLabs là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2017,
+    "size": "201-500",
+    "locations": [
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "FastAPI",
+      "Product Management",
+      "Swift",
+      "Laravel",
+      "Hadoop",
+      "Scikit-learn",
+      "TensorFlow",
+      "iOS",
+      "Flask"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/novalabs"
+    },
+    "contacts": {
+      "email": "hr@novalabs.com",
+      "phone": "+84 921370793"
+    },
+    "rating": 4.3,
+    "openJobs": [
+      1534,
+      1373,
+      1109,
+      1644,
+      1211,
+      1013
+    ]
+  },
+  {
+    "id": "novaloop",
+    "name": "RocketCloud",
+    "logo": "assets/logos/novaloop.png",
+    "website": "https://www.novaloop.com",
+    "about": "RocketCloud là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2009,
+    "size": "201-500",
+    "locations": [
+      "Da Nang",
+      "Can Tho",
+      "Hanoi"
+    ],
+    "techStack": [
+      "Hadoop",
+      "TensorFlow",
+      "Azure",
+      "Linux"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/novaloop"
+    },
+    "contacts": {
+      "email": "hr@novaloop.com",
+      "phone": "+84 912446861"
+    },
+    "rating": 3.9,
+    "openJobs": [
+      1344,
+      1689,
+      1165,
+      1287,
+      1323
+    ]
+  },
+  {
+    "id": "novaworks",
+    "name": "BlueWorks",
+    "logo": "assets/logos/novaworks.png",
+    "website": "https://www.novaworks.com",
+    "about": "BlueWorks là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2023,
+    "size": "1000+",
+    "locations": [
+      "Da Nang"
+    ],
+    "techStack": [
+      "Kotlin",
+      "Rust",
+      "Flask",
+      "FastAPI",
+      "Node.js",
+      "PHP",
+      "Jest"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/novaworks"
+    },
+    "contacts": {
+      "email": "hr@novaworks.com",
+      "phone": "+84 923574883"
+    },
+    "rating": 4.6,
+    "openJobs": [
+      1141,
+      1036,
+      1375
+    ]
+  },
+  {
+    "id": "moonworks",
+    "name": "PulseData",
+    "logo": "assets/logos/moonworks.png",
+    "website": "https://www.moonworks.com",
+    "about": "PulseData là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2022,
+    "size": "51-200",
+    "locations": [
+      "Da Nang",
+      "Can Tho",
+      "HCMC"
+    ],
+    "techStack": [
+      "Flask",
+      "Kafka",
+      "Android",
+      "FastAPI",
+      "Java",
+      "Spring",
+      "Playwright",
+      "Scikit-learn"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/moonworks"
+    },
+    "contacts": {
+      "email": "hr@moonworks.com",
+      "phone": "+84 993851247"
+    },
+    "rating": 4.5,
+    "openJobs": [
+      1445,
+      1387,
+      1383,
+      1048,
+      1248
+    ]
+  },
+  {
+    "id": "neosoft",
+    "name": "SunData",
+    "logo": "assets/logos/neosoft.png",
+    "website": "https://www.neosoft.com",
+    "about": "SunData là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2022,
+    "size": "51-200",
+    "locations": [
+      "Hai Phong"
+    ],
+    "techStack": [
+      "PyTorch",
+      "Computer Vision",
+      "C++",
+      "GCP",
+      "Airflow",
+      "PHP"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/neosoft"
+    },
+    "contacts": {
+      "email": "hr@neosoft.com",
+      "phone": "+84 970254091"
+    },
+    "rating": 4.2,
+    "openJobs": [
+      1501,
+      1662,
+      1606
+    ]
+  },
+  {
+    "id": "sunlabs",
+    "name": "MoonWorks",
+    "logo": "assets/logos/sunlabs.png",
+    "website": "https://www.sunlabs.com",
+    "about": "MoonWorks là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2022,
+    "size": "1000+",
+    "locations": [
+      "Hai Phong",
+      "Hanoi"
+    ],
+    "techStack": [
+      "PyTorch",
+      "MongoDB",
+      "GCP",
+      "Docker",
+      "Selenium",
+      "PHP"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/sunlabs"
+    },
+    "contacts": {
+      "email": "hr@sunlabs.com",
+      "phone": "+84 961254050"
+    },
+    "rating": 4.2,
+    "openJobs": [
+      1727,
+      1214,
+      1420,
+      1427,
+      1202
+    ]
+  },
+  {
+    "id": "orionnetworks",
+    "name": "CloudAI",
+    "logo": "assets/logos/orionnetworks.png",
+    "website": "https://www.orionnetworks.com",
+    "about": "CloudAI là công ty công nghệ tập trung vào sản phẩm số và dịch vụ phần mềm.",
+    "foundedYear": 2001,
+    "size": "11-50",
+    "locations": [
+      "Hanoi"
+    ],
+    "techStack": [
+      "Flask",
+      "Figma",
+      "C#",
+      "Next.js",
+      "Hadoop",
+      "Kubernetes",
+      "Objective-C",
+      "PostgreSQL"
+    ],
+    "socials": {
+      "linkedin": "https://linkedin.com/company/orionnetworks"
+    },
+    "contacts": {
+      "email": "hr@orionnetworks.com",
+      "phone": "+84 979244185"
+    },
+    "rating": 3.9,
+    "openJobs": [
+      1300,
+      1573,
+      1545,
+      1649
+    ]
+  }
+]
