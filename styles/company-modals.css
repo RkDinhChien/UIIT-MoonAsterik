@@ -1,0 +1,152 @@
+/* Company Modals Styles */
+
+/* Modal Container */
+.company-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-modal.active {
+  display: flex;
+}
+
+/* Modal Content */
+.company-modal-content {
+  background: white;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modal Header */
+.company-modal-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-modal-header h2 {
+  margin: 0;
+  color: #263238;
+}
+
+.company-modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Alias for close button class used in HTML */
+.company-modal-close {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #999;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-modal-close-btn:hover,
+.company-modal-close:hover {
+  color: #263238;
+}
+
+/* Modal Body */
+.company-modal-body {
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Modal Footer */
+.company-modal-footer {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #E0E0E0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+/* Modal Buttons */
+.modal-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.modal-btn-cancel {
+  border: 1px solid #E0E0E0;
+  background: white;
+  color: #263238;
+}
+
+.modal-btn-cancel:hover {
+  background: #F5F5F5;
+}
+
+.modal-btn-submit {
+  background: #00BCD4;
+  color: white;
+}
+
+.modal-btn-submit:hover {
+  background: #00ACC1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .company-modal-content {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .company-modal-header {
+    padding: 1rem 1.5rem;
+  }
+
+  .company-modal-body {
+    padding: 1.5rem;
+  }
+
+  .company-modal-footer {
+    padding: 1rem 1.5rem;
+    flex-direction: column-reverse;
+  }
+
+  .modal-btn {
+    width: 100%;
+  }
+}
