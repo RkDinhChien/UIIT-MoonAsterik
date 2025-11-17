@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moon* - Company Applicants</title>
+  <link rel="stylesheet" href="../../styles/main.css" />
+  <link rel="stylesheet" href="../../styles/index.css" />
+  <link rel="stylesheet" href="../../styles/profile-styles.css" />
+  <link rel="stylesheet" href="../../styles/company-applicants.css" />
+</head>
+<body>
+  <!-- Company Navbar -->
+  <nav class="simple-navbar" style="background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100;">
+    <div class="container">
+      <a href="../../index.html" class="navbar-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="navbar-logo-text">Moon<span class="asterisk">*</span></span>
+      </a>
+      
+      <div class="navbar-center" id="navbarMenu">
+        <a href="company-dashboard.html" class="navbar-link">Dashboard</a>
+        <a href="company-applicants.html" class="navbar-link" style="color: #00BCD4; font-weight: 600;">All Applicants</a>
+        <a href="company-detail.html" class="navbar-link">Company Profile</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <button class="btn btn-primary navbar-logout-btn" onclick="logout()">
+          Logout
+        </button>
+      </div>
+      
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container py-xl">
+      <div class="flex-between" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <div>
+          <h2 style="margin: 0 0 0.5rem 0;">All Applicants</h2>
+          <p class="text-gray">Manage and track all applicants across your job postings</p>
+        </div>
+        <button class="btn btn-primary" onclick="window.location.href='company-dashboard.html'">Back to Dashboard</button>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="tabs" style="display: flex; gap: 1rem; border-bottom: 2px solid #E0E0E0; margin-bottom: 2rem; flex-wrap: wrap;">
+        <button class="tab" onclick="filterApplicants('all')" style="padding: 1rem; border: none; background: none; border-bottom: 3px solid #00BCD4; font-weight: 600; color: #00BCD4; cursor: pointer;">
+          All Applicants <span id="count-all">(0)</span>
+        </button>
+        <button class="tab" onclick="filterApplicants('Pending')" style="padding: 1rem; border: none; background: none; border-bottom: 3px solid transparent; font-weight: 600; color: #666; cursor: pointer;">
+          Pending <span id="count-Pending">(0)</span>
+        </button>
+        <button class="tab" onclick="filterApplicants('Reviewing')" style="padding: 1rem; border: none; background: none; border-bottom: 3px solid transparent; font-weight: 600; color: #666; cursor: pointer;">
+          Reviewing <span id="count-Reviewing">(0)</span>
+        </button>
+        <button class="tab" onclick="filterApplicants('Interview')" style="padding: 1rem; border: none; background: none; border-bottom: 3px solid transparent; font-weight: 600; color: #666; cursor: pointer;">
+          Interview <span id="count-Interview">(0)</span>
+        </button>
+        <button class="tab" onclick="filterApplicants('Accepted')" style="padding: 1rem; border: none; background: none; border-bottom: 3px solid transparent; font-weight: 600; color: #666; cursor: pointer;">
+          Accepted <span id="count-Accepted">(0)</span>
+        </button>
+        <button class="tab" onclick="filterApplicants('Rejected')" style="padding: 1rem; border: none; background: none; border-bottom: 3px solid transparent; font-weight: 600; color: #666; cursor: pointer;">
+          Rejected <span id="count-Rejected">(0)</span>
+        </button>
+      </div>
+
+      <!-- Applicants List -->
+      <div class="applicants-list" id="applicants-list" style="display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Applicants will be loaded dynamically -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="brand-text">Moon<span class="brand-accent">*</span></span>
+          </div>
+          <p class="footer-description">Connecting IT students with their dream careers.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="jobs.html">Browse Jobs</a></li>
+            <li><a href="#">For Students</a></li>
+            <li><a href="#">For Companies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 Moon*. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../../js/site.js"></script>
+  <!-- Applicants Modules -->
+  <script src="../../js/modules/applicants-list.js"></script>
+  <script src="../../js/modules/applicants-status.js"></script>
+  <!-- Main applicants script -->
+  <script src="../../js/company-applicants.js"></script>
+</body>
+</html>
