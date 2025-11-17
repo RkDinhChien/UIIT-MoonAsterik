@@ -140,6 +140,12 @@ async function loadJobs() {
 		console.log('Total jobs loaded from API:', allJobs.length);
 		console.log('Jobs data sample:', allJobs.slice(0, 3));
 
+		// Update job count display
+		const jobCountDisplay = document.getElementById('job-count-display');
+		if (jobCountDisplay) {
+			jobCountDisplay.textContent = allJobs.length;
+		}
+
 		// Reset to page 1 and render
 		currentPage = 1;
 		renderJobsPage();

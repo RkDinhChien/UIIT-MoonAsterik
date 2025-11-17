@@ -32,6 +32,12 @@ function applyFilters() {
 		return matchesSearch && matchesLocation;
 	});
 
+	// Update job count display with filtered results
+	const jobCountDisplay = document.getElementById('job-count-display');
+	if (jobCountDisplay) {
+		jobCountDisplay.textContent = filteredJobs.length;
+	}
+
 	currentPage = 1;
 	renderJobsPage();
 	setupPagination();

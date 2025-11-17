@@ -345,60 +345,60 @@
 	z-index: 1;
 }
 
-/* Blue - Soft Sky Blue */
+/* Cyan - Profile Views */
 .stat-card-blue .stat-icon-wrapper {
-	background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
-	box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+	background: linear-gradient(135deg, #caf0f8 0%, #b0e5f0 100%);
+	box-shadow: 0 4px 12px rgba(0, 188, 212, 0.15);
 }
 
 .stat-card-blue .stat-icon {
-	color: #4f46e5;
+	color: #00bcd4;
 }
 
 .stat-card-blue:hover .stat-icon-wrapper {
-	box-shadow: 0 8px 16px rgba(99, 102, 241, 0.25);
+	box-shadow: 0 8px 16px rgba(0, 188, 212, 0.25);
 }
 
-/* Green - Soft Mint Green */
+/* Cyan - Applications */
 .stat-card-green .stat-icon-wrapper {
-	background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
-	box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+	background: linear-gradient(135deg, #caf0f8 0%, #b0e5f0 100%);
+	box-shadow: 0 4px 12px rgba(0, 188, 212, 0.15);
 }
 
 .stat-card-green .stat-icon {
-	color: #059669;
+	color: #00bcd4;
 }
 
 .stat-card-green:hover .stat-icon-wrapper {
-	box-shadow: 0 8px 16px rgba(16, 185, 129, 0.25);
+	box-shadow: 0 8px 16px rgba(0, 188, 212, 0.25);
 }
 
-/* Orange - Soft Peach */
+/* Cyan - Saved Jobs */
 .stat-card-orange .stat-icon-wrapper {
-	background: linear-gradient(135deg, #fed7aa 0%, #fee2e2 100%);
-	box-shadow: 0 4px 12px rgba(251, 146, 60, 0.15);
+	background: linear-gradient(135deg, #caf0f8 0%, #b0e5f0 100%);
+	box-shadow: 0 4px 12px rgba(0, 188, 212, 0.15);
 }
 
 .stat-card-orange .stat-icon {
-	color: #ea580c;
+	color: #00bcd4;
 }
 
 .stat-card-orange:hover .stat-icon-wrapper {
-	box-shadow: 0 8px 16px rgba(251, 146, 60, 0.25);
+	box-shadow: 0 8px 16px rgba(0, 188, 212, 0.25);
 }
 
-/* Purple - Soft Lavender */
+/* Cyan - Interviews */
 .stat-card-purple .stat-icon-wrapper {
-	background: linear-gradient(135deg, #e9d5ff 0%, #f3e8ff 100%);
-	box-shadow: 0 4px 12px rgba(168, 85, 247, 0.15);
+	background: linear-gradient(135deg, #caf0f8 0%, #b0e5f0 100%);
+	box-shadow: 0 4px 12px rgba(0, 188, 212, 0.15);
 }
 
 .stat-card-purple .stat-icon {
-	color: #9333ea;
+	color: #00bcd4;
 }
 
 .stat-card-purple:hover .stat-icon-wrapper {
-	box-shadow: 0 8px 16px rgba(168, 85, 247, 0.25);
+	box-shadow: 0 8px 16px rgba(0, 188, 212, 0.25);
 }
 
 .stat-info {
@@ -484,7 +484,7 @@
 	display: block;
 	font-size: 2rem;
 	font-weight: 700;
-	color: #667eea;
+	color: #00bcd4;
 	line-height: 1;
 }
 
@@ -521,7 +521,7 @@
 }
 
 .checklist-item.completed {
-	color: #48c774;
+	color: #00bcd4;
 }
 
 .checklist-icon {
@@ -531,7 +531,7 @@
 }
 
 .checklist-item.completed .checklist-icon {
-	color: #48c774;
+	color: #00bcd4;
 }
 
 /* Responsive Design */

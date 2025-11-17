@@ -462,16 +462,15 @@ function saveProfile() {
 			location,
 			bio,
 			visibility,
-			education,
-			experience,
-			skills,
-			links,
-			profilePicture: window.currentProfilePicture || null,
-			resume: null, // TODO: Implement later
-			lastUpdated: new Date().toISOString(),
-		};
-
-		// Save to localStorage with userId-specific key
+		education,
+		experience,
+		skills,
+		links,
+		profilePicture: window.currentProfilePicture || null,
+		photo: window.currentProfilePicture || null,
+		resume: null, // TODO: Implement later
+		lastUpdated: new Date().toISOString(),
+	};		// Save to localStorage with userId-specific key
 		const profileKey = `userProfile_${userId}`;
 		localStorage.setItem(profileKey, JSON.stringify(profileData));
 
@@ -1071,6 +1070,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					const profileKey = `userProfile_${userId}`;
 					const profileData = localStorage.getItem(profileKey);
 					const profile = profileData ? JSON.parse(profileData) : {};
+					profile.profilePicture = imageData;
 					profile.photo = imageData;
 					localStorage.setItem(profileKey, JSON.stringify(profile));
 					localStorage.setItem('profileLastUpdated', Date.now().toString());

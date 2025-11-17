@@ -359,3 +359,48 @@
 		transform: rotate(360deg);
 	}
 }
+
+/* Create Job Alert Button */
+.btn-job-alert {
+	background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+	color: white;
+	border: 2px solid white;
+	border-radius: 8px;
+	padding: 0.75rem 1.75rem;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3), 0 2px 4px rgba(0, 0, 0, 0.1);
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.btn-job-alert:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(6, 182, 212, 0.4), 0 4px 8px rgba(0, 0, 0, 0.15);
+	background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
+}
+
+.btn-job-alert:active {
+	transform: translateY(0);
+	box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
+}
+
+/* Job count display animation */
+#job-count-display {
+	display: inline-block;
+	animation: countFadeIn 0.5s ease;
+}
+
+@keyframes countFadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
