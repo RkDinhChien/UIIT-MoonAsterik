@@ -1,1459 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Moon* - Connect IT Students With Careers</title>
-		<link rel="stylesheet" href="./styles/main.css" />
-		<link rel="stylesheet" href="./styles/index.css" />
-		<link rel="stylesheet" href="./styles/notification.css" />
-	</head>
-	<body>
-		<!-- Simple Navbar -->
-		<nav class="simple-navbar">
-			<div class="container">
-				<a href="index.html" class="navbar-logo">
-					<svg
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-						<path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
-					</svg>
-					<span class="navbar-logo-text"
-						>Moon<span class="asterisk">*</span></span
-					>
-				</a>
-
-				<div class="navbar-center" id="navbarMenu">
-					<a href="#hero" class="navbar-link">Home</a>
-					<a href="#features" class="navbar-link">About us</a>
-					<a href="#how-it-works" class="navbar-link">How it Works</a>
-					<a href="#success-stories-section" class="navbar-link">Blogs</a>
-				</div>
-
-				<div class="navbar-actions">
-					<button class="btn-login" data-modal-open="login">Login</button>
-					<button class="btn-signup" data-modal-open="signup">Sign Up</button>
-				</div>
-
-				<button class="mobile-toggle" id="mobileToggle">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
-			</div>
-		</nav>
-
-		<main>
-			<!-- Hero Section -->
-			<section id="hero" class="hero-section">
-				<div class="hero-overlay"></div>
-
-				<div class="container hero-content">
-					<div class="hero-badge">🚀 Connecting Top IT Talent</div>
-					<h1 class="hero-title">
-						Launch Your <span class="highlight">Tech Career</span>
-					</h1>
-					<p class="hero-description">
-						Moon* connects talented IT students with innovative companies
-						looking for fresh perspectives and cutting-edge skills.
-					</p>
-					<div class="hero-buttons">
-						<button
-							class="btn btn-primary btn-lg btn-hero-primary"
-							data-modal-open="signup"
-						>
-							<svg
-								class="icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-							>
-								<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-								<circle cx="9" cy="7" r="4"></circle>
-								<path
-									d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
-								></path>
-							</svg>
-							I'm a Student
-						</button>
-						<button
-							class="btn btn-lg btn-hero-secondary"
-							data-modal-open="signup"
-						>
-							<svg
-								class="icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-							>
-								<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-								<path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
-							</svg>
-							I'm an Employer
-						</button>
-					</div>
-				</div>
-			</section>
-
-			<!-- Featured Companies Logos -->
-			<section class="companies-section">
-				<div class="companies-header">
-					<h2 class="text-center companies-title">TOP TIER EMPLOYERS</h2>
-				</div>
-				<div class="logos-slider">
-					<div class="logos-track">
-						<a
-							href="https://www.fpt-software.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/fpt.png" alt="FPT Software" />
-						</a>
-						<a
-							href="https://www.vng.com.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/vng.png" alt="VNG Corporation" />
-						</a>
-						<a
-							href="https://vietteltelecom.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/viettel.png" alt="Viettel" />
-						</a>
-						<a
-							href="https://www.vnpt.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/vnpt.png" alt="VNPT" />
-						</a>
-						<a
-							href="https://tiki.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/tiki.png" alt="Tiki" />
-						</a>
-						<a
-							href="https://shopee.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/shopee.png" alt="Shopee" />
-						</a>
-						<a
-							href="https://www.grab.com/vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/grab.png" alt="Grab" />
-						</a>
-						<a
-							href="https://www.momo.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/momo.png" alt="Momo" />
-						</a>
-						<a
-							href="https://www.vingroup.net/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/vingroup.png" alt="VinGroup" />
-						</a>
-						<a
-							href="https://www.cmc.com.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/cmc.png" alt="CMC Corporation" />
-						</a>
-						<a
-							href="https://www.tma.com.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/tma.png" alt="TMA Solutions" />
-						</a>
-						<a
-							href="https://www.nashtechglobal.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/nashtech.png" alt="NashTech" />
-						</a>
-						<a
-							href="https://www.luxoft.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/luxoft.png" alt="Luxoft Vietnam" />
-						</a>
-						<a
-							href="https://kms-technology.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/kms.png" alt="KMS Technology" />
-						</a>
-						<a
-							href="https://www.gameloft.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/gameloft.png" alt="Gameloft" />
-						</a>
-						<!-- Duplicate for seamless loop -->
-						<a
-							href="https://www.fpt-software.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/fpt.png" alt="FPT Software" />
-						</a>
-						<a
-							href="https://www.vng.com.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/vng.png" alt="VNG Corporation" />
-						</a>
-						<a
-							href="https://vietteltelecom.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/viettel.png" alt="Viettel" />
-						</a>
-						<a
-							href="https://www.vnpt.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/vnpt.png" alt="VNPT" />
-						</a>
-						<a
-							href="https://tiki.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/tiki.png" alt="Tiki" />
-						</a>
-						<a
-							href="https://shopee.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/shopee.png" alt="Shopee" />
-						</a>
-						<a
-							href="https://www.grab.com/vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/grab.png" alt="Grab" />
-						</a>
-						<a
-							href="https://www.momo.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/momo.png" alt="Momo" />
-						</a>
-						<a
-							href="https://www.vingroup.net/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/vingroup.png" alt="VinGroup" />
-						</a>
-						<a
-							href="https://www.cmc.com.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/cmc.png" alt="CMC Corporation" />
-						</a>
-						<a
-							href="https://www.tma.com.vn/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/tma.png" alt="TMA Solutions" />
-						</a>
-						<a
-							href="https://www.nashtechglobal.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/nashtech.png" alt="NashTech" />
-						</a>
-						<a
-							href="https://www.luxoft.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/luxoft.png" alt="Luxoft Vietnam" />
-						</a>
-						<a
-							href="https://kms-technology.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/kms.png" alt="KMS Technology" />
-						</a>
-						<a
-							href="https://www.gameloft.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="logo-item"
-						>
-							<img src="./assets/logos/gameloft.png" alt="Gameloft" />
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<!-- Features Section -->
-			<section id="features" class="features-section">
-				<div class="container">
-					<div class="features-grid">
-						<!-- Left Side - Image/CTA -->
-						<div class="features-image-container">
-							<div class="features-decoration-1"></div>
-							<div class="features-decoration-2"></div>
-							<img
-								src="./assets/CTA_photo.png"
-								alt="Students collaborating"
-								class="features-image"
-							/>
-						</div>
-
-						<!-- Right Side - Features -->
-						<div>
-							<h2 class="features-title">
-								Why Choose Moon<span class="gradient-text">*</span>?
-							</h2>
-							<p class="features-description">
-								We've built the most comprehensive platform for connecting IT
-								talent with opportunity
-							</p>
-
-							<div class="features-list">
-								<div class="feature-item">
-									<div class="feature-icon feature-icon-1">
-										<svg
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="white"
-											stroke-width="2.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											style="width: 26px; height: 26px"
-										>
-											<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-										</svg>
-									</div>
-
-									<div class="feature-text">
-										<h3>AI-Powered Matching</h3>
-										<p>
-											Our intelligent algorithm matches students with the
-											perfect opportunities based on skills and preferences.
-										</p>
-									</div>
-								</div>
-
-								<div class="feature-item">
-									<div class="feature-icon feature-icon-2">
-										<svg
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="white"
-											stroke-width="2.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											style="width: 26px; height: 26px"
-										>
-											<path
-												d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-											></path>
-										</svg>
-									</div>
-
-									<div class="feature-text">
-										<h3>Verified Profiles</h3>
-										<p>
-											All student profiles and company listings are verified to
-											ensure authenticity and quality.
-										</p>
-									</div>
-								</div>
-
-								<div class="feature-item">
-									<div class="feature-icon feature-icon-3">
-										<svg
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="white"
-											stroke-width="2.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											style="width: 26px; height: 26px"
-										>
-											<circle cx="12" cy="12" r="10"></circle>
-											<polyline points="12 6 12 12 16 14"></polyline>
-										</svg>
-									</div>
-
-									<div class="feature-text">
-										<h3>Direct Application Tracking</h3>
-										<p>
-											Track your applications in real-time and get instant
-											notifications on status updates.
-										</p>
-									</div>
-								</div>
-
-								<div class="feature-item">
-									<div class="feature-icon feature-icon-4">
-										<svg
-											viewBox="0 0 24 24"
-											fill="none"
-											stroke="white"
-											stroke-width="2.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											style="width: 26px; height: 26px"
-										>
-											<polyline
-												points="22 12 18 12 15 21 9 3 6 12 2 12"
-											></polyline>
-										</svg>
-									</div>
-
-									<div class="feature-text">
-										<h3>Career Growth Tools</h3>
-										<p>
-											Access resources, mentorship programs, and skill
-											assessments to accelerate your career.
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- Stats Section -->
-			<section
-				class="stats-section"
-				style="
-					background: url('./assets/banner số liệu.png') center/cover;
-					position: relative;
-				"
-			>
-				<!-- Overlay for better text readability -->
-				<div
-					style="
-						position: absolute;
-						top: 0;
-						left: 0;
-						right: 0;
-						bottom: 0;
-						background: rgba(102, 126, 234, 0.3);
-						z-index: 1;
-					"
-				></div>
-
-				<!-- Tech Decorations -->
-				<div class="stats-decoration-1" style="z-index: 2"></div>
-				<div class="stats-decoration-2" style="z-index: 2"></div>
-				<div class="stats-grid-pattern" style="z-index: 2; opacity: 0.3"></div>
-
-				<div
-					class="container stats-container"
-					style="position: relative; z-index: 3"
-				>
-					<div class="stats-header">
-						<h2 class="stats-title">Trusted by Thousands</h2>
-					</div>
-
-					<div class="stats-grid">
-						<div class="stat-card" data-aos="fade-up" data-aos-delay="0">
-							<div class="stat-icon stat-icon-1">
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-									<circle cx="9" cy="7" r="4"></circle>
-									<path
-										d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
-									></path>
-								</svg>
-							</div>
-							<div class="stat-number" data-target="12450">0</div>
-							<div class="stat-label">Students Registered</div>
-						</div>
-
-						<div
-							class="stat-card stat-card-highlight"
-							data-aos="fade-up"
-							data-aos-delay="100"
-						>
-							<div class="stat-icon stat-icon-2">
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-									<path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
-								</svg>
-							</div>
-							<div class="stat-number" data-target="850">0</div>
-							<div class="stat-label">Companies Joined</div>
-							<div class="stat-badge">Growing Fast</div>
-						</div>
-
-						<div class="stat-card" data-aos="fade-up" data-aos-delay="200">
-							<div class="stat-icon stat-icon-3">
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-									<path d="M16 2v4M8 2v4M2 11h20"></path>
-								</svg>
-							</div>
-							<div class="stat-number" data-target="3200">0</div>
-							<div class="stat-label">Jobs Posted</div>
-						</div>
-					</div>
-
-					<div class="stats-footer">
-						<div class="stats-metrics">
-							<div class="metric-item">
-								<span class="metric-value">95%</span>
-								<span class="metric-label">Success Rate</span>
-							</div>
-							<div class="metric-divider"></div>
-							<div class="metric-item">
-								<span class="metric-value">4.8/5</span>
-								<span class="metric-label">User Rating</span>
-							</div>
-							<div class="metric-divider"></div>
-							<div class="metric-item">
-								<span class="metric-value">24/7</span>
-								<span class="metric-label">Support</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- How It Works Section -->
-			<section id="how-it-works" class="how-it-works-section">
-				<div class="container">
-					<div class="how-it-works-header">
-						<h2 class="section-title">How It Works</h2>
-					</div>
-
-					<!-- For Students -->
-					<div class="workflow-container">
-						<div class="workflow-header">
-							<div class="workflow-badge student-badge">
-								<svg
-									class="workflow-icon"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-									<circle cx="12" cy="7" r="4"></circle>
-								</svg>
-								<h3 class="workflow-title">For Students</h3>
-							</div>
-						</div>
-
-						<div class="steps-timeline">
-							<div class="timeline-line student-line"></div>
-
-							<div
-								class="step-card student-step"
-								data-aos="fade-right"
-								data-aos-delay="0"
-							>
-								<div class="step-number student-number">1</div>
-								<div class="step-content">
-									<h4 class="step-title">Create Your Profile</h4>
-									<p class="step-description">
-										Build a comprehensive profile showcasing your skills,
-										projects, and experience.
-									</p>
-								</div>
-							</div>
-
-							<div
-								class="step-card student-step"
-								data-aos="fade-right"
-								data-aos-delay="100"
-							>
-								<div class="step-number student-number">2</div>
-								<div class="step-content">
-									<h4 class="step-title">Get AI-Powered Matches</h4>
-									<p class="step-description">
-										Our intelligent algorithm finds perfect job opportunities
-										matching your skills and goals.
-									</p>
-								</div>
-							</div>
-
-							<div
-								class="step-card student-step"
-								data-aos="fade-right"
-								data-aos-delay="200"
-							>
-								<div class="step-number student-number">3</div>
-								<div class="step-content">
-									<h4 class="step-title">Apply with One Click</h4>
-									<p class="step-description">
-										Apply effortlessly and track all applications with real-time
-										status updates.
-									</p>
-								</div>
-							</div>
-
-							<div
-								class="step-card student-step"
-								data-aos="fade-right"
-								data-aos-delay="300"
-							>
-								<div class="step-number student-number">4</div>
-								<div class="step-content">
-									<h4 class="step-title">Launch Your Career</h4>
-									<p class="step-description">
-										Interview with top companies and start your exciting tech
-										career journey.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- For Companies -->
-					<div class="workflow-container">
-						<div class="workflow-header">
-							<div class="workflow-badge company-badge">
-								<svg
-									class="workflow-icon"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-									<path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
-								</svg>
-								<h3 class="workflow-title">For Companies</h3>
-							</div>
-						</div>
-
-						<div class="steps-timeline">
-							<div class="timeline-line company-line"></div>
-
-							<div
-								class="step-card company-step"
-								data-aos="fade-left"
-								data-aos-delay="0"
-							>
-								<div class="step-number company-number">1</div>
-								<div class="step-content">
-									<h4 class="step-title">Post Job Opportunities</h4>
-									<p class="step-description">
-										Create detailed job listings to attract the best IT talent
-										to your company.
-									</p>
-								</div>
-							</div>
-
-							<div
-								class="step-card company-step"
-								data-aos="fade-left"
-								data-aos-delay="100"
-							>
-								<div class="step-number company-number">2</div>
-								<div class="step-content">
-									<h4 class="step-title">Review AI-Matched Candidates</h4>
-									<p class="step-description">
-										Get curated candidates who best match your requirements and
-										company culture.
-									</p>
-								</div>
-							</div>
-
-							<div
-								class="step-card company-step"
-								data-aos="fade-left"
-								data-aos-delay="200"
-							>
-								<div class="step-number company-number">3</div>
-								<div class="step-content">
-									<h4 class="step-title">Schedule & Interview</h4>
-									<p class="step-description">
-										Seamlessly schedule interviews and connect with top
-										candidates.
-									</p>
-								</div>
-							</div>
-
-							<div
-								class="step-card company-step"
-								data-aos="fade-left"
-								data-aos-delay="300"
-							>
-								<div class="step-number company-number">4</div>
-								<div class="step-content">
-									<h4 class="step-title">Build Your Dream Team</h4>
-									<p class="step-description">
-										Make offers and build a strong tech team with fresh talent
-										and innovation.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- Success Stories Section -->
-			<section id="success-stories-section" class="success-stories-section">
-				<div class="container">
-					<div class="success-stories-header">
-						<h2 class="section-title">Success Stories</h2>
-						<p class="section-subtitle">
-							Real stories from our Moon* community
-						</p>
-					</div>
-
-					<div class="success-stories-grid" id="success-stories-grid">
-						<!-- Stories will be populated by JavaScript -->
-					</div>
-
-					<div class="success-stories-footer">
-						<a href="pages/html/blogs.html" class="btn-more-stories">
-							More Success Stories
-							<svg
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							>
-								<path d="M5 12h14M12 5l7 7-7 7"></path>
-							</svg>
-						</a>
-					</div>
-				</div>
-			</section>
-
-			<!-- Story Modal -->
-			<div id="index-story-modal" class="modal">
-				<div class="modal-overlay"></div>
-				<div class="modal-content story-modal-content">
-					<div class="modal-header">
-						<h2 class="modal-title" id="index-story-modal-title">
-							Story Title
-						</h2>
-						<button class="modal-close" onclick="closeIndexStoryModal()">
-							&times;
-						</button>
-					</div>
-					<div class="modal-body story-modal-body">
-						<!-- Story Image -->
-						<div class="story-modal-image-container">
-							<img
-								id="index-story-modal-image"
-								alt="Story"
-								class="story-modal-image"
-							/>
-							<div
-								id="index-story-modal-category"
-								class="story-modal-category"
-							></div>
-						</div>
-
-						<!-- Story Meta -->
-						<div class="story-modal-meta">
-							<div>
-								<div
-									id="index-story-modal-author"
-									class="story-modal-author"
-								></div>
-								<div id="index-story-modal-role" class="story-modal-role"></div>
-							</div>
-							<div class="story-modal-meta-info">
-								<span id="index-story-modal-date"></span>
-								<span id="index-story-modal-readtime"></span>
-							</div>
-						</div>
-
-						<!-- Story Content -->
-						<div id="index-story-modal-content" class="story-modal-text"></div>
-					</div>
-				</div>
-			</div>
-
-			<!-- CTA Section -->
-			<section
-				class="cta-section"
-				style="
-					background: url('./assets/CTA banner.png') center/cover;
-					position: relative;
-				"
-			>
-				<div
-					class="container text-center"
-					style="position: relative; z-index: 2"
-				>
-					<h2 class="cta-title">Ready to Get Started?</h2>
-					<p class="cta-description">
-						Join thousands of students and companies already using
-						<strong>Moon*</strong>
-					</p>
-					<button class="btn btn-lg btn-cta" data-modal-open="signup">
-						🚀 Join Moon* Today
-					</button>
-				</div>
-			</section>
-		</main>
-
-		<!-- Footer -->
-		<footer class="footer">
-			<div class="container footer-content">
-				<div class="footer-grid">
-					<div class="footer-section">
-						<div class="footer-brand">
-							<svg
-								class="icon icon-lg"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-							>
-								<path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-								<path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
-							</svg>
-							<span class="brand-text"
-								>Moon<span class="brand-accent">*</span></span
-							>
-						</div>
-						<p class="footer-description">
-							Connecting IT students with their dream careers.
-						</p>
-					</div>
-
-					<div class="footer-section">
-						<h4 class="footer-heading">Platform</h4>
-						<ul class="footer-links">
-							<li><a href="pages/html/jobs.html">Browse Jobs</a></li>
-							<li><a href="#">For Students</a></li>
-							<li><a href="#">For Companies</a></li>
-						</ul>
-					</div>
-
-					<div class="footer-section">
-						<h4 class="footer-heading">Company</h4>
-						<ul class="footer-links">
-							<li><a href="#">About Us</a></li>
-							<li><a href="pages/html/blogs.html">Blog</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-					</div>
-
-					<div class="footer-section">
-						<h4 class="footer-heading">Legal</h4>
-						<ul class="footer-links">
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms of Service</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="footer-bottom">
-					<p class="footer-copyright">
-						&copy; 2025 Moon*. All rights reserved.
-					</p>
-					<div class="footer-social">
-						<a href="#" class="social-link" aria-label="Facebook">
-							<svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-								<path
-									d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-								></path>
-							</svg>
-						</a>
-						<a href="#" class="social-link" aria-label="Twitter">
-							<svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-								<path
-									d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-								></path>
-							</svg>
-						</a>
-						<a href="#" class="social-link" aria-label="LinkedIn">
-							<svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-								<path
-									d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-								></path>
-								<circle cx="4" cy="4" r="2"></circle>
-							</svg>
-						</a>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-		<!-- Modals -->
-		<div id="signup-modal" class="modal" aria-hidden="true">
-			<div class="modal-overlay" data-modal-close></div>
-			<div class="modal-content modal-content-custom modal-signup-enhanced">
-				<div class="modal-header">
-					<div>
-						<h2 class="modal-title">Create your account</h2>
-						<p class="modal-subtitle">Join thousands of IT professionals</p>
-					</div>
-					<button class="modal-close" data-modal-close>&times;</button>
-				</div>
-
-				<form class="modal-body" id="signup-form">
-					<!-- Account Type Selection -->
-					<div class="form-group">
-						<label class="form-label"
-							>I am a <span class="required">*</span></label
-						>
-						<div class="account-type-pills">
-							<label class="pill-option">
-								<input
-									type="radio"
-									name="account-type"
-									value="student"
-									required
-								/>
-								<span class="pill-label">
-									<svg
-										class="pill-icon"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
-									>
-										<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-										<circle cx="12" cy="7" r="4"></circle>
-									</svg>
-									Student
-								</span>
-							</label>
-							<label class="pill-option">
-								<input
-									type="radio"
-									name="account-type"
-									value="company"
-									required
-								/>
-								<span class="pill-label">
-									<svg
-										class="pill-icon"
-										viewBox="0 0 24 24"
-										fill="none"
-										stroke="currentColor"
-										stroke-width="2"
-									>
-										<rect
-											x="2"
-											y="7"
-											width="20"
-											height="14"
-											rx="2"
-											ry="2"
-										></rect>
-										<path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
-									</svg>
-									Company
-								</span>
-							</label>
-						</div>
-					</div>
-
-					<!-- Personal Information -->
-					<div class="form-section-title">Personal Information</div>
-
-					<div class="form-group">
-						<label class="form-label"
-							>Full Name <span class="required">*</span></label
-						>
-						<div class="input-with-icon">
-							<svg
-								class="input-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-								<circle cx="12" cy="7" r="4"></circle>
-							</svg>
-							<input
-								class="form-input"
-								type="text"
-								name="fullname"
-								placeholder="Enter your full name"
-								required
-							/>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label class="form-label"
-							>Username <span class="required">*</span></label
-						>
-						<div class="input-with-icon">
-							<svg
-								class="input-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path d="M16 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-								<circle cx="9" cy="7" r="4"></circle>
-								<path
-									d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
-								></path>
-							</svg>
-							<input
-								class="form-input"
-								type="text"
-								name="username"
-								id="signup-username"
-								placeholder="Choose a unique username"
-								required
-							/>
-						</div>
-						<div class="input-help" id="username-help"></div>
-					</div>
-
-					<div class="form-group">
-						<label class="form-label"
-							>Email Address <span class="required">*</span></label
-						>
-						<div class="input-with-icon">
-							<svg
-								class="input-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-								></path>
-								<polyline points="22,6 12,13 2,6"></polyline>
-							</svg>
-							<input
-								class="form-input"
-								type="email"
-								name="email"
-								placeholder="your.email@example.com"
-								required
-							/>
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label class="form-label">Phone Number</label>
-						<div class="input-with-icon">
-							<svg
-								class="input-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
-								></path>
-							</svg>
-							<input
-								class="form-input"
-								type="tel"
-								name="phone"
-								placeholder="+84 123 456 789"
-							/>
-						</div>
-					</div>
-
-					<!-- Security -->
-					<div class="form-section-title">Security</div>
-
-					<div class="form-group">
-						<label class="form-label"
-							>Password <span class="required">*</span></label
-						>
-						<div class="input-with-icon password-field">
-							<svg
-								class="input-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-								<path d="M7 11V7a5 5 0 0110 0v4"></path>
-							</svg>
-							<input
-								class="form-input"
-								type="password"
-								name="password"
-								id="signup-password"
-								placeholder="Enter your password"
-								minlength="8"
-								required
-							/>
-							<button
-								type="button"
-								class="password-toggle"
-								onclick="togglePassword('signup-password')"
-							>
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-									<circle cx="12" cy="12" r="3"></circle>
-								</svg>
-							</button>
-						</div>
-						<div class="password-strength-container">
-							<div class="password-strength-bar">
-								<div
-									class="password-strength-fill"
-									id="password-strength-fill"
-								></div>
-							</div>
-							<div
-								class="password-strength-text"
-								id="password-strength-text"
-							></div>
-						</div>
-						<div class="input-help">
-							Must be at least 8 characters with letters and numbers
-						</div>
-					</div>
-
-					<div class="form-group">
-						<label class="form-label"
-							>Confirm Password <span class="required">*</span></label
-						>
-						<div class="input-with-icon password-field">
-							<svg
-								class="input-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-								<path d="M7 11V7a5 5 0 0110 0v4"></path>
-							</svg>
-							<input
-								class="form-input"
-								type="password"
-								name="confirm-password"
-								id="signup-confirm-password"
-								placeholder="Re-enter your password"
-								minlength="8"
-								required
-							/>
-							<button
-								type="button"
-								class="password-toggle"
-								onclick="togglePassword('signup-confirm-password')"
-							>
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-									<circle cx="12" cy="12" r="3"></circle>
-								</svg>
-							</button>
-						</div>
-						<div class="input-help" id="confirm-password-help"></div>
-					</div>
-
-					<!-- Terms & Conditions -->
-					<label class="checkbox-enhanced">
-						<input type="checkbox" name="terms" required />
-						<span class="checkbox-text"
-							>I agree to the
-							<a href="#" class="link-inline">Terms of Service</a> and
-							<a href="#" class="link-inline">Privacy Policy</a></span
-						>
-					</label>
-
-					<label class="checkbox-enhanced">
-						<input type="checkbox" name="newsletter" />
-						<span class="checkbox-text"
-							>Send me updates about new opportunities and features</span
-						>
-					</label>
-
-					<button
-						class="btn btn-primary btn-full btn-signup-submit"
-						type="submit"
-					>
-						<span>Create Account</span>
-						<svg
-							class="btn-icon"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-						>
-							<path d="M5 12h14M12 5l7 7-7 7"></path>
-						</svg>
-					</button>
-
-					<div class="form-footer-text">
-						Already have an account?
-						<a href="#" class="link-signup" data-modal-open="login">Sign in</a>
-					</div>
-
-					<!-- Social Login Options -->
-					<div class="divider">
-						<span>or continue with</span>
-					</div>
-
-					<div class="social-signup-section">
-						<button type="button" class="btn-social-signup btn-google">
-							<svg class="social-icon" viewBox="0 0 24 24">
-								<path
-									fill="#4285F4"
-									d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-								/>
-								<path
-									fill="#34A853"
-									d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-								/>
-								<path
-									fill="#FBBC05"
-									d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
-								/>
-								<path
-									fill="#EA4335"
-									d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
-								/>
-							</svg>
-							<span>Google</span>
-						</button>
-
-						<button type="button" class="btn-social-signup btn-facebook">
-							<svg class="social-icon" fill="#1877F2" viewBox="0 0 24 24">
-								<path
-									d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-								/>
-							</svg>
-							<span>Facebook</span>
-						</button>
-
-						<button type="button" class="btn-social-signup btn-github">
-							<svg class="social-icon" fill="#24292e" viewBox="0 0 24 24">
-								<path
-									d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-								/>
-							</svg>
-							<span>GitHub</span>
-						</button>
-					</div>
-				</form>
-			</div>
-		</div>
-
-		<div id="login-modal" class="modal" aria-hidden="true">
-			<div class="modal-overlay" data-modal-close></div>
-			<div class="modal-content modal-content-login">
-				<div class="modal-header">
-					<h2 class="modal-title">Welcome Back to Moon*</h2>
-					<button class="modal-close" data-modal-close>&times;</button>
-				</div>
-				<p class="modal-description">Sign in to access your account</p>
-
-				<!-- Step 1: Choose Account Type -->
-				<div class="modal-body" id="login-step-1">
-					<div class="account-type-selection">
-						<button
-							type="button"
-							class="account-type-btn"
-							onclick="showLoginForm('student')"
-						>
-							<svg
-								class="account-type-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-								<circle cx="12" cy="7" r="4"></circle>
-							</svg>
-							<span>Student</span>
-						</button>
-						<button
-							type="button"
-							class="account-type-btn"
-							onclick="showLoginForm('company')"
-						>
-							<svg
-								class="account-type-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-								<path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
-							</svg>
-							<span>Company</span>
-						</button>
-					</div>
-				</div>
-
-				<!-- Step 2: Login Form -->
-				<div class="modal-body" id="login-step-2" style="display: none">
-					<div class="login-demo-notice">
-						<svg
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-						>
-							<circle cx="12" cy="12" r="10"></circle>
-							<path d="M12 16v-4M12 8h.01"></path>
-						</svg>
-						<span
-							><strong>Demo Mode</strong> - Enter any email and password to
-							continue</span
-						>
-					</div>
-
-					<form id="login-form">
-						<input type="hidden" id="login-account-type" name="account-type" />
-
-						<label class="form-group">
-							<span class="form-label">Email</span>
-							<input
-								class="form-input"
-								type="email"
-								name="email"
-								placeholder="student@university.edu"
-								required
-							/>
-						</label>
-
-						<label class="form-group">
-							<span class="form-label">Password</span>
-							<input
-								class="form-input"
-								type="password"
-								name="password"
-								placeholder="Enter your password"
-								required
-							/>
-						</label>
-
-						<div class="form-footer">
-							<label class="checkbox">
-								<input type="checkbox" name="remember" />
-								<span>Remember me</span>
-							</label>
-							<a href="#" class="link-forgot-password">Forgot password?</a>
-						</div>
-
-						<button
-							class="btn btn-primary btn-full btn-login-submit"
-							type="submit"
-						>
-							<span id="login-btn-text">Sign In as Student</span>
-						</button>
-					</form>
-
-					<button
-						type="button"
-						class="btn-back-link"
-						onclick="backToAccountTypeSelection()"
-					>
-						Back
-					</button>
-
-					<div class="login-footer-text">
-						Don't have an account?
-						<a href="#" class="link-signup" data-modal-open="signup">Sign up</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<script src="./js/modules/signup.js"></script>
-		<script src="./js/modules/login.js"></script>
-		<script src="./js/modules/notification.js"></script>
-		<script src="./js/pages/index.js"></script>
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moon* - Connect IT Students With Careers</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link rel="stylesheet" href="./styles/index.css" />
+</head>
+<body>
+  <!-- Simple Navbar -->
+  <nav class="simple-navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="navbar-logo-text">Moon<span class="asterisk">*</span></span>
+      </a>
+      
+      <div class="navbar-center" id="navbarMenu">
+        <a href="#hero" class="navbar-link">Home</a>
+        <a href="#features" class="navbar-link">About us</a>
+        <a href="#how-it-works" class="navbar-link">How it Works</a>
+        <a href="#success-stories-section" class="navbar-link">Blogs</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <button class="btn-login" data-modal-open="login">Login</button>
+        <button class="btn-signup" data-modal-open="signup">Sign Up</button>
+      </div>
+      
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-overlay"></div>
+      
+      <div class="container hero-content">
+        <h1 class="hero-title">
+          Launch Your <span class="highlight">Tech Career</span>
+        </h1>
+        <p class="hero-description">
+          Moon* connects talented IT students with innovative companies looking for fresh perspectives and cutting-edge skills.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary btn-lg btn-hero-primary" data-modal-open="signup">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path>
+            </svg>
+            I'm a Student
+          </button>
+          <button class="btn btn-lg btn-hero-secondary" data-modal-open="signup">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
+            </svg>
+            I'm an Employer
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Companies Logos -->
+    <section class="companies-section">
+      <div class="companies-header">
+        <h2 class="text-center companies-title">
+          TOP TIER EMPLOYERS
+        </h2>
+      </div>
+      <div class="logos-slider">
+        <div class="logos-track">
+          <a href="https://www.fpt-software.com/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/fpt.png" alt="FPT Software" />
+          </a>
+          <a href="https://www.vng.com.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/vng.png" alt="VNG Corporation" />
+          </a>
+          <a href="https://vietteltelecom.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/viettel.png" alt="Viettel" />
+          </a>
+          <a href="https://www.vnpt.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/vnpt.png" alt="VNPT" />
+          </a>
+          <a href="https://tiki.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/tiki.png" alt="Tiki" />
+          </a>
+          <a href="https://shopee.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/shopee.png" alt="Shopee" />
+          </a>
+          <a href="https://www.grab.com/vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/grab.png" alt="Grab" />
+          </a>
+          <a href="https://www.momo.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/momo.png" alt="Momo" />
+          </a>
+          <a href="https://www.vingroup.net/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/vingroup.png" alt="VinGroup" />
+          </a>
+          <a href="https://www.cmc.com.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/cmc.png" alt="CMC Corporation" />
+          </a>
+          <a href="https://www.tma.com.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/tma.png" alt="TMA Solutions" />
+          </a>
+          <a href="https://www.nashtechglobal.com/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/nashtech.png" alt="NashTech" />
+          </a>
+          <a href="https://www.luxoft.com/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/luxoft.png" alt="Luxoft Vietnam" />
+          </a>
+          <a href="https://kms-technology.com/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/kms.png" alt="KMS Technology" />
+          </a>
+          <a href="https://www.gameloft.com/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/gameloft.png" alt="Gameloft" />
+          </a>
+          <!-- Duplicate for seamless loop -->
+          <a href="https://www.fpt-software.com/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/fpt.png" alt="FPT Software" />
+          </a>
+          <a href="https://www.vng.com.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/vng.png" alt="VNG Corporation" />
+          </a>
+          <a href="https://vietteltelecom.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/viettel.png" alt="Viettel" />
+          </a>
+          <a href="https://www.vnpt.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/vnpt.png" alt="VNPT" />
+          </a>
+          <a href="https://tiki.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/tiki.png" alt="Tiki" />
+          </a>
+          <a href="https://shopee.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/shopee.png" alt="Shopee" />
+          </a>
+          <a href="https://www.grab.com/vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/grab.png" alt="Grab" />
+          </a>
+          <a href="https://www.momo.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/momo.png" alt="Momo" />
+          </a>
+          <a href="https://www.vingroup.net/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/vingroup.png" alt="VinGroup" />
+          </a>
+          <a href="https://www.cmc.com.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/cmc.png" alt="CMC Corporation" />
+          </a>
+          <a href="https://www.tma.com.vn/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/tma.png" alt="TMA Solutions" />
+          </a>
+          <a href="https://www.nashtechglobal.com/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/nashtech.png" alt="NashTech" />
+          </a>
+          <a href="https://www.luxoft.com/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/luxoft.png" alt="Luxoft Vietnam" />
+          </a>
+          <a href="https://kms-technology.com/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/kms.png" alt="KMS Technology" />
+          </a>
+          <a href="https://www.gameloft.com/" target="_blank" rel="noopener noreferrer" class="logo-item">
+            <img src="./assets/logos/gameloft.png" alt="Gameloft" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="features-grid">
+          
+          <!-- Left Side - Image/CTA -->
+          <div class="features-image-container">
+            <div class="features-decoration-1"></div>
+            <div class="features-decoration-2"></div>
+            <img src="./assets/CTA_photo.png" alt="Students collaborating" class="features-image" />
+          </div>
+          
+          <!-- Right Side - Features -->
+          <div>
+            <h2 class="features-title">
+              Why Choose Moon<span class="gradient-text">*</span>?
+            </h2>
+            <p class="features-description">
+              We've built the most comprehensive platform for connecting IT talent with opportunity
+            </p>
+            
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon feature-icon-1">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 26px; height: 26px;">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                  </svg>
+                </div>
+                
+                <div class="feature-text">
+                  <h3>AI-Powered Matching</h3>
+                  <p>Our intelligent algorithm matches students with the perfect opportunities based on skills and preferences.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon feature-icon-2">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 26px; height: 26px;">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                
+                <div class="feature-text">
+                  <h3>Verified Profiles</h3>
+                  <p>All student profiles and company listings are verified to ensure authenticity and quality.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon feature-icon-3">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 26px; height: 26px;">
+                    <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                
+                <div class="feature-text">
+                  <h3>Direct Application Tracking</h3>
+                  <p>Track your applications in real-time and get instant notifications on status updates.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon feature-icon-4">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 26px; height: 26px;">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </div>
+                
+                <div class="feature-text">
+                  <h3>Career Growth Tools</h3>
+                  <p>Access resources, mentorship programs, and skill assessments to accelerate your career.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <!-- Tech Decorations -->
+      <div class="stats-decoration-1"></div>
+      <div class="stats-decoration-2"></div>
+      <div class="stats-grid-pattern"></div>
+      
+      <div class="container stats-container">
+        <div class="grid md-grid-cols-3 gap-lg">
+          <div class="stat-card">
+            <div class="stat-number" data-target="12450">0+</div>
+            <div class="stat-label">Students Registered</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number" data-target="850">0+</div>
+            <div class="stat-label">Companies Joined</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number" data-target="3200">0+</div>
+            <div class="stat-label">Jobs Posted</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+      <div class="container">
+        <div class="how-it-works-header">
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-subtitle">Simple steps to connect talent with opportunity</p>
+        </div>
+
+        <!-- For Students -->
+        <div class="workflow-container">
+          <div class="workflow-header">
+            <svg class="workflow-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <h3 class="workflow-title">For Students</h3>
+          </div>
+          
+          <div class="steps-grid">
+            <div class="step-card student-step">
+              <div class="step-number student-number">1</div>
+              <div class="step-content">
+                <h4 class="step-title">Create Profile</h4>
+                <p class="step-description">Build your profile with skills, projects, and experience</p>
+              </div>
+            </div>
+
+            <div class="step-card student-step">
+              <div class="step-number student-number">2</div>
+              <div class="step-content">
+                <h4 class="step-title">Get Matched</h4>
+                <p class="step-description">AI finds perfect opportunities for your skills</p>
+              </div>
+            </div>
+
+            <div class="step-card student-step">
+              <div class="step-number student-number">3</div>
+              <div class="step-content">
+                <h4 class="step-title">Apply Easily</h4>
+                <p class="step-description">One-click apply and track applications</p>
+              </div>
+            </div>
+
+            <div class="step-card student-step">
+              <div class="step-number student-number">4</div>
+              <div class="step-content">
+                <h4 class="step-title">Start Career</h4>
+                <p class="step-description">Interview and launch your tech career</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- For Companies -->
+        <div class="workflow-container">
+          <div class="workflow-header">
+            <svg class="workflow-icon" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
+            </svg>
+            <h3 class="workflow-title company-title">For Companies</h3>
+          </div>
+          
+          <div class="steps-grid">
+            <div class="step-card company-step">
+              <div class="step-number company-number">1</div>
+              <div class="step-content">
+                <h4 class="step-title">Post Jobs</h4>
+                <p class="step-description">Create detailed listings to attract top talent</p>
+              </div>
+            </div>
+
+            <div class="step-card company-step">
+              <div class="step-number company-number">2</div>
+              <div class="step-content">
+                <h4 class="step-title">Review Candidates</h4>
+                <p class="step-description">Get AI-matched profiles based on requirements</p>
+              </div>
+            </div>
+
+            <div class="step-card company-step">
+              <div class="step-number company-number">3</div>
+              <div class="step-content">
+                <h4 class="step-title">Schedule Interviews</h4>
+                <p class="step-description">Connect and interview with ease</p>
+              </div>
+            </div>
+
+            <div class="step-card company-step">
+              <div class="step-number company-number">4</div>
+              <div class="step-content">
+                <h4 class="step-title">Build Your Team</h4>
+                <p class="step-description">Hire and grow with fresh talent</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section id ="success-stories-section" class="success-stories-section">
+      <div class="container">
+        <div class="success-stories-header">
+          <h2 class="section-title">Success Stories</h2>
+          <p class="section-subtitle">Real stories from our Moon* community</p>
+        </div>
+
+        <div class="success-stories-grid" id="success-stories-grid">
+          <!-- Stories will be populated by JavaScript -->
+        </div>
+
+        <div class="success-stories-footer">
+          <a href="pages/html/blogs.html" class="btn-more-stories">
+            More Success Stories
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Modal -->
+    <div id="index-story-modal" class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content story-modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="index-story-modal-title">Story Title</h2>
+          <button class="modal-close" onclick="closeIndexStoryModal()">&times;</button>
+        </div>
+        <div class="modal-body story-modal-body">
+          <!-- Story Image -->
+          <div class="story-modal-image-container">
+            <img id="index-story-modal-image" alt="Story" class="story-modal-image" />
+            <div id="index-story-modal-category" class="story-modal-category"></div>
+          </div>
+
+          <!-- Story Meta -->
+          <div class="story-modal-meta">
+            <div>
+              <div id="index-story-modal-author" class="story-modal-author"></div>
+              <div id="index-story-modal-role" class="story-modal-role"></div>
+            </div>
+            <div class="story-modal-meta-info">
+              <span id="index-story-modal-date"></span>
+              <span id="index-story-modal-readtime"></span>
+            </div>
+          </div>
+
+          <!-- Story Content -->
+          <div id="index-story-modal-content" class="story-modal-text"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container text-center">
+        <h2 class="cta-title">Ready to Get Started?</h2>
+        <p class="cta-description">
+          Join thousands of students and companies already using Moon*
+        </p>
+        <button class="btn btn-lg btn-cta" data-modal-open="signup">
+          Join Moon* Today
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="brand-text">Moon<span class="brand-accent">*</span></span>
+          </div>
+          <p class="footer-description">Connecting IT students with their dream careers.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="pages/html/jobs.html">Browse Jobs</a></li>
+            <li><a href="#">For Students</a></li>
+            <li><a href="#">For Companies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="pages/html/blogs.html">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 Moon*. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+  <div id="signup-modal" class="modal" aria-hidden="true">
+    <div class="modal-overlay" data-modal-close></div>
+    <div class="modal-content modal-content-custom">
+      <div class="modal-header">
+        <h2 class="modal-title">Create your account</h2>
+        <button class="modal-close" data-modal-close>&times;</button>
+      </div>
+      <p class="modal-description">Tell us a bit about you and start matching today.</p>
+      <form class="modal-body" id="signup-form">
+        <label class="form-group">
+          <span class="form-label">Username</span>
+          <input class="form-input" type="text" name="username" placeholder="Enter your username" required />
+        </label>
+        <label class="form-group">
+          <span class="form-label">Gmail</span>
+          <input class="form-input" type="email" name="email" placeholder="your.email@gmail.com" required />
+        </label>
+        <label class="form-group">
+          <span class="form-label">Password</span>
+          <input class="form-input" type="password" name="password" placeholder="Enter your password" minlength="8" required />
+        </label>
+        <label class="form-group">
+          <span class="form-label">Confirm Password</span>
+          <input class="form-input" type="password" name="confirm-password" placeholder="Re-enter your password" minlength="8" required />
+        </label>
+        <label class="form-group">
+          <span class="form-label">Account Type</span>
+          <select class="form-input" name="account-type" required>
+            <option value="">Select account type</option>
+            <option value="student">Student</option>
+            <option value="company">Company</option>
+          </select>
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="terms" required />
+          <span>I agree to the terms and privacy policy.</span>
+        </label>
+        <button class="btn btn-primary btn-full" type="submit">Create account</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="login-modal" class="modal" aria-hidden="true">
+    <div class="modal-overlay" data-modal-close></div>
+    <div class="modal-content modal-content-login">
+      <div class="modal-header">
+        <h2 class="modal-title">Welcome Back to Moon*</h2>
+        <button class="modal-close" data-modal-close>&times;</button>
+      </div>
+      <p class="modal-description">Sign in to access your account</p>
+      
+      <!-- Step 1: Choose Account Type -->
+      <div class="modal-body" id="login-step-1">
+        <div class="account-type-selection">
+          <button type="button" class="account-type-btn" onclick="showLoginForm('student')">
+            <svg class="account-type-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>Student</span>
+          </button>
+          <button type="button" class="account-type-btn" onclick="showLoginForm('company')">
+            <svg class="account-type-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
+            </svg>
+            <span>Company</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Login Form -->
+      <div class="modal-body" id="login-step-2" style="display: none;">
+        <div class="login-demo-notice">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 16v-4M12 8h.01"></path>
+          </svg>
+          <span><strong>Demo Mode</strong> - Enter any email and password to continue</span>
+        </div>
+        
+        <form id="login-form">
+          <input type="hidden" id="login-account-type" name="account-type" />
+          
+          <label class="form-group">
+            <span class="form-label">Email</span>
+            <input class="form-input" type="email" name="email" placeholder="student@university.edu" required />
+          </label>
+          
+          <label class="form-group">
+            <span class="form-label">Password</span>
+            <input class="form-input" type="password" name="password" placeholder="Enter your password" required />
+          </label>
+          
+          <div class="form-footer">
+            <label class="checkbox">
+              <input type="checkbox" name="remember" />
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="link-forgot-password">Forgot password?</a>
+          </div>
+          
+          <button class="btn btn-primary btn-full btn-login-submit" type="submit">
+            <span id="login-btn-text">Sign In as Student</span>
+          </button>
+        </form>
+        
+        <button type="button" class="btn-back-link" onclick="backToAccountTypeSelection()">
+          Back
+        </button>
+        
+        <div class="login-footer-text">
+          Don't have an account? <a href="#" class="link-signup" data-modal-open="signup">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/modules/signup.js"></script>
+  <script src="./js/modules/login.js"></script>
+  <script src="./js/pages/index.js"></script>
+</body>
 </html>

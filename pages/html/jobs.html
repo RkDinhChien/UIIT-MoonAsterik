@@ -1,495 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Moon* - Job Marketplace</title>
-		<link rel="stylesheet" href="../../styles/main.css" />
-		<link rel="stylesheet" href="../../styles/index.css" />
-		<link rel="stylesheet" href="../../styles/jobs.css" />
-		<link rel="stylesheet" href="../../styles/notification.css" />
-	</head>
-	<body>
-		<!-- Dashboard Navbar -->
-		<nav
-			class="simple-navbar"
-			style="
-				background: white;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-				position: sticky;
-				top: 0;
-				z-index: 100;
-			"
-		>
-			<div class="container">
-				<a href="../../index.html" class="navbar-logo">
-					<svg
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-						<path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
-					</svg>
-					<span class="navbar-logo-text"
-						>Moon<span class="asterisk">*</span></span
-					>
-				</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moon* - Job Marketplace</title>
+  <link rel="stylesheet" href="../../styles/main.css" />
+  <link rel="stylesheet" href="../../styles/index.css" />
+  <link rel="stylesheet" href="../../styles/jobs.css" />
+</head>
+<body>
+  <!-- Dashboard Navbar -->
+  <nav class="simple-navbar" style="background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100;">
+    <div class="container">
+      <a href="../../index.html" class="navbar-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="navbar-logo-text">Moon<span class="asterisk">*</span></span>
+      </a>
+      
+      <div class="navbar-center" id="navbarMenu">
+        <a href="student-dashboard.html" class="navbar-link">Dashboard</a>
+        <a href="profile.html" class="navbar-link">Profile</a>
+        <a href="jobs.html" class="navbar-link" style="color: #00BCD4; font-weight: 600;">Jobs</a>
+        <a href="applications.html" class="navbar-link">My Applications</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <button class="btn btn-primary" onclick="logout()" style="padding: 0.5rem 1.5rem;">
+          Logout
+        </button>
+      </div>
+      
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
 
-				<div class="navbar-center" id="navbarMenu">
-					<a href="student-dashboard.html" class="navbar-link">Dashboard</a>
-					<a href="profile.html" class="navbar-link">Profile</a>
-					<a
-						href="jobs.html"
-						class="navbar-link"
-						style="color: #00bcd4; font-weight: 600"
-						>Jobs</a
-					>
-					<a href="applications.html" class="navbar-link">My Applications</a>
-				</div>
+  <main>
+    <section class="page-hero" style="background: linear-gradient(135deg, #00BCD4 0%, #4DD0E1 100%); padding: 3rem 1rem; color: white;">
+      <div class="container">
+        <p class="eyebrow" style="color: rgba(255, 255, 255, 0.9);">Opportunity board</p>
+        <h1 style="color: white; margin-bottom: 1rem;">Find the role that matches your stack</h1>
+        <p class="lead" style="color: rgba(255, 255, 255, 0.95); max-width: 700px;">
+          Filters designed for fast-moving students. No fluff - just verified openings and transparent salary bands.
+        </p>
+        
+        <!-- Search & Filters -->
+        <div class="filters" style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <input 
+            type="text" 
+            class="form-input" 
+            placeholder="Search by title, company, or skill" 
+            style="flex: 1; min-width: 200px; background: white;" 
+            onkeypress="if(event.key==='Enter') applyFilters()"
+          />
+          <select class="form-input" style="min-width: 150px; background: white;" onchange="applyFilters()">
+            <option value="">All locations</option>
+            <option value="Ho Chi Minh City">Ho Chi Minh City</option>
+            <option value="Hanoi">Hanoi</option>
+            <option value="Da Nang">Da Nang</option>
+          </select>
+          <button class="btn btn-primary" style="background: white; color: #00BCD4; font-weight: 600;" onclick="applyFilters()">
+            Apply filters
+          </button>
+        </div>
+      </div>
+    </section>
 
-				<div class="navbar-actions">
-					<div class="user-dropdown">
-						<button class="user-dropdown-toggle" id="userDropdownToggle">
-							<div class="user-avatar">
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-									<circle cx="12" cy="7" r="4"></circle>
-								</svg>
-							</div>
-							<span class="user-name" id="userName">Student</span>
-							<svg
-								class="dropdown-arrow"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<polyline points="6 9 12 15 18 9"></polyline>
-							</svg>
-						</button>
+    <section class="section" style="padding: 3rem 1rem;">
+      <div class="container">
+        <div class="list-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <p style="font-size: 1.125rem;"><strong>87</strong> roles open this week.</p>
+          <button class="btn btn-outline">Create job alert</button>
+        </div>
 
-						<div class="user-dropdown-menu" id="userDropdownMenu">
-							<div class="dropdown-header">
-								<div class="dropdown-user-info">
-									<div class="dropdown-user-name" id="dropdownUserName">
-										Student
-									</div>
-									<div class="dropdown-user-email" id="dropdownUserEmail">
-										student@example.com
-									</div>
-								</div>
-							</div>
-							<div class="dropdown-divider"></div>
-							<a href="profile.html" class="dropdown-item">
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-									<circle cx="12" cy="7" r="4"></circle>
-								</svg>
-								<span>My Profile</span>
-							</a>
-							<a href="profile.html" class="dropdown-item">
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"
-									></path>
-									<path
-										d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"
-									></path>
-								</svg>
-								<span>Edit Profile</span>
-							</a>
-							<a href="applications.html" class="dropdown-item">
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path
-										d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"
-									></path>
-									<polyline points="14 2 14 8 20 8"></polyline>
-								</svg>
-								<span>My Applications</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<button class="dropdown-item" onclick="logout()">
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-								>
-									<path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"></path>
-									<polyline points="16 17 21 12 16 7"></polyline>
-									<line x1="21" y1="12" x2="9" y2="12"></line>
-								</svg>
-								<span>Logout</span>
-							</button>
-						</div>
-					</div>
-				</div>
+        <div class="job-list" id="job-list" style="display: flex; flex-direction: column; gap: 1rem;">
+          <!-- Jobs will be loaded dynamically from localStorage -->
+        </div>
 
-				<button class="mobile-toggle" id="mobileToggle">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
-			</div>
-		</nav>
+        <!-- Pagination (will be populated dynamically) -->
+        <div id="pagination-container" style="margin-top: 2rem; display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+        </div>
+      </div>
+    </section>
+  </main>
 
-		<main>
-			<section
-				class="page-hero"
-				style="
-					background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.35)),
-						url('../../assets/banner jobs.png') center center/cover no-repeat;
-					padding: 4rem 1rem 4rem 2rem;
-					color: white;
-					position: relative;
-					min-height: 320px;
-					height: auto;
-					display: flex;
-					align-items: center;
-					background-attachment: scroll;
-					overflow: hidden;
-					background-size: cover;
-					background-position: center center;
-				"
-			>
-				<div
-					class="container"
-					style="position: relative; z-index: 1; max-width: 1200px"
-				>
-					<div style="max-width: 700px">
-						<p
-							class="eyebrow"
-							style="
-								color: #ffd700;
-								font-weight: 600;
-								font-size: 0.95rem;
-								letter-spacing: 0.5px;
-								margin-bottom: 1rem;
-								text-transform: uppercase;
-							"
-						>
-							🚀 Opportunity Board
-						</p>
-						<h1
-							style="
-								color: white;
-								margin-bottom: 1.5rem;
-								font-size: 3rem;
-								font-weight: 700;
-								line-height: 1.2;
-								text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
-							"
-						>
-							Find the Role That Matches Your Stack
-						</h1>
-						<p
-							class="lead"
-							style="
-								color: rgba(255, 255, 255, 0.95);
-								max-width: 600px;
-								font-size: 1.1rem;
-								line-height: 1.6;
-								text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-								margin-bottom: 2rem;
-							"
-						>
-							Filters designed for fast-moving students. No fluff - just
-							verified openings and transparent salary bands.
-						</p>
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="brand-text">Moon<span class="brand-accent">*</span></span>
+          </div>
+          <p class="footer-description">Connecting IT students with their dream careers.</p>
+        </div>
 
-						<!-- Search & Filters -->
-						<div
-							class="filters"
-							style="
-								margin-top: 2rem;
-								display: flex;
-								gap: 0.75rem;
-								flex-wrap: wrap;
-								max-width: 650px;
-							"
-						>
-							<input
-								type="text"
-								class="form-input"
-								placeholder="Search by title, company, or skill"
-								style="
-									flex: 1;
-									min-width: 250px;
-									background: white;
-									padding: 0.75rem 1rem;
-								"
-								onkeypress="if(event.key==='Enter') applyFilters()"
-							/>
-							<select
-								class="form-input"
-								style="width: 180px; background: white; padding: 0.75rem 1rem"
-								onchange="applyFilters()"
-							>
-								<option value="">All locations</option>
-								<option value="Ho Chi Minh City">Ho Chi Minh City</option>
-								<option value="Hanoi">Hanoi</option>
-								<option value="Da Nang">Da Nang</option>
-							</select>
-							<button
-								class="btn btn-primary"
-								style="
-									background: linear-gradient(135deg, #00bcd4 0%, #00acc1 100%);
-									color: white;
-									font-weight: 600;
-									padding: 0.75rem 1.75rem;
-									white-space: nowrap;
-									box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
-									display: flex;
-									align-items: center;
-									gap: 0.5rem;
-									border: none;
-									transition: all 0.3s ease;
-								"
-								onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 16px rgba(0,188,212,0.4)';"
-								onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,188,212,0.3)';"
-								onclick="applyFilters()"
-							>
-								<svg
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									style="width: 18px; height: 18px"
-								>
-									<circle cx="11" cy="11" r="8"></circle>
-									<path d="M21 21l-4.35-4.35"></path>
-								</svg>
-								Search
-							</button>
-						</div>
-					</div>
-				</div>
-			</section>
+        <div class="footer-section">
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="jobs.html">Browse Jobs</a></li>
+            <li><a href="#">For Students</a></li>
+            <li><a href="#">For Companies</a></li>
+          </ul>
+        </div>
 
-			<section class="section" style="padding: 3rem 1rem">
-				<div class="container">
-					<div
-						class="list-header"
-						style="
-							display: flex;
-							justify-content: space-between;
-							align-items: center;
-							margin-bottom: 2rem;
-						"
-					>
-						<p style="font-size: 1.125rem">
-							<strong id="job-count-display">0</strong> roles open this week.
-						</p>
-						<button class="btn-job-alert">🔔 Create job alert</button>
-					</div>
+        <div class="footer-section">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
 
-					<div
-						class="job-list"
-						id="job-list"
-						style="display: flex; flex-direction: column; gap: 1rem"
-					>
-						<!-- Jobs will be loaded dynamically from localStorage -->
-					</div>
+        <div class="footer-section">
+          <h4 class="footer-heading">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
 
-					<!-- Pagination (will be populated dynamically) -->
-					<div
-						id="pagination-container"
-						style="
-							margin-top: 2rem;
-							display: flex;
-							justify-content: center;
-							gap: 0.5rem;
-							flex-wrap: wrap;
-						"
-					></div>
-				</div>
-			</section>
-		</main>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 Moon*. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-		<footer class="footer">
-			<div class="container footer-content">
-				<div class="footer-grid">
-					<div class="footer-section">
-						<div class="footer-brand">
-							<svg
-								class="icon icon-lg"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-							>
-								<path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-								<path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
-							</svg>
-							<span class="brand-text"
-								>Moon<span class="brand-accent">*</span></span
-							>
-						</div>
-						<p class="footer-description">
-							Connecting IT students with their dream careers.
-						</p>
-					</div>
+  <div id="signup-modal" class="modal" aria-hidden="true">
+    <div class="modal-overlay" data-modal-close></div>
+    <div class="modal-content" style="max-width: 560px">
+      <div class="modal-header">
+        <h2 class="modal-title">Create your account</h2>
+        <button class="modal-close" data-modal-close>&times;</button>
+      </div>
+      <p class="modal-description">Tell us a bit about you and start matching today.</p>
+      <form class="modal-body" id="signup-form">
+        <label class="form-group">
+          <span class="form-label">Full name</span>
+          <input class="form-input" type="text" name="name" required />
+        </label>
+        <label class="form-group">
+          <span class="form-label">Email</span>
+          <input class="form-input" type="email" name="email" required />
+        </label>
+        <label class="form-group">
+          <span class="form-label">Choose a path</span>
+          <select class="form-input" name="role" required>
+            <option value="">Select your role</option>
+            <option value="student">I'm a Student</option>
+            <option value="employer">I'm an Employer</option>
+          </select>
+        </label>
+        <label class="form-group">
+          <span class="form-label">Password</span>
+          <input class="form-input" type="password" name="password" minlength="8" required />
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="terms" required />
+          <span>I agree to the terms and privacy policy.</span>
+        </label>
+        <button class="btn btn-primary btn-full" type="submit">Create account</button>
+      </form>
+    </div>
+  </div>
 
-					<div class="footer-section">
-						<h4 class="footer-heading">Platform</h4>
-						<ul class="footer-links">
-							<li><a href="jobs.html">Browse Jobs</a></li>
-							<li><a href="#">For Students</a></li>
-							<li><a href="#">For Companies</a></li>
-						</ul>
-					</div>
+  <div id="login-modal" class="modal" aria-hidden="true">
+    <div class="modal-overlay" data-modal-close></div>
+    <div class="modal-content" style="max-width: 480px">
+      <div class="modal-header">
+        <h2 class="modal-title">Welcome back</h2>
+        <button class="modal-close" data-modal-close>&times;</button>
+      </div>
+      <form class="modal-body" id="login-form">
+        <label class="form-group">
+          <span class="form-label">Email</span>
+          <input class="form-input" type="email" name="email" required />
+        </label>
+        <label class="form-group">
+          <span class="form-label">Password</span>
+          <input class="form-input" type="password" name="password" required />
+        </label>
+        <button class="btn btn-primary btn-full" type="submit">Sign in</button>
+      </form>
+    </div>
+  </div>
 
-					<div class="footer-section">
-						<h4 class="footer-heading">Company</h4>
-						<ul class="footer-links">
-							<li><a href="#">About Us</a></li>
-							<li><a href="blogs.html">Blog</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-					</div>
-
-					<div class="footer-section">
-						<h4 class="footer-heading">Legal</h4>
-						<ul class="footer-links">
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms of Service</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="footer-bottom">
-					<p class="footer-copyright">
-						&copy; 2025 Moon*. All rights reserved.
-					</p>
-					<div class="footer-social">
-						<a href="#" class="social-link" aria-label="Facebook">
-							<svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-								<path
-									d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
-								></path>
-							</svg>
-						</a>
-						<a href="#" class="social-link" aria-label="Twitter">
-							<svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-								<path
-									d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
-								></path>
-							</svg>
-						</a>
-						<a href="#" class="social-link" aria-label="LinkedIn">
-							<svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-								<path
-									d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-								></path>
-								<circle cx="4" cy="4" r="2"></circle>
-							</svg>
-						</a>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-		<div id="signup-modal" class="modal" aria-hidden="true">
-			<div class="modal-overlay" data-modal-close></div>
-			<div class="modal-content" style="max-width: 560px">
-				<div class="modal-header">
-					<h2 class="modal-title">Create your account</h2>
-					<button class="modal-close" data-modal-close>&times;</button>
-				</div>
-				<p class="modal-description">
-					Tell us a bit about you and start matching today.
-				</p>
-				<form class="modal-body" id="signup-form">
-					<label class="form-group">
-						<span class="form-label">Full name</span>
-						<input class="form-input" type="text" name="name" required />
-					</label>
-					<label class="form-group">
-						<span class="form-label">Email</span>
-						<input class="form-input" type="email" name="email" required />
-					</label>
-					<label class="form-group">
-						<span class="form-label">Choose a path</span>
-						<select class="form-input" name="role" required>
-							<option value="">Select your role</option>
-							<option value="student">I'm a Student</option>
-							<option value="employer">I'm an Employer</option>
-						</select>
-					</label>
-					<label class="form-group">
-						<span class="form-label">Password</span>
-						<input
-							class="form-input"
-							type="password"
-							name="password"
-							minlength="8"
-							required
-						/>
-					</label>
-					<label class="checkbox">
-						<input type="checkbox" name="terms" required />
-						<span>I agree to the terms and privacy policy.</span>
-					</label>
-					<button class="btn btn-primary btn-full" type="submit">
-						Create account
-					</button>
-				</form>
-			</div>
-		</div>
-
-		<div id="login-modal" class="modal" aria-hidden="true">
-			<div class="modal-overlay" data-modal-close></div>
-			<div class="modal-content" style="max-width: 480px">
-				<div class="modal-header">
-					<h2 class="modal-title">Welcome back</h2>
-					<button class="modal-close" data-modal-close>&times;</button>
-				</div>
-				<form class="modal-body" id="login-form">
-					<label class="form-group">
-						<span class="form-label">Email</span>
-						<input class="form-input" type="email" name="email" required />
-					</label>
-					<label class="form-group">
-						<span class="form-label">Password</span>
-						<input
-							class="form-input"
-							type="password"
-							name="password"
-							required
-						/>
-					</label>
-					<button class="btn btn-primary btn-full" type="submit">
-						Sign in
-					</button>
-				</form>
-			</div>
-		</div>
-
-		<script src="../../js/modules/job-filter.js"></script>
-		<script src="../../js/modules/job-display.js"></script>
-		<script src="../../js/modules/job-detail.js"></script>
-		<script src="../../js/modules/notification.js"></script>
-		<script src="../../js/jobs.js"></script>
-	</body>
+  <script src="../../js/modules/job-filter.js"></script>
+  <script src="../../js/modules/job-display.js"></script>
+  <script src="../../js/modules/job-detail.js"></script>
+  <script src="../../js/jobs.js"></script>
+</body>
 </html>
