@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moon* - My Applications</title>
+  <link rel="stylesheet" href="../../styles/main.css" />
+  <link rel="stylesheet" href="../../styles/index.css" />
+  <link rel="stylesheet" href="../../styles/profile-styles.css" />
+</head>
+<body>
+  <div data-component="navbar"></div>
+  <nav class="simple-navbar" style="background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100;">
+    <div class="container">
+      <a href="../../index.html" class="navbar-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="navbar-logo-text">Moon<span class="asterisk">*</span></span>
+      </a>
+      
+      <div class="navbar-center" id="navbarMenu">
+        <a href="student-dashboard.html" class="navbar-link" >Dashboard</a>
+        <a href="profile.html" class="navbar-link">Profile</a>
+        <a href="jobs.html" class="navbar-link">Jobs</a>
+        <a href="applications.html" class="navbar-link" style="color: #00BCD4; font-weight: 600;">My Applications</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <button class="btn btn-primary" onclick="logout()" style="padding: 0.5rem 1.5rem;">
+          Logout
+        </button>
+      </div>
+      
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  <main>
+    <div class="container py-xl">
+      <div class="flex-between" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <div>
+          <h2 style="margin: 0 0 0.5rem 0;">My Applications</h2>
+          <p class="text-gray">Track the status of your job applications</p>
+        </div>
+        <button class="btn btn-primary" onclick="window.location.href='jobs.html'">Browse More Jobs</button>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="tabs" style="display: flex; gap: 1rem; border-bottom: 2px solid #E0E0E0; margin-bottom: 2rem; flex-wrap: wrap;">
+        <button class="tab" onclick="filterApplications('all')" style="padding: 1rem; border: none; background: none; border-bottom: 3px solid #00BCD4; font-weight: 600; color: #00BCD4; cursor: pointer;">
+          All Applications <span id="count-all">(0)</span>
+        </button>
+        <button class="tab" onclick="filterApplications('Pending')" style="padding: 1rem; border: none; background: none; border-bottom: 3px solid transparent; font-weight: 600; color: #666; cursor: pointer;">
+          Under Review <span id="count-Pending">(0)</span>
+        </button>
+        <button class="tab" onclick="filterApplications('Interview')" style="padding: 1rem; border: none; background: none; border-bottom: 3px solid transparent; font-weight: 600; color: #666; cursor: pointer;">
+          Interview <span id="count-Interview">(0)</span>
+        </button>
+        <button class="tab" onclick="filterApplications('Rejected')" style="padding: 1rem; border: none; background: none; border-bottom: 3px solid transparent; font-weight: 600; color: #666; cursor: pointer;">
+          Not Selected <span id="count-Rejected">(0)</span>
+        </button>
+        <button class="tab" onclick="filterApplications('Accepted')" style="padding: 1rem; border: none; background: none; border-bottom: 3px solid transparent; font-weight: 600; color: #666; cursor: pointer;">
+          Accepted <span id="count-Accepted">(0)</span>
+        </button>
+      </div>
+
+      <!-- Applications List -->
+      <div class="applications-list" id="applications-list" style="display: flex; flex-direction: column; gap: 1rem;">
+        <!-- Applications will be loaded dynamically -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="brand-text">Moon<span class="brand-accent">*</span></span>
+          </div>
+          <p class="footer-description">Connecting IT students with their dream careers.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="jobs.html">Browse Jobs</a></li>
+            <li><a href="#">For Students</a></li>
+            <li><a href="#">For Companies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 Moon*. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../../js/site.js"></script>
+  <script>
+    // Global variable to store all applications
+    let allApplicationsData = [];
+    let allJobsData = [];
+    let currentFilter = 'all';
+
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navbarMenu = document.getElementById('navbarMenu');
+    
+    if (mobileToggle && navbarMenu) {
+      mobileToggle.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navbarMenu.classList.toggle('active');
+      });
+    }
+
+    // Logout function
+    function logout() {
+      if (confirm('Are you sure you want to logout?')) {
+        localStorage.removeItem('currentUser');
+        localStorage.removeItem('isLoggedIn');
+        alert('Logged out successfully!');
+        window.location.href = '../../index.html';
+      }
+    }
+
+    // Update tab counts
+    function updateTabCounts(applications) {
+      const counts = {
+        all: applications.length,
+        Pending: applications.filter(a => a.status === 'Pending').length,
+        Interview: applications.filter(a => a.status === 'Interview').length,
+        Rejected: applications.filter(a => a.status === 'Rejected').length,
+        Accepted: applications.filter(a => a.status === 'Accepted').length,
+        Reviewing: applications.filter(a => a.status === 'Reviewing').length
+      };
+      
+      document.getElementById('count-all').textContent = `(${counts.all})`;
+      document.getElementById('count-Pending').textContent = `(${counts.Pending + counts.Reviewing})`;
+      document.getElementById('count-Interview').textContent = `(${counts.Interview})`;
+      document.getElementById('count-Rejected').textContent = `(${counts.Rejected})`;
+      document.getElementById('count-Accepted').textContent = `(${counts.Accepted})`;
+    }
+
+    // Filter applications by status
+    function filterApplications(status) {
+      currentFilter = status;
+      
+      // Update active tab styling
+      document.querySelectorAll('.tab').forEach(btn => {
+        btn.style.borderBottomColor = 'transparent';
+        btn.style.color = '#666';
+      });
+      
+      event.target.style.borderBottomColor = '#00BCD4';
+      event.target.style.color = '#00BCD4';
+      
+      // Filter and display
+      let filtered = allApplicationsData;
+      if (status !== 'all') {
+        if (status === 'Pending') {
+          filtered = allApplicationsData.filter(a => a.status === 'Pending' || a.status === 'Reviewing');
+        } else {
+          filtered = allApplicationsData.filter(a => a.status === status);
+        }
+      }
+      
+      renderApplications(filtered);
+    }
+
+    // Render applications to DOM
+    function renderApplications(applications) {
+      const appsList = document.getElementById('applications-list');
+      
+      if (applications.length === 0) {
+        appsList.innerHTML = `<p style="text-align: center; color: #666; padding: 2rem;">No applications found in this category.</p>`;
+        return;
+      }
+      
+      appsList.innerHTML = applications.map(app => {
+        const job = allJobsData.find(j => j.id == app.jobId);
+        if (!job) return '';
+        
+        const statusConfig = {
+          'Pending': { text: 'Under Review', bg: '#FFF3E0', color: '#F57C00' },
+          'Reviewing': { text: 'Under Review', bg: '#FFF3E0', color: '#F57C00' },
+          'Interview': { text: 'Interview Scheduled', bg: '#E3F2FD', color: '#1976D2' },
+          'Rejected': { text: 'Not Selected', bg: '#F5F5F5', color: '#666' },
+          'Accepted': { text: 'Accepted', bg: '#E8F5E9', color: '#388E3C' }
+        };
+        
+        const status = statusConfig[app.status] || statusConfig['Pending'];
+        const date = new Date(app.appliedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        
+        return `
+          <article class="card" style="padding: 1.5rem; ${app.status === 'Rejected' ? 'opacity: 0.8;' : ''}">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+              <div style="flex: 1;">
+                <h3 style="margin: 0 0 0.5rem 0; color: #263238; font-size: 1.25rem;">${job.title}</h3>
+                <p style="margin: 0 0 0.5rem 0; color: #00BCD4; font-weight: 600; font-size: 1.1rem;">${job.companyName}</p>
+                <p style="margin: 0; color: #666;">${job.location || 'Unknown'} • ${job.type || 'Full-time'} • Applied on ${date}</p>
+              </div>
+              <span class="badge" style="background: ${status.bg}; color: ${status.color}; padding: 0.5rem 1rem; border-radius: 16px; font-weight: 600;">${status.text}</span>
+            </div>
+            
+            ${app.status === 'Interview' ? `
+              <div style="padding: 1rem; background: #E3F2FD; border-radius: 8px; margin-bottom: 1rem;">
+                <p style="margin: 0 0 0.5rem 0; font-weight: 600; color: #1976D2;">
+                  <svg style="width: 16px; height: 16px; display: inline; vertical-align: middle; margin-right: 0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="16" y1="2" x2="16" y2="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="8" y1="2" x2="8" y2="6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="3" y1="10" x2="21" y2="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Interview scheduled
+                </p>
+                <p style="margin: 0; color: #666; font-size: 0.9rem;">Contact company for interview details</p>
+              </div>
+            ` : app.status === 'Pending' || app.status === 'Reviewing' ? `
+              <div style="margin-bottom: 1rem;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                  <span style="font-size: 0.9rem; color: #666;">Application Status</span>
+                  <span style="font-size: 0.9rem; color: #666;">${app.status}</span>
+                </div>
+                <div style="height: 8px; background: #E0E0E0; border-radius: 4px; overflow: hidden;">
+                  <div style="height: 100%; width: 33%; background: #F57C00; border-radius: 4px;"></div>
+                </div>
+              </div>
+            ` : app.status === 'Rejected' ? `
+              <div style="padding: 1rem; background: #F5F5F5; border-radius: 8px; margin-bottom: 1rem;">
+                <p style="margin: 0; color: #666; font-size: 0.9rem;">Thank you for your interest. We've decided to move forward with other candidates at this time.</p>
+              </div>
+            ` : app.status === 'Accepted' ? `
+              <div style="padding: 1rem; background: #E8F5E9; border-radius: 8px; margin-bottom: 1rem;">
+                <p style="margin: 0; color: #388E3C; font-size: 0.9rem;"><strong>🎉 Congratulations!</strong> You've been selected for this position. Check your email for next steps.</p>
+              </div>
+            ` : ''}
+
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="btn btn-primary" onclick="openJobDetailModal('${app.jobId}')">View Details</button>
+              ${app.status !== 'Rejected' && app.status !== 'Accepted' ? `<button class="btn btn-outline" onclick="withdrawApplication('${app.applicantId}')">Withdraw</button>` : ''}
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // Load applications from localStorage
+    function loadApplications() {
+      try {
+        // Check login status
+        const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+        const studentId = currentUser.userid || currentUser.userId || currentUser.id;
+        
+        if (!studentId) {
+          alert('Please login first!');
+          window.location.href = '../../index.html';
+          return;
+        }
+
+        // Get all jobs from localStorage
+        allJobsData = [];
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key.startsWith('companyJobs_')) {
+            const jobs = JSON.parse(localStorage.getItem(key) || '[]');
+            allJobsData = [...allJobsData, ...jobs];
+          }
+        }
+
+        // Get student applications
+        const studentApplicationsKey = `studentApplications_${studentId}`;
+        allApplicationsData = JSON.parse(localStorage.getItem(studentApplicationsKey) || '[]');
+
+        // Sort applications by appliedAt (most recent first)
+        allApplicationsData = allApplicationsData.sort((a, b) => new Date(b.appliedAt) - new Date(a.appliedAt));
+
+        // Update tab counts
+        updateTabCounts(allApplicationsData);
+        
+        // Render all applications
+        renderApplications(allApplicationsData);
+      } catch (error) {
+        console.error('Error loading applications:', error);
+        document.getElementById('applications-list').innerHTML = '<p style="text-align: center; color: #666;">Unable to load applications. Please try again later.</p>';
+      }
+    }
+
+    // Withdraw application
+    function withdrawApplication(applicantId) {
+      if (confirm('Are you sure you want to withdraw this application?')) {
+        const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+        const studentId = currentUser.userid || currentUser.userId || currentUser.id;
+        
+        const studentApplicationsKey = `studentApplications_${studentId}`;
+        let studentApplications = JSON.parse(localStorage.getItem(studentApplicationsKey) || '[]');
+        
+        // Find the application to remove
+        const appToRemove = studentApplications.find(app => app.applicantId === applicantId);
+        if (appToRemove) {
+          // Also remove from company's applications
+          const companyKey = `applications_${appToRemove.companyId}`;
+          let companyApps = JSON.parse(localStorage.getItem(companyKey) || '[]');
+          companyApps = companyApps.filter(app => app.applicantId !== applicantId);
+          localStorage.setItem(companyKey, JSON.stringify(companyApps));
+        }
+        
+        studentApplications = studentApplications.filter(app => app.applicantId !== applicantId);
+        localStorage.setItem(studentApplicationsKey, JSON.stringify(studentApplications));
+        
+        alert('Application withdrawn successfully');
+        loadApplications(); // Reload
+      }
+    }
+
+    // Open job detail modal
+    function openJobDetailModal(jobId) {
+      const job = allJobsData.find(j => j.id == jobId);
+      if (!job) {
+        console.error('Job not found:', jobId);
+        return;
+      }
+      
+      const modal = document.createElement('div');
+      modal.className = 'job-detail-modal';
+      modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow-y: auto;
+      `;
+      
+      const content = document.createElement('div');
+      content.style.cssText = `
+        background: white;
+        border-radius: 12px;
+        max-width: 800px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        margin: 2rem auto;
+        position: relative;
+      `;
+      
+      const location = job.location || 'Unknown';
+      const jobType = job.type || 'Full-time';
+      const position = job.position || 'Mid Level';
+      const technicalRequirements = job.technicalRequirements || [];
+      const description = job.description || 'No description available';
+      const requirements = job.requirements || '';
+      const benefits = job.benefits || '';
+      const postedAt = job.postedAt ? new Date(job.postedAt).toLocaleDateString() : new Date().toLocaleDateString();
+      
+      content.innerHTML = `
+        <div style="padding: 2rem;">
+          <!-- Close button -->
+          <button onclick="this.closest('.job-detail-modal').remove()" 
+            style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; color: #999; cursor: pointer; line-height: 1;">
+            &times;
+          </button>
+          
+          <!-- Header -->
+          <div style="margin-bottom: 2rem;">
+            <p style="margin: 0 0 0.5rem 0; color: #78909C; font-weight: 600;">${job.companyName} • ${location}</p>
+            <h1 style="margin: 0 0 1rem 0; color: #263238; font-size: 2rem;">${job.title}</h1>
+            <p style="margin: 0 0 1rem 0; color: #546E7A; font-size: 1.125rem;">${jobType} • ${position}</p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              ${technicalRequirements.map(tag => `<span class="badge" style="background: #E3F2FD; color: #1976D2; padding: 0.5rem 1rem; border-radius: 12px; font-size: 0.875rem;">${tag}</span>`).join('')}
+            </div>
+          </div>
+          
+          <!-- Key Info -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+            <div>
+              <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">SALARY</p>
+              <p style="margin: 0; color: #00BCD4; font-size: 1.25rem; font-weight: 600;">${job.salary}</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">JOB TYPE</p>
+              <p style="margin: 0; color: #263238; font-size: 1.125rem; font-weight: 600;">${jobType}</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">EXPERIENCE LEVEL</p>
+              <p style="margin: 0; color: #263238; font-size: 1.125rem; font-weight: 600;">${position}</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">POSTED</p>
+              <p style="margin: 0; color: #263238; font-size: 1.125rem; font-weight: 600;">${postedAt}</p>
+            </div>
+          </div>
+          
+          <!-- Divider -->
+          <hr style="border: none; border-top: 1px solid #E0E0E0; margin: 2rem 0;" />
+          
+          <!-- Description -->
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: #263238; margin: 0 0 1rem 0;">About the role</h3>
+            <p style="color: #546E7A; line-height: 1.6; margin: 0 0 1rem 0;">${description}</p>
+            
+            ${requirements ? `
+              <h4 style="color: #263238; margin: 1rem 0 0.5rem 0;">Requirements</h4>
+              <p style="margin: 0 0 1rem 0; color: #546E7A; line-height: 1.6;">${requirements}</p>
+            ` : ''}
+            
+            ${benefits ? `
+              <h4 style="color: #263238; margin: 1rem 0 0.5rem 0;">Benefits</h4>
+              <p style="margin: 0 0 1rem 0; color: #546E7A; line-height: 1.6;">${benefits}</p>
+            ` : ''}
+          </div>
+          
+          <!-- Additional Info -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; padding: 1.5rem; background: #F5F5F5; border-radius: 8px;">
+            <div>
+              <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">OPENINGS</p>
+              <p style="margin: 0; color: #263238; font-size: 1.125rem; font-weight: 600;">${job.openings || 1}</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">TARGET STUDENTS</p>
+              <p style="margin: 0; color: #263238; font-size: 1.125rem; font-weight: 600;">${job.targetStudents || 'All'}</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">DAYS OFF</p>
+              <p style="margin: 0; color: #263238; font-size: 1.125rem; font-weight: 600;">${job.daysOff || '-'}</p>
+            </div>
+            <div>
+              <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">PAID LEAVE</p>
+              <p style="margin: 0; color: #263238; font-size: 1.125rem; font-weight: 600;">${job.paidLeave || '-'} days</p>
+            </div>
+          </div>
+          
+          <!-- Divider -->
+          <hr style="border: none; border-top: 1px solid #E0E0E0; margin: 2rem 0;" />
+          
+          <!-- Action Buttons -->
+          <div style="display: flex; gap: 1rem; justify-content: flex-end;">
+            <button onclick="this.closest('.job-detail-modal').remove()" class="btn btn-outline" style="padding: 0.75rem 1.5rem;">
+              Close
+            </button>
+          </div>
+        </div>
+      `;
+      
+      modal.appendChild(content);
+      modal.onclick = function(e) {
+        if (e.target === modal) {
+          modal.remove();
+          document.body.style.overflow = 'auto';
+        }
+      };
+      
+      document.body.appendChild(modal);
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Load applications when page loads
+    document.addEventListener('DOMContentLoaded', loadApplications);
+  </script>
+</body>
+</html>
