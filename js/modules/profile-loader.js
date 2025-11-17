@@ -462,15 +462,15 @@ function saveProfile() {
 			location,
 			bio,
 			visibility,
-		education,
-		experience,
-		skills,
-		links,
-		profilePicture: window.currentProfilePicture || null,
-		photo: window.currentProfilePicture || null,
-		resume: null, // TODO: Implement later
-		lastUpdated: new Date().toISOString(),
-	};		// Save to localStorage with userId-specific key
+			education,
+			experience,
+			skills,
+			links,
+			profilePicture: window.currentProfilePicture || null,
+			photo: window.currentProfilePicture || null,
+			resume: null, // TODO: Implement later
+			lastUpdated: new Date().toISOString(),
+		}; // Save to localStorage with userId-specific key
 		const profileKey = `userProfile_${userId}`;
 		localStorage.setItem(profileKey, JSON.stringify(profileData));
 

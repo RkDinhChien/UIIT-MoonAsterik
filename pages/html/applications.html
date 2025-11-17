@@ -748,70 +748,74 @@
 
 			// Withdraw application
 			function withdrawApplication(applicantId) {
-				window.notify.confirm(
-					'Bạn có chắc chắn muốn rút đơn ứng tuyển này?',
-					'Xác nhận rút đơn',
-					{
-						confirmText: 'Rút đơn',
-						cancelText: 'Hủy',
-						confirmType: 'danger'
-					}
-				).then((confirmed) => {
-					if (confirmed) {
-						const currentUser = JSON.parse(
-							localStorage.getItem('currentUser') || '{}'
-						);
-						const studentId =
-							currentUser.userid || currentUser.userId || currentUser.id;
-
-						const studentApplicationsKey = `studentApplications_${studentId}`;
-						let studentApplications = JSON.parse(
-							localStorage.getItem(studentApplicationsKey) || '[]'
-						);
-
-						// Find the application to remove
-						const appToRemove = studentApplications.find(
-							(app) => app.applicantId === applicantId
-						);
-						if (appToRemove) {
-							// Also remove from company's applications
-							const companyKey = `applications_${appToRemove.companyId}`;
-							let companyApps = JSON.parse(
-								localStorage.getItem(companyKey) || '[]'
+				window.notify
+					.confirm(
+						'Bạn có chắc chắn muốn rút đơn ứng tuyển này?',
+						'Xác nhận rút đơn',
+						{
+							confirmText: 'Rút đơn',
+							cancelText: 'Hủy',
+							confirmType: 'danger',
+						}
+					)
+					.then((confirmed) => {
+						if (confirmed) {
+							const currentUser = JSON.parse(
+								localStorage.getItem('currentUser') || '{}'
 							);
-							companyApps = companyApps.filter(
+							const studentId =
+								currentUser.userid || currentUser.userId || currentUser.id;
+
+							const studentApplicationsKey = `studentApplications_${studentId}`;
+							let studentApplications = JSON.parse(
+								localStorage.getItem(studentApplicationsKey) || '[]'
+							);
+
+							// Find the application to remove
+							const appToRemove = studentApplications.find(
+								(app) => app.applicantId === applicantId
+							);
+							if (appToRemove) {
+								// Also remove from company's applications
+								const companyKey = `applications_${appToRemove.companyId}`;
+								let companyApps = JSON.parse(
+									localStorage.getItem(companyKey) || '[]'
+								);
+								companyApps = companyApps.filter(
+									(app) => app.applicantId !== applicantId
+								);
+								localStorage.setItem(companyKey, JSON.stringify(companyApps));
+							}
+
+							studentApplications = studentApplications.filter(
 								(app) => app.applicantId !== applicantId
 							);
-							localStorage.setItem(companyKey, JSON.stringify(companyApps));
+							localStorage.setItem(
+								studentApplicationsKey,
+								JSON.stringify(studentApplications)
+							);
+
+							window.notify.success('Đã rút đơn ứng tuyển!');
+							setTimeout(() => {
+								loadApplications(); // Reload
+							}, 1000);
 						}
-
-						studentApplications = studentApplications.filter(
-							(app) => app.applicantId !== applicantId
-						);
-						localStorage.setItem(
-							studentApplicationsKey,
-							JSON.stringify(studentApplications)
-						);
-
-						window.notify.success('Đã rút đơn ứng tuyển!');
-						setTimeout(() => {
-							loadApplications(); // Reload
-						}, 1000);
-					}
-				});
+					});
 			}
 
 			// Open job detail modal
 			function openJobDetailModal(jobId) {
 				console.log('Opening job detail for jobId:', jobId);
 				console.log('All jobs data:', allJobsData);
-				
+
 				// Ensure jobs are loaded
 				if (!allJobsData || allJobsData.length === 0) {
-					window.notify.warning('Đang tải dữ liệu công việc, vui lòng thử lại sau giây lát!');
+					window.notify.warning(
+						'Đang tải dữ liệu công việc, vui lòng thử lại sau giây lát!'
+					);
 					return;
 				}
-				
+
 				const job = allJobsData.find((j) => j.id == jobId);
 				if (!job) {
 					console.error('Job not found:', jobId);
@@ -917,10 +921,11 @@
 				} else if (typeof job.description === 'string') {
 					descriptionHTML = `<p style="color: #546E7A; line-height: 1.6; margin: 0 0 1rem 0;">${job.description}</p>`;
 				}
-				
+
 				// Fallback if no description
 				if (!descriptionHTML) {
-					descriptionHTML = '<p style="color: #546E7A; line-height: 1.6;">No description available.</p>';
+					descriptionHTML =
+						'<p style="color: #546E7A; line-height: 1.6;">No description available.</p>';
 				}
 
 				const postedAt = job.postedAt
@@ -1047,9 +1052,9 @@
 					loadUserInfo();
 				});
 
-			loadApplications();
-		});
-	</script>
-	<script src="../../js/modules/notification.js"></script>
-</body>
+				loadApplications();
+			});
+		</script>
+		<script src="../../js/modules/notification.js"></script>
+	</body>
 </html>

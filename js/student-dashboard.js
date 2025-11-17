@@ -181,13 +181,13 @@ function loadDashboardStats() {
 		// Interviews
 		statCards[3].querySelector('.stat-value').textContent = interviewCount;
 	}
-	
+
 	// Update banner inline stats
 	const profileViewsCount = document.getElementById('profileViewsCount');
 	const applicationsCountEl = document.getElementById('applicationsCount');
 	const savedJobsCountEl = document.getElementById('savedJobsCount');
 	const interviewsCountEl = document.getElementById('interviewsCount');
-	
+
 	if (profileViewsCount) profileViewsCount.textContent = profileViews;
 	if (applicationsCountEl) applicationsCountEl.textContent = applicationCount;
 	if (savedJobsCountEl) savedJobsCountEl.textContent = savedJobsCount;
@@ -317,10 +317,10 @@ function loadDashboard() {
 		const studentId =
 			currentUser.userid || currentUser.userId || currentUser.id;
 
-    if (!studentId) {
-      window.location.href = '../../index.html';
-      return;
-    }		// Get all jobs from localStorage
+		if (!studentId) {
+			window.location.href = '../../index.html';
+			return;
+		} // Get all jobs from localStorage
 		let allJobs = [];
 		for (let i = 0; i < localStorage.length; i++) {
 			const key = localStorage.key(i);

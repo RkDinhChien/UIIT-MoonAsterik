@@ -27,7 +27,9 @@ function initializeLoginForm() {
 			const accountsData = localStorage.getItem(storageKey);
 
 			if (!accountsData) {
-				window.notify.error('Không tìm thấy tài khoản. Vui lòng đăng ký trước!');
+				window.notify.error(
+					'Không tìm thấy tài khoản. Vui lòng đăng ký trước!'
+				);
 				return;
 			}
 

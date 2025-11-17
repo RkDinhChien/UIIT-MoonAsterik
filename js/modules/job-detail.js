@@ -215,7 +215,9 @@ function applyForJob(jobId) {
 
 	console.log('Application submitted:', application);
 
-	window.notify.success('Ứng tuyển thành công! Bạn có thể xem trong dashboard.');
+	window.notify.success(
+		'Ứng tuyển thành công! Bạn có thể xem trong dashboard.'
+	);
 
 	// Close modal and refresh
 	setTimeout(() => {
@@ -243,7 +245,7 @@ function hasUserApplied(jobId) {
 // Save job (for future implementation)
 function saveJob(jobId, event) {
 	event.stopPropagation();
-	
+
 	const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
 	const studentId = currentUser.userid || currentUser.userId || currentUser.id;
 

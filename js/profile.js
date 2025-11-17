@@ -127,7 +127,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (!currentUser || !currentUser.userid) {
 		window.location.href = '../../index.html';
 		return;
-	}	console.log('Current logged in user:', currentUser);
+	}
+	console.log('Current logged in user:', currentUser);
 	console.log('User ID:', currentUser.userid);
 
 	// Small delay to ensure DOM is fully ready
