@@ -377,12 +377,9 @@
 
 			// Logout function
 			function logout() {
-				if (confirm('Are you sure you want to logout?')) {
-					localStorage.removeItem('currentUser');
-					localStorage.removeItem('isLoggedIn');
-					alert('Logged out successfully!');
-					window.location.href = '../../index.html';
-				}
+				localStorage.removeItem('currentUser');
+				localStorage.removeItem('isLoggedIn');
+				window.location.href = '../../index.html';
 			}
 
 			// Load user info for dropdown
@@ -392,50 +389,85 @@
 				);
 
 				if (currentUser.username) {
+					const userId =
+						currentUser.userid || currentUser.userId || currentUser.id;
+					const profileKey = `userProfile_${userId}`;
+					const profile = JSON.parse(localStorage.getItem(profileKey) || '{}');
+
 					const userNameEl = document.getElementById('userName');
 					const dropdownUserNameEl =
 						document.getElementById('dropdownUserName');
 					const dropdownUserEmailEl =
 						document.getElementById('dropdownUserEmail');
 
+					const displayName =
+						profile.fullName || currentUser.fullname || currentUser.username;
+
 					if (userNameEl) {
-						userNameEl.textContent =
-							currentUser.fullname || currentUser.username;
+						userNameEl.textContent = displayName;
 					}
 					if (dropdownUserNameEl) {
-						dropdownUserNameEl.textContent =
-							currentUser.fullname || currentUser.username;
+						dropdownUserNameEl.textContent = displayName;
 					}
 					if (dropdownUserEmailEl) {
-						dropdownUserEmailEl.textContent = currentUser.email || '';
+						dropdownUserEmailEl.textContent =
+							profile.email || currentUser.email || '';
+					}
+
+					// Update navbar avatar if photo exists
+					const navbarAvatar = document.querySelector(
+						'.user-dropdown .user-avatar'
+					);
+					if (navbarAvatar && profile.photo) {
+						navbarAvatar.innerHTML = '';
+						const img = document.createElement('img');
+						img.src = profile.photo;
+						img.alt = displayName;
+						img.style.cssText =
+							'width: 100%; height: 100%; object-fit: cover; border-radius: 50%;';
+						img.onerror = function () {
+							navbarAvatar.innerHTML = `
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+									<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+									<circle cx="12" cy="7" r="4"></circle>
+								</svg>
+							`;
+						};
+						navbarAvatar.appendChild(img);
 					}
 				}
 			}
+
+			// Load user info for dropdown (remove duplicate)
+			// Removed duplicate function - using the one above with avatar support
 
 			// Initialize user dropdown
 			function initUserDropdown() {
 				const dropdownToggle = document.getElementById('userDropdownToggle');
-				const dropdownMenu = document.getElementById('userDropdownMenu');
+				const dropdown = dropdownToggle?.closest('.user-dropdown');
 
-				if (dropdownToggle && dropdownMenu) {
-					dropdownToggle.addEventListener('click', function (e) {
-						e.stopPropagation();
-						dropdownMenu.classList.toggle('show');
+				if (!dropdownToggle || !dropdown) return;
+
+				dropdownToggle.addEventListener('click', function (e) {
+					e.stopPropagation();
+					dropdown.classList.toggle('active');
+				});
+
+				// Close dropdown when clicking outside
+				document.addEventListener('click', function (e) {
+					if (!dropdown.contains(e.target)) {
+						dropdown.classList.remove('active');
+					}
+				});
+
+				// Close dropdown when clicking menu items
+				const dropdownItems = dropdown.querySelectorAll('.dropdown-item');
+				dropdownItems.forEach((item) => {
+					item.addEventListener('click', function () {
+						dropdown.classList.remove('active');
 					});
-
-					// Close dropdown when clicking outside
-					document.addEventListener('click', function (e) {
-						if (
-							!dropdownToggle.contains(e.target) &&
-							!dropdownMenu.contains(e.target)
-						) {
-							dropdownMenu.classList.remove('show');
-						}
-					});
-				}
-			}
-
-			// Update tab counts
+				});
+			} // Update tab counts
 			function updateTabCounts(applications) {
 				const counts = {
 					all: applications.length,
@@ -532,32 +564,81 @@
 							year: 'numeric',
 						});
 
+						// Company logo mapping
+						const companyLogoMap = {
+							vng: 'vng.png',
+							zingplay: 'vng.png',
+							zing: 'vng.png',
+							fpt: 'fpt.png',
+							fsoft: 'fpt.png',
+							grab: 'grab.png',
+							shopee: 'Shopee.png',
+							tiki: 'tiki.png',
+							momo: 'momo.png',
+							m_service: 'momo.png',
+							viettel: 'viettel.png',
+							vnpt: 'vnpt.png',
+							vingroup: 'vingroup.png',
+							vin: 'vingroup.png',
+							cmc: 'cmc.png',
+							tma: 'tma.png',
+							nashtech: 'nashtech.png',
+							nash: 'nashtech.png',
+							luxoft: 'luxoft.png',
+							kms: 'kms.png',
+							gameloft: 'gameloft.png',
+							'game loft': 'gameloft.png',
+						};
+
+						const companyNameLower = job.companyName.toLowerCase();
+						let logoFile = null;
+						for (const [key, file] of Object.entries(companyLogoMap)) {
+							if (companyNameLower.includes(key)) {
+								logoFile = file;
+								break;
+							}
+						}
+
+						const companyLogo = logoFile
+							? `../../assets/logos/${logoFile}`
+							: `../../assets/logos/${job.companyId}.png`;
+						const location = job.location?.city || job.location || 'Unknown';
+						const jobType = job.type || 'Full-time';
+
 						return `
-          <article class="card" style="padding: 1.5rem; ${
+          <article class="card" style="padding: 1.5rem; display: flex; gap: 1.5rem; ${
 						app.status === 'Rejected' ? 'opacity: 0.8;' : ''
 					}">
-            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-              <div style="flex: 1;">
-                <h3 style="margin: 0 0 0.5rem 0; color: #263238; font-size: 1.25rem;">${
-									job.title
-								}</h3>
-                <p style="margin: 0 0 0.5rem 0; color: #00BCD4; font-weight: 600; font-size: 1.1rem;">${
-									job.companyName
-								}</p>
-                <p style="margin: 0; color: #666;">${
-									job.location || 'Unknown'
-								} • ${job.type || 'Full-time'} • Applied on ${date}</p>
+            <!-- Company Logo -->
+            <div style="flex-shrink: 0; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 0.875rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+              <img src="${companyLogo}" alt="${
+							job.companyName
+						}" style="max-width: 100%; max-height: 100%; object-fit: contain;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div style="display: none; width: 100%; height: 100%; align-items: center; justify-content: center; background: linear-gradient(135deg, #00bcd4 0%, #4dd0e1 100%); color: white; font-weight: 700; font-size: 1.75rem; border-radius: 8px;">
+                ${job.companyName.charAt(0).toUpperCase()}
               </div>
-              <span class="badge" style="background: ${status.bg}; color: ${
+            </div>
+
+            <!-- Job Info -->
+            <div style="flex: 1; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                <div style="flex: 1;">
+                  <h3 style="margin: 0 0 0.5rem 0; color: #263238; font-size: 1.25rem; font-weight: 600;">${
+										job.title
+									}</h3>
+                  <p style="margin: 0 0 0.5rem 0; color: #00BCD4; font-weight: 600; font-size: 1.1rem;">${
+										job.companyName
+									}</p>
+                  <p style="margin: 0; color: #666;">${location} • ${jobType} • Applied on ${date}</p>
+                </div>
+                <span class="badge" style="background: ${status.bg}; color: ${
 							status.color
-						}; padding: 0.5rem 1rem; border-radius: 16px; font-weight: 600;">${
+						}; padding: 0.5rem 1rem; border-radius: 16px; font-weight: 600; white-space: nowrap;">${
 							status.text
 						}</span>
-            </div>
-            
-            ${
-							app.status === 'Interview'
-								? `
+              </div>            ${
+								app.status === 'Interview'
+									? `
               <div style="padding: 1rem; background: #E3F2FD; border-radius: 8px; margin-bottom: 1rem;">
                 <p style="margin: 0 0 0.5rem 0; font-weight: 600; color: #1976D2;">
                   <svg style="width: 16px; height: 16px; display: inline; vertical-align: middle; margin-right: 0.25rem;" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -571,8 +652,8 @@
                 <p style="margin: 0; color: #666; font-size: 0.9rem;">Contact company for interview details</p>
               </div>
             `
-								: app.status === 'Pending' || app.status === 'Reviewing'
-								? `
+									: app.status === 'Pending' || app.status === 'Reviewing'
+									? `
               <div style="margin-bottom: 1rem;">
                 <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
                   <span style="font-size: 0.9rem; color: #666;">Application Status</span>
@@ -583,20 +664,20 @@
                 </div>
               </div>
             `
-								: app.status === 'Rejected'
-								? `
+									: app.status === 'Rejected'
+									? `
               <div style="padding: 1rem; background: #F5F5F5; border-radius: 8px; margin-bottom: 1rem;">
                 <p style="margin: 0; color: #666; font-size: 0.9rem;">Thank you for your interest. We've decided to move forward with other candidates at this time.</p>
               </div>
             `
-								: app.status === 'Accepted'
-								? `
+									: app.status === 'Accepted'
+									? `
               <div style="padding: 1rem; background: #E8F5E9; border-radius: 8px; margin-bottom: 1rem;">
                 <p style="margin: 0; color: #388E3C; font-size: 0.9rem;"><strong>🎉 Congratulations!</strong> You've been selected for this position. Check your email for next steps.</p>
               </div>
             `
-								: ''
-						}
+									: ''
+							}
 
             <div style="display: flex; gap: 0.5rem;">
               <button class="btn btn-primary" onclick="openJobDetailModal('${
@@ -608,6 +689,7 @@
 									: ''
 							}
             </div>
+            </div>
           </article>
         `;
 					})
@@ -615,7 +697,7 @@
 			}
 
 			// Load applications from localStorage
-			function loadApplications() {
+			async function loadApplications() {
 				try {
 					// Check login status
 					const currentUser = JSON.parse(
@@ -625,19 +707,19 @@
 						currentUser.userid || currentUser.userId || currentUser.id;
 
 					if (!studentId) {
-						alert('Please login first!');
 						window.location.href = '../../index.html';
 						return;
 					}
 
-					// Get all jobs from localStorage
-					allJobsData = [];
-					for (let i = 0; i < localStorage.length; i++) {
-						const key = localStorage.key(i);
-						if (key.startsWith('companyJobs_')) {
-							const jobs = JSON.parse(localStorage.getItem(key) || '[]');
-							allJobsData = [...allJobsData, ...jobs];
-						}
+					// Load jobs from API
+					try {
+						const response = await fetch('../../assets/data/jobs.json');
+						if (!response.ok) throw new Error('Failed to load jobs');
+						allJobsData = await response.json();
+						console.log('Loaded jobs from API:', allJobsData.length);
+					} catch (error) {
+						console.error('Error loading jobs:', error);
+						allJobsData = [];
 					}
 
 					// Get student applications
@@ -701,8 +783,10 @@
 						JSON.stringify(studentApplications)
 					);
 
-					alert('Application withdrawn successfully');
-					loadApplications(); // Reload
+					window.notify.success('Đã rút đơn ứng tuyển!');
+					setTimeout(() => {
+						loadApplications(); // Reload
+					}, 1000);
 				}
 			}
 
@@ -742,13 +826,77 @@
         position: relative;
       `;
 
-				const location = job.location || 'Unknown';
+				const location = job.location?.city || job.location || 'Unknown';
 				const jobType = job.type || 'Full-time';
-				const position = job.position || 'Mid Level';
-				const technicalRequirements = job.technicalRequirements || [];
-				const description = job.description || 'No description available';
-				const requirements = job.requirements || '';
-				const benefits = job.benefits || '';
+				const experienceLevel = job.experienceLevel || 'Mid Level';
+				const tags = job.tags || job.technicalRequirements || [];
+
+				// Format salary
+				let salaryText = '[object Object]';
+				if (
+					job.salary &&
+					typeof job.salary === 'object' &&
+					job.salary.min &&
+					job.salary.max
+				) {
+					const minSalary = (job.salary.min / 1000000).toFixed(0);
+					const maxSalary = (job.salary.max / 1000000).toFixed(0);
+					salaryText = `${minSalary}-${maxSalary}M VND/${
+						job.salary.unit || 'month'
+					}`;
+				} else if (typeof job.salary === 'string') {
+					salaryText = job.salary;
+				}
+
+				// Parse description
+				let descriptionHTML = '';
+				if (job.description && typeof job.description === 'object') {
+					if (job.description.summary) {
+						descriptionHTML += `<p style="color: #546E7A; line-height: 1.6; margin: 0 0 1rem 0;">${job.description.summary}</p>`;
+					}
+					if (
+						job.description.responsibilities &&
+						job.description.responsibilities.length > 0
+					) {
+						descriptionHTML += `<h4 style="color: #263238; margin: 1rem 0 0.5rem 0;">Responsibilities</h4>
+						<ul class="job-detail-list" style="list-style: none; padding: 0; margin: 0 0 1rem 0;">
+							${job.description.responsibilities
+								.map(
+									(item) =>
+										`<li style="padding: 0.25rem 0 0.25rem 1.5rem; position: relative;">✓ ${item}</li>`
+								)
+								.join('')}
+						</ul>`;
+					}
+					if (
+						job.description.requirements &&
+						job.description.requirements.length > 0
+					) {
+						descriptionHTML += `<h4 style="color: #263238; margin: 1rem 0 0.5rem 0;">Requirements</h4>
+						<ul class="job-detail-list" style="list-style: none; padding: 0; margin: 0 0 1rem 0;">
+							${job.description.requirements
+								.map(
+									(item) =>
+										`<li style="padding: 0.25rem 0 0.25rem 1.5rem; position: relative;">✓ ${item}</li>`
+								)
+								.join('')}
+						</ul>`;
+					}
+					if (job.description.benefits && job.description.benefits.length > 0) {
+						descriptionHTML += `<h4 style="color: #263238; margin: 1rem 0 0.5rem 0;">Benefits</h4>
+						<ul class="job-detail-list" style="list-style: none; padding: 0; margin: 0 0 1rem 0;">
+							${job.description.benefits
+								.map(
+									(item) =>
+										`<li style="padding: 0.25rem 0 0.25rem 1.5rem; position: relative;">✓ ${item}</li>`
+								)
+								.join('')}
+						</ul>`;
+					}
+				} else if (typeof job.description === 'string') {
+					descriptionHTML = `<p style="color: #546E7A; line-height: 1.6; margin: 0 0 1rem 0;">${job.description}</p>`;
+				}
+
 				const postedAt = job.postedAt
 					? new Date(job.postedAt).toLocaleDateString()
 					: new Date().toLocaleDateString();
@@ -769,9 +917,10 @@
             <h1 style="margin: 0 0 1rem 0; color: #263238; font-size: 2rem;">${
 							job.title
 						}</h1>
-            <p style="margin: 0 0 1rem 0; color: #546E7A; font-size: 1.125rem;">${jobType} • ${position}</p>
+            <p style="margin: 0 0 1rem 0; color: #546E7A; font-size: 1.125rem;">${jobType} • ${experienceLevel}</p>
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              ${technicalRequirements
+              ${tags
+								.slice(0, 6)
 								.map(
 									(tag) =>
 										`<span class="badge" style="background: #E3F2FD; color: #1976D2; padding: 0.5rem 1rem; border-radius: 12px; font-size: 0.875rem;">${tag}</span>`
@@ -784,9 +933,7 @@
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
             <div>
               <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">SALARY</p>
-              <p style="margin: 0; color: #00BCD4; font-size: 1.25rem; font-weight: 600;">${
-								job.salary
-							}</p>
+              <p style="margin: 0; color: #00BCD4; font-size: 1.25rem; font-weight: 600;">${salaryText}</p>
             </div>
             <div>
               <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">JOB TYPE</p>
@@ -794,13 +941,21 @@
             </div>
             <div>
               <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">EXPERIENCE LEVEL</p>
-              <p style="margin: 0; color: #263238; font-size: 1.125rem; font-weight: 600;">${position}</p>
+              <p style="margin: 0; color: #263238; font-size: 1.125rem; font-weight: 600;">${experienceLevel}</p>
             </div>
             <div>
               <p style="margin: 0 0 0.5rem 0; color: #78909C; font-size: 0.875rem; font-weight: 600;">POSTED</p>
               <p style="margin: 0; color: #263238; font-size: 1.125rem; font-weight: 600;">${postedAt}</p>
             </div>
           </div>
+          
+          <!-- Divider -->
+          <hr style="border: none; border-top: 1px solid #E0E0E0; margin: 2rem 0;" />
+          
+          <!-- Description -->
+          <div style="margin-bottom: 2rem;">
+            <h3 style="color: #263238; margin: 0 0 1rem 0;">About the role</h3>
+            ${descriptionHTML}
           
           <!-- Divider -->
           <hr style="border: none; border-top: 1px solid #E0E0E0; margin: 2rem 0;" />
@@ -886,6 +1041,11 @@
 				// Load user info for dropdown
 				loadUserInfo();
 				initUserDropdown();
+
+				// Listen for profile updates
+				window.addEventListener('profileUpdated', function () {
+					loadUserInfo();
+				});
 
 				loadApplications();
 			});

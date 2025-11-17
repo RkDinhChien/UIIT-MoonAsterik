@@ -1,1 +1,66 @@
-[]
+[
+	{
+		"userid": "company001",
+		"username": "VNG Corporation",
+		"email": "hr@vng.com.vn",
+		"password": "123456",
+		"accountType": "company",
+		"createdAt": "2024-08-01T10:00:00Z"
+	},
+	{
+		"userid": "company002",
+		"username": "FPT Software",
+		"email": "recruitment@fpt.com.vn",
+		"password": "123456",
+		"accountType": "company",
+		"createdAt": "2024-08-05T14:30:00Z"
+	},
+	{
+		"userid": "company003",
+		"username": "Grab Vietnam",
+		"email": "talent@grab.com",
+		"password": "123456",
+		"accountType": "company",
+		"createdAt": "2024-08-10T09:15:00Z"
+	},
+	{
+		"userid": "company004",
+		"username": "Shopee Vietnam",
+		"email": "careers@shopee.vn",
+		"password": "123456",
+		"accountType": "company",
+		"createdAt": "2024-08-12T11:45:00Z"
+	},
+	{
+		"userid": "company005",
+		"username": "Tiki Corporation",
+		"email": "jobs@tiki.vn",
+		"password": "123456",
+		"accountType": "company",
+		"createdAt": "2024-08-15T16:20:00Z"
+	},
+	{
+		"userid": "company006",
+		"username": "MoMo",
+		"email": "hiring@momo.vn",
+		"password": "123456",
+		"accountType": "company",
+		"createdAt": "2024-08-18T10:30:00Z"
+	},
+	{
+		"userid": "company007",
+		"username": "Viettel Digital",
+		"email": "recruit@viettel.com.vn",
+		"password": "123456",
+		"accountType": "company",
+		"createdAt": "2024-08-20T13:00:00Z"
+	},
+	{
+		"userid": "company008",
+		"username": "TMA Solutions",
+		"email": "hr@tmasolutions.com",
+		"password": "123456",
+		"accountType": "company",
+		"createdAt": "2024-08-22T15:45:00Z"
+	}
+]

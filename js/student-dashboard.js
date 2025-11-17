@@ -15,6 +15,30 @@ document.addEventListener('DOMContentLoaded', function () {
 	initUserDropdown();
 	loadProfileCompletion();
 	loadDashboardStats();
+
+	// Listen for profile updates
+	window.addEventListener('profileUpdated', function () {
+		loadUserInfo(); // Reload avatar and name
+		loadProfileCompletion();
+		loadDashboardStats();
+	});
+
+	// Also check for updates when window regains focus (user comes back from profile page)
+	window.addEventListener('focus', function () {
+		loadUserInfo(); // Reload avatar and name
+		loadProfileCompletion();
+		loadDashboardStats();
+	});
+
+	// Check for updates every 5 seconds if on dashboard
+	setInterval(function () {
+		const lastUpdated = localStorage.getItem('profileLastUpdated');
+		if (lastUpdated) {
+			loadUserInfo(); // Reload avatar and name
+			loadProfileCompletion();
+			loadDashboardStats();
+		}
+	}, 5000);
 });
 
 // Calculate and display profile completion
@@ -133,8 +157,9 @@ function loadDashboardStats() {
 	// Count total applications
 	const applicationCount = applications.length;
 
-	// Profile views - would need tracking system, using mock for now
-	const profileViews = localStorage.getItem(`profileViews_${userId}`) || 127;
+	// Profile views - initialize if not exists
+	let profileViews =
+		parseInt(localStorage.getItem(`profileViews_${userId}`)) || 0;
 
 	// Saved jobs
 	const savedJobsKey = `savedJobs_${userId}`;
@@ -163,13 +188,18 @@ function loadUserInfo() {
 	const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
 
 	if (currentUser.username) {
+		const userId = currentUser.userid || currentUser.userId || currentUser.id;
+		const profileKey = `userProfile_${userId}`;
+		const profile = JSON.parse(localStorage.getItem(profileKey) || '{}');
+
 		// Update user name in navbar
 		const userNameElement = document.getElementById('userName');
 		const dropdownUserName = document.getElementById('dropdownUserName');
 		const dropdownUserEmail = document.getElementById('dropdownUserEmail');
 		const bannerUserName = document.getElementById('bannerUserName');
 
-		const displayName = currentUser.fullname || currentUser.username;
+		const displayName =
+			profile.fullName || currentUser.fullname || currentUser.username;
 
 		if (userNameElement) {
 			userNameElement.textContent = displayName;
@@ -178,10 +208,53 @@ function loadUserInfo() {
 			dropdownUserName.textContent = displayName;
 		}
 		if (dropdownUserEmail) {
-			dropdownUserEmail.textContent = currentUser.email || '';
+			dropdownUserEmail.textContent = profile.email || currentUser.email || '';
 		}
 		if (bannerUserName) {
 			bannerUserName.textContent = displayName;
+		}
+
+		// Update avatar image if profile photo exists
+		const avatarLarge = document.querySelector('.user-avatar-large');
+		if (avatarLarge && profile.photo) {
+			// Clear existing content
+			avatarLarge.innerHTML = '';
+			// Add image
+			const img = document.createElement('img');
+			img.src = profile.photo;
+			img.alt = displayName;
+			img.style.cssText =
+				'width: 100%; height: 100%; object-fit: cover; border-radius: 50%;';
+			img.onerror = function () {
+				// If image fails to load, show default SVG
+				avatarLarge.innerHTML = `
+					<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+						<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+						<circle cx="12" cy="7" r="4"></circle>
+					</svg>
+				`;
+			};
+			avatarLarge.appendChild(img);
+		}
+
+		// Update navbar avatar if exists
+		const navbarAvatar = document.querySelector('.user-dropdown .user-avatar');
+		if (navbarAvatar && profile.photo) {
+			navbarAvatar.innerHTML = '';
+			const img = document.createElement('img');
+			img.src = profile.photo;
+			img.alt = displayName;
+			img.style.cssText =
+				'width: 100%; height: 100%; object-fit: cover; border-radius: 50%;';
+			img.onerror = function () {
+				navbarAvatar.innerHTML = `
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+						<circle cx="12" cy="7" r="4"></circle>
+					</svg>
+				`;
+			};
+			navbarAvatar.appendChild(img);
 		}
 	}
 }
@@ -218,12 +291,9 @@ function initUserDropdown() {
 
 // Logout function
 function logout() {
-	if (confirm('Are you sure you want to logout?')) {
-		localStorage.removeItem('currentUser');
-		localStorage.removeItem('isLoggedIn');
-		alert('Logged out successfully!');
-		window.location.href = '../../index.html';
-	}
+	localStorage.removeItem('currentUser');
+	localStorage.removeItem('isLoggedIn');
+	window.location.href = '../../index.html';
 }
 
 window.logout = logout;
@@ -236,13 +306,10 @@ function loadDashboard() {
 		const studentId =
 			currentUser.userid || currentUser.userId || currentUser.id;
 
-		if (!studentId) {
-			alert('Please login first!');
-			window.location.href = '../../index.html';
-			return;
-		}
-
-		// Get all jobs from localStorage
+    if (!studentId) {
+      window.location.href = '../../index.html';
+      return;
+    }		// Get all jobs from localStorage
 		let allJobs = [];
 		for (let i = 0; i < localStorage.length; i++) {
 			const key = localStorage.key(i);

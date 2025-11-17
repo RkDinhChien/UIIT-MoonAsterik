@@ -13,28 +13,135 @@ if (mobileToggle && navbarMenu) {
 document.addEventListener('DOMContentLoaded', function () {
 	loadUserInfo();
 	initUserDropdown();
+	loadDashboardStats();
 });
+
+// Listen for profile updates
+window.addEventListener('companyProfileUpdated', function () {
+	loadUserInfo();
+});
+
+// Check for profile updates periodically
+window.addEventListener('focus', function () {
+	loadUserInfo();
+});
+
+setInterval(function () {
+	const lastCheck = localStorage.getItem('companyProfileLastChecked') || '0';
+	const lastUpdate = localStorage.getItem('companyProfileLastUpdated') || '0';
+	if (lastUpdate > lastCheck) {
+		loadUserInfo();
+		localStorage.setItem('companyProfileLastChecked', Date.now().toString());
+	}
+}, 5000);
 
 // Load user info into navbar
 function loadUserInfo() {
 	const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+	const userId = currentUser.userid || currentUser.userId || currentUser.id;
+	const profileKey = `companyProfile_${userId}`;
+	const profile = JSON.parse(localStorage.getItem(profileKey) || '{}');
 
 	if (currentUser.username) {
 		// Update user name in navbar
 		const userNameElement = document.getElementById('userName');
 		const dropdownUserName = document.getElementById('dropdownUserName');
 		const dropdownUserEmail = document.getElementById('dropdownUserEmail');
+		const bannerName = document.getElementById('companyBannerName');
 
 		if (userNameElement) {
-			userNameElement.textContent = currentUser.username;
+			userNameElement.textContent = profile.companyName || currentUser.username;
 		}
 		if (dropdownUserName) {
-			dropdownUserName.textContent = currentUser.username;
+			dropdownUserName.textContent =
+				profile.companyName || currentUser.username;
 		}
 		if (dropdownUserEmail) {
 			dropdownUserEmail.textContent = currentUser.email;
 		}
+		if (bannerName) {
+			bannerName.textContent = `Welcome back, ${
+				profile.companyName || currentUser.username
+			}`;
+		}
+
+		// Update logo/avatar in navbar and banner
+		const navbarAvatar = document.querySelector('.user-dropdown .user-avatar');
+		const bannerLogo = document.querySelector('.company-banner-logo');
+
+		if (navbarAvatar && profile.logo) {
+			navbarAvatar.innerHTML = `<img src="${profile.logo}" alt="Company Logo" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\"></rect><path d=\"M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16\"></path></svg>';" />`;
+		}
+
+		if (bannerLogo && profile.logo) {
+			bannerLogo.innerHTML = `<img src="${profile.logo}" alt="Company Logo" style="width: 100%; height: 100%; object-fit: cover;" />`;
+		}
 	}
+}
+
+// Load and update dashboard statistics
+function loadDashboardStats() {
+	const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+	const userId = currentUser.userid || currentUser.userId || currentUser.id;
+
+	// Load jobs data
+	fetch('../../assets/data/jobs.json')
+		.then((response) => response.json())
+		.then((jobsData) => {
+			// Count active jobs for this company
+			const activeJobs = jobsData.filter(
+				(job) => job.companyId === userId
+			).length;
+			const activeJobsElement = document.getElementById('activeJobsCount');
+			if (activeJobsElement) {
+				activeJobsElement.textContent = activeJobs;
+			}
+
+			// Load applications to count applicants
+			return fetch('../../assets/data/applications.json');
+		})
+		.then((response) => response.json())
+		.then((applicationsData) => {
+			// Get all job IDs for this company
+			return fetch('../../assets/data/jobs.json')
+				.then((res) => res.json())
+				.then((jobsData) => {
+					const companyJobIds = jobsData
+						.filter((job) => job.companyId === userId)
+						.map((job) => job.id);
+
+					// Count total applicants for company's jobs
+					const totalApplicants = applicationsData.filter((app) =>
+						companyJobIds.includes(app.jobId)
+					).length;
+
+					// Count new applicants (applications in last 7 days)
+					const sevenDaysAgo = new Date();
+					sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+					const newApplicants = applicationsData.filter((app) => {
+						if (!companyJobIds.includes(app.jobId)) return false;
+						const appDate = new Date(app.appliedDate);
+						return appDate >= sevenDaysAgo;
+					}).length;
+
+					// Update UI
+					const totalApplicantsElement = document.getElementById(
+						'totalApplicantsCount'
+					);
+					const newApplicantsElement =
+						document.getElementById('newApplicantsCount');
+
+					if (totalApplicantsElement) {
+						totalApplicantsElement.textContent = totalApplicants;
+					}
+					if (newApplicantsElement) {
+						newApplicantsElement.textContent = newApplicants;
+					}
+				});
+		})
+		.catch((error) => {
+			console.error('Error loading dashboard stats:', error);
+		});
 }
 
 // Initialize user dropdown toggle
@@ -69,12 +176,21 @@ function initUserDropdown() {
 
 // Logout function
 function logout() {
-	if (confirm('Are you sure you want to logout?')) {
-		localStorage.removeItem('currentUser');
-		localStorage.removeItem('isLoggedIn');
-		alert('Logged out successfully!');
-		window.location.href = '../../index.html';
-	}
+	window.notify
+		.confirm('Bạn có chắc chắn muốn đăng xuất?', 'Xác nhận đăng xuất', {
+			confirmText: 'Đăng xuất',
+			cancelText: 'Hủy',
+		})
+		.then((confirmed) => {
+			if (confirmed) {
+				localStorage.removeItem('currentUser');
+				localStorage.removeItem('isLoggedIn');
+				window.notify.success('Đăng xuất thành công!');
+				setTimeout(() => {
+					window.location.href = '../../index.html';
+				}, 1000);
+			}
+		});
 }
 
 // Update applicant status
@@ -357,7 +473,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (!isLoggedIn || !currentUser.userid) {
 		console.warn('Company not logged in, redirecting to login page');
-		alert('Please login first to access company dashboard');
 		window.location.href = '../../index.html';
 		return;
 	}
@@ -365,7 +480,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Check if this is a company account
 	if (currentUser.accountType !== 'company') {
 		console.warn('Not a company account, redirecting');
-		alert('This page is for company accounts only');
 		window.location.href = '../../index.html';
 		return;
 	}

@@ -73,7 +73,7 @@ function submitJobPosting() {
   
   // Validate form
   if (!form.checkValidity()) {
-    alert('Please fill in all required fields!');
+    window.notify.warning('Please fill in all required fields!');
     form.reportValidity();
     return;
   }
@@ -83,7 +83,10 @@ function submitJobPosting() {
   const companyId = currentUser.userid || currentUser.userId || currentUser.id;
   
   if (!companyId) {
-    alert('Please login first to post a job!');
+    window.notify.warning('Please login first to post a job!');
+    setTimeout(() => {
+      window.location.href = '../../index.html';
+    }, 2000);
     return;
   }
 
@@ -130,7 +133,7 @@ function submitJobPosting() {
   console.log('Job posted successfully:', jobData);
   console.log('Job ID:', jobData.id);
   
-  alert('Job posted successfully!');
+  window.notify.success('Job posted successfully!');
   closePostJobModal();
   
   // Reload dashboard to show new job

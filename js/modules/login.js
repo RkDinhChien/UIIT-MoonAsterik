@@ -17,7 +17,7 @@ function initializeLoginForm() {
 
 			// Validate account type
 			if (!accountType) {
-				alert('Please select an account type first!');
+				window.notify.warning('Vui lòng chọn loại tài khoản!');
 				return;
 			}
 
@@ -27,7 +27,7 @@ function initializeLoginForm() {
 			const accountsData = localStorage.getItem(storageKey);
 
 			if (!accountsData) {
-				alert('No accounts found. Please sign up first!');
+				window.notify.error('Không tìm thấy tài khoản. Vui lòng đăng ký trước!');
 				return;
 			}
 
@@ -55,8 +55,6 @@ function initializeLoginForm() {
 				localStorage.setItem('currentUser', JSON.stringify(userSession));
 				localStorage.setItem('isLoggedIn', 'true');
 
-				alert(`Welcome back, ${user.username}!`);
-
 				// Close modal
 				document.getElementById('login-modal').classList.remove('active');
 				document.body.style.overflow = '';
@@ -68,7 +66,7 @@ function initializeLoginForm() {
 					window.location.href = './pages/html/company-dashboard.html';
 				}
 			} else {
-				alert('Invalid email or password!');
+				window.notify.error('Email hoặc mật khẩu không đúng!');
 			}
 		});
 	}
@@ -181,6 +179,5 @@ window.checkLoginStatus = checkLoginStatus;
 window.logout = function () {
 	localStorage.removeItem('currentUser');
 	localStorage.removeItem('isLoggedIn');
-	alert('Logged out successfully!');
 	window.location.href = '../../index.html';
 };

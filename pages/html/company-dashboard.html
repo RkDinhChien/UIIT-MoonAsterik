@@ -161,19 +161,91 @@
 		</nav>
 
 		<main>
-			<div class="dashboard">
-				<div class="container">
-					<div class="dashboard-header">
-						<div class="dashboard-header-content">
-							<h1>Company Dashboard</h1>
-							<p>Welcome back, TechViet Solutions</p>
+			<!-- Company Banner with Dashboard Header & Stats -->
+			<div
+				class="company-banner"
+				style="
+					background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+					padding: 3rem 0 2.5rem 0;
+					position: relative;
+					overflow: hidden;
+				"
+			>
+				<div class="container" style="position: relative; z-index: 2">
+					<!-- Header Row -->
+					<div
+						style="
+							display: flex;
+							align-items: flex-start;
+							justify-content: space-between;
+							gap: 2rem;
+							margin-bottom: 2.5rem;
+						"
+					>
+						<div style="display: flex; align-items: center; gap: 2rem; flex: 1">
+							<div
+								class="company-banner-logo"
+								style="
+									width: 90px;
+									height: 90px;
+									border-radius: 16px;
+									overflow: hidden;
+									background: white;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+									box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+								"
+							>
+								<svg
+									style="width: 45px; height: 45px; color: #667eea"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+									<path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
+								</svg>
+							</div>
+							<div style="color: white">
+								<h1
+									style="
+										margin: 0 0 0.5rem 0;
+										font-size: 1.875rem;
+										font-weight: 700;
+									"
+								>
+									Company Dashboard
+								</h1>
+								<p
+									style="margin: 0; font-size: 1.05rem; opacity: 0.95"
+									id="companyBannerName"
+								>
+									Welcome back, Your Company
+								</p>
+							</div>
 						</div>
-						<button class="btn btn-primary" onclick="openPostJobModal()">
+						<button
+							class="btn"
+							onclick="openPostJobModal()"
+							style="
+								background: white;
+								color: #667eea;
+								padding: 0.75rem 1.5rem;
+								font-weight: 600;
+								box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+								border: none;
+								white-space: nowrap;
+							"
+						>
 							<svg
 								class="icon"
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
+								stroke-width="2"
+								style="width: 20px; height: 20px"
 							>
 								<line x1="12" y1="5" x2="12" y2="19"></line>
 								<line x1="5" y1="12" x2="19" y2="12"></line>
@@ -182,79 +254,288 @@
 						</button>
 					</div>
 
-					<!-- Stats Cards -->
-					<div class="stats-grid">
-						<div class="card stat-card">
-							<div class="stat-card-content">
-								<p>Active Jobs</p>
-								<h2>3</h2>
+					<!-- Stats Cards in Banner -->
+					<div
+						style="
+							display: grid;
+							grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+							gap: 1.25rem;
+						"
+					>
+						<div
+							style="
+								background: rgba(255, 255, 255, 0.95);
+								padding: 1.75rem;
+								border-radius: 12px;
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+								transition: transform 0.2s, box-shadow 0.2s;
+								cursor: default;
+							"
+							onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)';"
+							onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"
+						>
+							<div>
+								<p
+									style="
+										margin: 0 0 0.5rem 0;
+										color: #666;
+										font-size: 0.875rem;
+										font-weight: 600;
+										text-transform: uppercase;
+										letter-spacing: 0.5px;
+									"
+								>
+									Active Jobs
+								</p>
+								<h2
+									style="
+										margin: 0;
+										color: #667eea;
+										font-size: 2.25rem;
+										font-weight: 700;
+									"
+									id="activeJobsCount"
+								>
+									0
+								</h2>
 							</div>
-							<svg
-								class="icon-xl stat-card-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="#00BCD4"
-								stroke-width="2"
+							<div
+								style="
+									width: 56px;
+									height: 56px;
+									background: rgba(102, 126, 234, 0.1);
+									border-radius: 12px;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+								"
 							>
-								<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-								<path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
-							</svg>
+								<svg
+									style="width: 32px; height: 32px; color: #667eea"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+									<path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
+								</svg>
+							</div>
 						</div>
 
-						<div class="card stat-card">
-							<div class="stat-card-content">
-								<p>Total Applicants</p>
-								<h2>97</h2>
+						<div
+							style="
+								background: rgba(255, 255, 255, 0.95);
+								padding: 1.75rem;
+								border-radius: 12px;
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+								transition: transform 0.2s, box-shadow 0.2s;
+								cursor: default;
+							"
+							onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)';"
+							onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"
+						>
+							<div>
+								<p
+									style="
+										margin: 0 0 0.5rem 0;
+										color: #666;
+										font-size: 0.875rem;
+										font-weight: 600;
+										text-transform: uppercase;
+										letter-spacing: 0.5px;
+									"
+								>
+									Total Applicants
+								</p>
+								<h2
+									style="
+										margin: 0;
+										color: #667eea;
+										font-size: 2.25rem;
+										font-weight: 700;
+									"
+									id="totalApplicantsCount"
+								>
+									0
+								</h2>
 							</div>
-							<svg
-								class="icon-xl stat-card-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="#4DD0E1"
-								stroke-width="2"
+							<div
+								style="
+									width: 56px;
+									height: 56px;
+									background: rgba(102, 126, 234, 0.1);
+									border-radius: 12px;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+								"
 							>
-								<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
-								<circle cx="9" cy="7" r="4"></circle>
-								<path
-									d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
-								></path>
-							</svg>
+								<svg
+									style="width: 32px; height: 32px; color: #667eea"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+									<circle cx="9" cy="7" r="4"></circle>
+									<path
+										d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
+									></path>
+								</svg>
+							</div>
 						</div>
 
-						<div class="card stat-card">
-							<div class="stat-card-content">
-								<p>New Applicants</p>
-								<h2>35</h2>
+						<div
+							style="
+								background: rgba(255, 255, 255, 0.95);
+								padding: 1.75rem;
+								border-radius: 12px;
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+								transition: transform 0.2s, box-shadow 0.2s;
+								cursor: default;
+							"
+							onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)';"
+							onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"
+						>
+							<div>
+								<p
+									style="
+										margin: 0 0 0.5rem 0;
+										color: #666;
+										font-size: 0.875rem;
+										font-weight: 600;
+										text-transform: uppercase;
+										letter-spacing: 0.5px;
+									"
+								>
+									New Applicants
+								</p>
+								<h2
+									style="
+										margin: 0;
+										color: #667eea;
+										font-size: 2.25rem;
+										font-weight: 700;
+									"
+									id="newApplicantsCount"
+								>
+									0
+								</h2>
 							</div>
-							<svg
-								class="icon-xl stat-card-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="#00BCD4"
-								stroke-width="2"
+							<div
+								style="
+									width: 56px;
+									height: 56px;
+									background: rgba(102, 126, 234, 0.1);
+									border-radius: 12px;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+								"
 							>
-								<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-							</svg>
+								<svg
+									style="width: 32px; height: 32px; color: #667eea"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+								</svg>
+							</div>
 						</div>
 
-						<div class="card stat-card">
-							<div class="stat-card-content">
-								<p>Profile Views</p>
-								<h2>1,234</h2>
+						<div
+							style="
+								background: rgba(255, 255, 255, 0.95);
+								padding: 1.75rem;
+								border-radius: 12px;
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+								transition: transform 0.2s, box-shadow 0.2s;
+								cursor: default;
+							"
+							onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 20px rgba(0,0,0,0.15)';"
+							onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"
+						>
+							<div>
+								<p
+									style="
+										margin: 0 0 0.5rem 0;
+										color: #666;
+										font-size: 0.875rem;
+										font-weight: 600;
+										text-transform: uppercase;
+										letter-spacing: 0.5px;
+									"
+								>
+									Profile Views
+								</p>
+								<h2
+									style="
+										margin: 0;
+										color: #667eea;
+										font-size: 2.25rem;
+										font-weight: 700;
+									"
+									id="profileViewsCount"
+								>
+									1,234
+								</h2>
 							</div>
-							<svg
-								class="icon-xl stat-card-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="#4DD0E1"
-								stroke-width="2"
+							<div
+								style="
+									width: 56px;
+									height: 56px;
+									background: rgba(102, 126, 234, 0.1);
+									border-radius: 12px;
+									display: flex;
+									align-items: center;
+									justify-content: center;
+								"
 							>
-								<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-								<circle cx="12" cy="12" r="3"></circle>
-							</svg>
+								<svg
+									style="width: 32px; height: 32px; color: #667eea"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+									<circle cx="12" cy="12" r="3"></circle>
+								</svg>
+							</div>
 						</div>
 					</div>
+				</div>
+				<div
+					style="
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background: url('../../assets/banner company.png') center/cover;
+						opacity: 0.08;
+					"
+				></div>
+			</div>
 
+			<div class="dashboard">
+				<div class="container">
 					<div class="dashboard-main-grid">
 						<!-- Active Job Listings -->
 						<div>
@@ -862,6 +1143,7 @@
 		<script type="module" src="../../js/site.js"></script>
 		<script src="../../js/modules/company-job-post.js"></script>
 		<script src="../../js/modules/company-job-edit.js"></script>
+		<script src="../../js/modules/notification.js"></script>
 		<script src="../../js/company-dashboard.js"></script>
 	</body>
 </html>

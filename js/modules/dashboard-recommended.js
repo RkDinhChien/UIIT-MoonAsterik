@@ -71,7 +71,7 @@ function applyJob(jobId) {
 
   const job = allJobs.find(j => j.id == jobId);
   if (!job) {
-    alert('Job not found');
+    window.notify.error('Không tìm thấy công việc này!');
     return;
   }
 
@@ -79,7 +79,7 @@ function applyJob(jobId) {
   const studentId = currentUser.userid || currentUser.userId || currentUser.id;
 
   if (!studentId) {
-    alert('Please login first!');
+    window.location.href = '../../index.html';
     return;
   }
 
@@ -88,7 +88,7 @@ function applyJob(jobId) {
   const studentApplications = JSON.parse(localStorage.getItem(studentApplicationsKey) || '[]');
   
   if (studentApplications.some(app => app.jobId == jobId)) {
-    alert('You have already applied for this job!');
+    window.notify.warning('Bạn đã ứng tuyển công việc này rồi!');
     return;
   }
 
@@ -114,8 +114,10 @@ function applyJob(jobId) {
   studentApplications.push(application);
   localStorage.setItem(studentApplicationsKey, JSON.stringify(studentApplications));
 
-  alert('Application submitted successfully!');
-  loadDashboard(); // Reload to show updated applications
+  window.notify.success('Ứng tuyển thành công!');
+  setTimeout(() => {
+    loadDashboard(); // Reload to show updated applications
+  }, 1000);
 }
 
 // Save job
@@ -124,7 +126,7 @@ function saveJob(jobId) {
   const studentId = currentUser.userid || currentUser.userId || currentUser.id;
 
   if (!studentId) {
-    alert('Please login first!');
+    window.location.href = '../../index.html';
     return;
   }
 
@@ -133,13 +135,13 @@ function saveJob(jobId) {
   const savedJobs = JSON.parse(localStorage.getItem(savedJobsKey) || '[]');
 
   if (savedJobs.includes(jobId)) {
-    alert('Job already saved!');
+    window.notify.info('Công việc này đã được lưu rồi!');
     return;
   }
 
   savedJobs.push(jobId);
   localStorage.setItem(savedJobsKey, JSON.stringify(savedJobs));
-  alert('Job saved successfully!');
+  window.notify.success('Đã lưu công việc!');
 }
 
 // Export functions to window object

@@ -22,10 +22,10 @@ function updateApplicantStatus(applicantId, companyId, newStatus) {
       localStorage.setItem(studentAppsKey, JSON.stringify(studentApps));
     }
     
-    alert(`Applicant status updated: ${oldStatus} → ${newStatus}`);
+    window.notify.success(`Applicant status updated: ${oldStatus} → ${newStatus}`);
     loadApplicants(); // Reload from applicants-list module
   } else {
-    alert('Unable to update applicant status. Please try again.');
+    window.notify.error('Unable to update applicant status. Please try again.');
   }
 }
 
@@ -227,13 +227,13 @@ function viewApplicantProfile(studentId) {
     document.body.style.overflow = 'hidden';
   } catch (error) {
     console.error('Error loading applicant profile:', error);
-    alert('Unable to load applicant profile. Please try again later.');
+    window.notify.error('Unable to load applicant profile. Please try again later.');
   }
 }
 
 // Contact applicant (placeholder)
 function contactApplicant(applicantId) {
-  alert('Feature coming soon: Send message to applicant ' + applicantId);
+  window.notify.info('Feature coming soon: Send message to applicant ' + applicantId);
 }
 
 // Export functions to window object

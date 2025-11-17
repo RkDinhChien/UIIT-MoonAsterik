@@ -5,8 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Moon* - My Profile</title>
 		<link rel="stylesheet" href="../../styles/main.css" />
-		<link rel="stylesheet" href="../../styles/index.css" />
+		<link rel="stylesheet" href="../../styles/profile.css" />
 		<link rel="stylesheet" href="../../styles/profile-styles.css" />
+		<link rel="stylesheet" href="../../styles/notification.css" />
 		<link rel="stylesheet" href="../../styles/profile.css" />
 	</head>
 	<body>
@@ -244,6 +245,7 @@
 						>
 							<div
 								class="profile-avatar-large"
+								id="profileAvatarDisplay"
 								style="
 									width: 120px;
 									height: 120px;
@@ -255,7 +257,17 @@
 									justify-content: center;
 								"
 							>
+								<img
+									id="profileImagePreview"
+									style="
+										width: 100%;
+										height: 100%;
+										object-fit: cover;
+										display: none;
+									"
+								/>
 								<svg
+									id="profileImagePlaceholder"
 									style="width: 60px; height: 60px; color: #999"
 									viewBox="0 0 24 24"
 									fill="none"
@@ -276,7 +288,17 @@
 								</svg>
 							</div>
 							<div class="profile-upload-controls">
-								<button class="btn btn-primary" style="margin-bottom: 0.5rem">
+								<input
+									type="file"
+									id="profilePictureInput"
+									accept="image/*"
+									style="display: none"
+								/>
+								<button
+									class="btn btn-primary"
+									onclick="document.getElementById('profilePictureInput').click()"
+									style="margin-bottom: 0.5rem"
+								>
 									<svg
 										class="icon"
 										viewBox="0 0 24 24"
@@ -400,6 +422,35 @@
 									placeholder="Tell us about your background, skills, and career goals..."
 								></textarea>
 							</div>
+
+							<div
+								style="
+									display: flex;
+									justify-content: flex-end;
+									margin-top: 1.5rem;
+									padding-top: 1.5rem;
+									border-top: 1px solid #e0e0e0;
+								"
+							>
+								<button
+									class="btn btn-primary save-section-btn"
+									onclick="saveBasicInfo()"
+								>
+									<svg
+										width="18"
+										height="18"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<polyline points="20 6 9 17 4 12"></polyline>
+									</svg>
+									Save Basic Info
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -414,33 +465,57 @@
 							align-items: center;
 						"
 					>
-						<h3 class="card-title">Skills</h3>
+						<div>
+							<h3 class="card-title" style="margin-bottom: 0.5rem">Skills</h3>
+							<p style="margin: 0; color: #666; font-size: 0.9rem">
+								Add your technical skills and expertise
+							</p>
+						</div>
 						<button
 							class="btn btn-primary"
-							onclick="addSkill()"
-							style="padding: 0.5rem 1rem"
+							onclick="openSkillModal()"
+							style="padding: 0.75rem 1.5rem"
 						>
-							<span style="font-size: 1.2rem; margin-right: 0.25rem">+</span>
+							<svg
+								class="icon"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<line x1="12" y1="5" x2="12" y2="19" />
+								<line x1="5" y1="12" x2="19" y2="12" />
+							</svg>
 							Add Skill
 						</button>
 					</div>
 					<div class="card-content">
-						<div
-							id="skills-list"
-							style="display: flex; flex-wrap: wrap; gap: 0.5rem"
-						>
-							<p
-								id="no-skills"
-								style="
-									width: 100%;
-									text-align: center;
-									color: #999;
-									font-style: italic;
-									padding: 2rem 0;
-								"
-							>
-								No skills added yet. Add your technical skills.
-							</p>
+						<div id="skills-container" class="skills-container">
+							<div id="no-skills" class="no-skills-message">
+								<svg
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									style="
+										width: 48px;
+										height: 48px;
+										color: #ccc;
+										margin-bottom: 1rem;
+									"
+								>
+									<circle cx="12" cy="12" r="10" />
+									<line x1="12" y1="8" x2="12" y2="12" />
+									<line x1="12" y1="16" x2="12.01" y2="16" />
+								</svg>
+								<p style="margin: 0 0 0.5rem 0; color: #666; font-weight: 500">
+									No skills added yet
+								</p>
+								<p style="margin: 0; font-size: 0.875rem; color: #999">
+									Click "Add Skill" to showcase your technical expertise
+								</p>
+							</div>
+							<div id="skills-list" class="skills-list"></div>
 						</div>
 					</div>
 				</div>
@@ -479,6 +554,33 @@
 								No education added yet. Add your academic background.
 							</p>
 						</div>
+						<div
+							style="
+								text-align: right;
+								margin-top: 1.5rem;
+								padding-top: 1.5rem;
+								border-top: 1px solid #e0e0e0;
+							"
+						>
+							<button
+								class="btn btn-primary save-section-btn"
+								onclick="saveEducation()"
+							>
+								<svg
+									width="18"
+									height="18"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<polyline points="20 6 9 17 4 12"></polyline>
+								</svg>
+								Save Education
+							</button>
+						</div>
 					</div>
 				</div>
 
@@ -515,6 +617,33 @@
 							>
 								No experience added yet. Add your work history.
 							</p>
+						</div>
+						<div
+							style="
+								text-align: right;
+								margin-top: 1.5rem;
+								padding-top: 1.5rem;
+								border-top: 1px solid #e0e0e0;
+							"
+						>
+							<button
+								class="btn btn-primary save-section-btn"
+								onclick="saveExperience()"
+							>
+								<svg
+									width="18"
+									height="18"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<polyline points="20 6 9 17 4 12"></polyline>
+								</svg>
+								Save Experience
+							</button>
 						</div>
 					</div>
 				</div>
@@ -554,6 +683,33 @@
 								other professional links.
 							</p>
 						</div>
+						<div
+							style="
+								text-align: right;
+								margin-top: 1.5rem;
+								padding-top: 1.5rem;
+								border-top: 1px solid #e0e0e0;
+							"
+						>
+							<button
+								class="btn btn-primary save-section-btn"
+								onclick="saveLinks()"
+							>
+								<svg
+									width="18"
+									height="18"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<polyline points="20 6 9 17 4 12"></polyline>
+								</svg>
+								Save Links
+							</button>
+						</div>
 					</div>
 				</div>
 
@@ -563,14 +719,24 @@
 						<h3 class="card-title">Resume / CV</h3>
 					</div>
 					<div class="card-content">
+						<input
+							type="file"
+							id="resumeFileInput"
+							accept=".pdf,.doc,.docx"
+							style="display: none"
+						/>
 						<div
+							id="resumeUploadArea"
 							class="resume-upload"
 							style="
 								padding: 2rem;
 								border: 2px dashed #e0e0e0;
 								border-radius: 8px;
 								text-align: center;
+								cursor: pointer;
+								transition: all 0.3s ease;
 							"
+							onclick="document.getElementById('resumeFileInput').click()"
 						>
 							<svg
 								style="
@@ -582,6 +748,7 @@
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
+								stroke-width="2"
 							>
 								<path
 									d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
@@ -594,12 +761,30 @@
 									stroke-linejoin="round"
 								/>
 							</svg>
-							<h4 style="margin: 0 0 0.5rem 0">Upload your resume</h4>
-							<p style="margin: 0 0 1rem 0; color: #666">
+							<h4 style="margin: 0 0 0.5rem 0" id="resumeTitle">
+								Upload your resume
+							</h4>
+							<p style="margin: 0 0 1rem 0; color: #666" id="resumeSubtitle">
 								PDF, DOC or DOCX. Max size 10MB
 							</p>
-							<button class="btn btn-primary">Choose File</button>
+							<button
+								class="btn btn-primary"
+								type="button"
+								onclick="event.stopPropagation(); document.getElementById('resumeFileInput').click()"
+							>
+								Choose File
+							</button>
 						</div>
+						<div
+							id="resumeFileName"
+							style="
+								margin-top: 1rem;
+								text-align: center;
+								color: #00bcd4;
+								font-weight: 500;
+								display: none;
+							"
+						></div>
 					</div>
 				</div>
 
@@ -615,6 +800,58 @@
 				</div>
 			</div>
 		</main>
+
+		<!-- Skills Modal -->
+		<div id="skillModal" class="skill-modal">
+			<div class="skill-modal-content">
+				<h3>Add a Skill</h3>
+				<p>Enter the skill details including your proficiency level</p>
+
+				<div class="skill-modal-form">
+					<div class="form-group">
+						<label for="skillInput">Skill Name *</label>
+						<input
+							type="text"
+							id="skillInput"
+							placeholder="e.g., JavaScript, Python, React..."
+							autocomplete="off"
+							required
+						/>
+					</div>
+
+					<div class="form-row">
+						<div class="form-group">
+							<label for="skillLevel">Proficiency Level *</label>
+							<select id="skillLevel" required>
+								<option value="">Select level...</option>
+								<option value="Beginner">Beginner</option>
+								<option value="Intermediate">Intermediate</option>
+								<option value="Advanced">Advanced</option>
+								<option value="Expert">Expert</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="skillMonths">Experience (months)</label>
+							<input
+								type="number"
+								id="skillMonths"
+								placeholder="e.g., 12"
+								min="0"
+								max="600"
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div class="skill-modal-actions">
+					<button class="btn-cancel" onclick="closeSkillModal()">Cancel</button>
+					<button class="btn-add" onclick="addSkillFromModal()">
+						Add Skill
+					</button>
+				</div>
+			</div>
+		</div>
 
 		<footer class="footer">
 			<div class="container footer-content">
@@ -701,6 +938,7 @@
 		<script type="module" src="../../js/site.js"></script>
 		<script src="../../js/modules/profile-edit.js"></script>
 		<script src="../../js/modules/profile-loader.js"></script>
+		<script src="../../js/modules/notification.js"></script>
 		<script src="../../js/profile.js"></script>
 	</body>
 </html>

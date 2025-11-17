@@ -343,12 +343,12 @@ function initializeSignupForm() {
 
 			// Validation
 			if (password !== confirmPassword) {
-				alert('Passwords do not match!');
+				console.error('Passwords do not match!');
 				return;
 			}
 
 			if (!accountType) {
-				alert('Please select an account type!');
+				console.error('Please select an account type!');
 				return;
 			}
 
@@ -366,11 +366,6 @@ function initializeSignupForm() {
 			const success = saveUserAccount(newUser, accountType);
 
 			if (success) {
-				// Show success message
-				alert(
-					`Account created successfully!\n\nUser ID: ${newUser.userid}\nUsername: ${newUser.username}\nEmail: ${newUser.gmail}\nAccount Type: ${accountType}`
-				);
-
 				// Reset form
 				signupForm.reset();
 
@@ -405,7 +400,7 @@ function saveUserAccount(user, accountType) {
 		// Check if email already exists
 		const emailExists = accounts.some((acc) => acc.gmail === user.gmail);
 		if (emailExists) {
-			alert('Email already registered!');
+			console.error('Email already registered!');
 			return false;
 		}
 
@@ -419,7 +414,6 @@ function saveUserAccount(user, accountType) {
 		return true;
 	} catch (error) {
 		console.error('Error saving user account:', error);
-		alert('Error saving account. Please try again.');
 		return false;
 	}
 }
@@ -489,7 +483,7 @@ function initializeLoginForm() {
 
 			// Validate account type
 			if (!accountType) {
-				alert('Please select an account type first!');
+				console.error('Please select an account type first!');
 				return;
 			}
 
@@ -499,7 +493,7 @@ function initializeLoginForm() {
 			const accountsData = localStorage.getItem(storageKey);
 
 			if (!accountsData) {
-				alert('No accounts found. Please sign up first!');
+				console.error('No accounts found');
 				return;
 			}
 
@@ -525,8 +519,6 @@ function initializeLoginForm() {
 				localStorage.setItem('currentUser', JSON.stringify(userSession));
 				localStorage.setItem('isLoggedIn', 'true');
 
-				alert(`Welcome back, ${user.username}!`);
-
 				// Close modal
 				document.getElementById('login-modal').classList.remove('active');
 				document.body.style.overflow = '';
@@ -538,7 +530,7 @@ function initializeLoginForm() {
 					window.location.href = './pages/html/company-dashboard.html';
 				}
 			} else {
-				alert('Invalid email or password!');
+				console.error('Invalid email or password!');
 			}
 		});
 	}
@@ -574,6 +566,5 @@ function backToAccountTypeSelection() {
 window.logout = function () {
 	localStorage.removeItem('currentUser');
 	localStorage.removeItem('isLoggedIn');
-	alert('Logged out successfully!');
 	window.location.href = 'index.html';
 };

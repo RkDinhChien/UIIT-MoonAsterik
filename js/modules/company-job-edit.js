@@ -17,7 +17,7 @@ function openEditJobModal(jobId) {
   const job = jobs.find(j => j.id === jobId);
   
   if (!job) {
-    alert('Job not found!');
+    window.notify.error('Job not found!');
     return;
   }
   
@@ -142,13 +142,13 @@ function submitJobUpdate() {
   
   // Validate form
   if (!form.checkValidity()) {
-    alert('Please fill in all required fields!');
+    window.notify.warning('Please fill in all required fields!');
     form.reportValidity();
     return;
   }
 
   if (!currentEditingJob) {
-    alert('No job selected for editing!');
+    window.notify.warning('No job selected for editing!');
     return;
   }
 
@@ -157,7 +157,10 @@ function submitJobUpdate() {
   const companyId = currentUser.userid || currentUser.userId || currentUser.id;
   
   if (!companyId) {
-    alert('Please login first!');
+    window.notify.warning('Please login first!');
+    setTimeout(() => {
+      window.location.href = '../../index.html';
+    }, 2000);
     return;
   }
 
@@ -206,13 +209,13 @@ function submitJobUpdate() {
 
     console.log('Job updated successfully:', updatedJobData);
     
-    alert('Job updated successfully!');
+    window.notify.success('Job updated successfully!');
     closeEditJobModal();
     
     // Reload dashboard
     loadCompanyDashboard();
   } else {
-    alert('Failed to update job!');
+    window.notify.error('Failed to update job!');
   }
 }
 

@@ -169,8 +169,10 @@ function loadApplicants() {
     console.log('Company ID:', companyId);
     
     if (!companyId) {
-      alert('Please login as a company first!');
-      window.location.href = '../../index.html';
+      window.notify.warning('Please login as a company first!');
+      setTimeout(() => {
+        window.location.href = '../../index.html';
+      }, 2000);
       return;
     }
 

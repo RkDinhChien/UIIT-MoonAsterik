@@ -6,6 +6,7 @@
 		<title>Moon* - Connect IT Students With Careers</title>
 		<link rel="stylesheet" href="./styles/main.css" />
 		<link rel="stylesheet" href="./styles/index.css" />
+		<link rel="stylesheet" href="./styles/notification.css" />
 	</head>
 	<body>
 		<!-- Simple Navbar -->
@@ -52,6 +53,7 @@
 				<div class="hero-overlay"></div>
 
 				<div class="container hero-content">
+					<div class="hero-badge">🚀 Connecting Top IT Talent</div>
 					<h1 class="hero-title">
 						Launch Your <span class="highlight">Tech Career</span>
 					</h1>
@@ -482,13 +484,35 @@
 			</section>
 
 			<!-- Stats Section -->
-			<section class="stats-section">
-				<!-- Tech Decorations -->
-				<div class="stats-decoration-1"></div>
-				<div class="stats-decoration-2"></div>
-				<div class="stats-grid-pattern"></div>
+			<section
+				class="stats-section"
+				style="
+					background: url('./assets/banner số liệu.png') center/cover;
+					position: relative;
+				"
+			>
+				<!-- Overlay for better text readability -->
+				<div
+					style="
+						position: absolute;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background: rgba(102, 126, 234, 0.3);
+						z-index: 1;
+					"
+				></div>
 
-				<div class="container stats-container">
+				<!-- Tech Decorations -->
+				<div class="stats-decoration-1" style="z-index: 2"></div>
+				<div class="stats-decoration-2" style="z-index: 2"></div>
+				<div class="stats-grid-pattern" style="z-index: 2; opacity: 0.3"></div>
+
+				<div
+					class="container stats-container"
+					style="position: relative; z-index: 3"
+				>
 					<div class="stats-header">
 						<h2 class="stats-title">Trusted by Thousands</h2>
 					</div>
@@ -827,8 +851,8 @@
 			</div>
 
 			<!-- CTA Section -->
-			<section class="cta-section">
-				<div class="container text-center">
+			<section class="cta-section" style="background: url('./assets/CTA banner.png') center/cover; position: relative;">				
+				<div class="container text-center" style="position: relative; z-index: 2;">
 					<h2 class="cta-title">Ready to Get Started?</h2>
 					<p class="cta-description">
 						Join thousands of students and companies already using Moon*
@@ -1419,6 +1443,7 @@
 
 		<script src="./js/modules/signup.js"></script>
 		<script src="./js/modules/login.js"></script>
+		<script src="./js/modules/notification.js"></script>
 		<script src="./js/pages/index.js"></script>
 	</body>
 </html>

@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Moon* - Student Dashboard</title>
 		<link rel="stylesheet" href="../../styles/main.css" />
-		<link rel="stylesheet" href="../../styles/index.css" />
 		<link rel="stylesheet" href="../../styles/student-dashboard.css" />
+		<link rel="stylesheet" href="../../styles/notification.css" />
 	</head>
 	<body>
 		<!-- Dashboard Navbar -->
@@ -157,14 +157,37 @@
 		<main>
 			<div class="container py-xl">
 				<!-- Hero Banner -->
-				<div class="dashboard-banner">
-					<div class="banner-content">
+				<div
+					class="dashboard-banner"
+					style="
+						background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.45)),
+							url('../../assets/Banner Dashboard.png') center center/cover
+								no-repeat;
+						position: relative;
+						border-radius: 16px;
+						overflow: hidden;
+						min-height: 280px;
+						height: auto;
+						display: flex;
+						align-items: center;
+						background-attachment: scroll;
+						background-size: cover;
+						background-position: center center;
+					"
+				>
+					<div class="banner-content" style="position: relative; z-index: 1">
 						<div class="banner-left">
-							<div class="user-avatar-large">
+							<div
+								class="user-avatar-large"
+								style="
+									background: rgba(255, 255, 255, 0.2);
+									border: 3px solid white;
+								"
+							>
 								<svg
 									viewBox="0 0 24 24"
 									fill="none"
-									stroke="currentColor"
+									stroke="white"
 									stroke-width="2"
 								>
 									<path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
@@ -172,10 +195,22 @@
 								</svg>
 							</div>
 							<div class="banner-text">
-								<h1 class="banner-title">
+								<h1
+									class="banner-title"
+									style="
+										color: white;
+										text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+									"
+								>
 									Welcome back, <span id="bannerUserName">Student</span>!
 								</h1>
-								<p class="banner-subtitle">
+								<p
+									class="banner-subtitle"
+									style="
+										color: rgba(255, 255, 255, 0.95);
+										text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+									"
+								>
 									Here's what's happening with your job search today
 								</p>
 							</div>
@@ -183,6 +218,11 @@
 						<button
 							class="btn btn-white"
 							onclick="window.location.href='profile.html'"
+							style="
+								background: white;
+								color: #00bcd4;
+								box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+							"
 						>
 							<svg
 								class="icon"
@@ -204,15 +244,13 @@
 				<div class="stats-grid">
 					<div class="stat-card stat-card-blue">
 						<div class="stat-icon-wrapper">
-							<svg
-								class="stat-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-								<circle cx="12" cy="12" r="3" />
+							<svg class="stat-icon" viewBox="0 0 24 24" fill="currentColor">
+								<path d="M12 15a3 3 0 100-6 3 3 0 000 6z" />
+								<path
+									fill-rule="evenodd"
+									d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
+									clip-rule="evenodd"
+								/>
 							</svg>
 						</div>
 						<div class="stat-info">
@@ -223,17 +261,15 @@
 
 					<div class="stat-card stat-card-green">
 						<div class="stat-icon-wrapper">
-							<svg
-								class="stat-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
+							<svg class="stat-icon" viewBox="0 0 24 24" fill="currentColor">
 								<path
-									d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+									fill-rule="evenodd"
+									d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z"
+									clip-rule="evenodd"
 								/>
-								<polyline points="14 2 14 8 20 8" />
+								<path
+									d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z"
+								/>
 							</svg>
 						</div>
 						<div class="stat-info">
@@ -244,14 +280,12 @@
 
 					<div class="stat-card stat-card-orange">
 						<div class="stat-icon-wrapper">
-							<svg
-								class="stat-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+							<svg class="stat-icon" viewBox="0 0 24 24" fill="currentColor">
+								<path
+									fill-rule="evenodd"
+									d="M6.32 2.577a49.255 49.255 0 0111.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 01-1.085.67L12 18.089l-7.165 3.583A.75.75 0 013.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93z"
+									clip-rule="evenodd"
+								/>
 							</svg>
 						</div>
 						<div class="stat-info">
@@ -262,17 +296,15 @@
 
 					<div class="stat-card stat-card-purple">
 						<div class="stat-icon-wrapper">
-							<svg
-								class="stat-icon"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-								<line x1="16" y1="2" x2="16" y2="6" />
-								<line x1="8" y1="2" x2="8" y2="6" />
-								<line x1="3" y1="10" x2="21" y2="10" />
+							<svg class="stat-icon" viewBox="0 0 24 24" fill="currentColor">
+								<path
+									d="M12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM7.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM8.25 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM9.75 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM10.5 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM12.75 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM14.25 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 17.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 15.75a.75.75 0 100-1.5.75.75 0 000 1.5zM15 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM16.5 13.5a.75.75 0 100-1.5.75.75 0 000 1.5z"
+								/>
+								<path
+									fill-rule="evenodd"
+									d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z"
+									clip-rule="evenodd"
+								/>
 							</svg>
 						</div>
 						<div class="stat-info">
@@ -555,6 +587,7 @@
 		<script type="module" src="../../js/site.js"></script>
 		<script src="../../js/modules/dashboard-recommended.js"></script>
 		<script src="../../js/modules/dashboard-applications.js"></script>
+		<script src="../../js/modules/notification.js"></script>
 		<script src="../../js/student-dashboard.js"></script>
 	</body>
 </html>

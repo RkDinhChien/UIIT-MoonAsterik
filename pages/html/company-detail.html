@@ -229,8 +229,35 @@
 
 				<!-- Company Logo and Basic Info -->
 				<div class="card mb-lg">
-					<div class="card-header">
+					<div
+						class="card-header"
+						style="
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+						"
+					>
 						<h3 class="card-title">Company Logo & Basic Information</h3>
+						<button
+							class="btn btn-primary"
+							onclick="saveBasicInfo()"
+							style="padding: 0.5rem 1.5rem"
+						>
+							<svg
+								class="icon"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"
+								></path>
+								<polyline points="17 21 17 13 7 13 7 21"></polyline>
+								<polyline points="7 3 7 8 15 8"></polyline>
+							</svg>
+							Save Basic Info
+						</button>
 					</div>
 					<div class="card-content">
 						<div
@@ -266,7 +293,17 @@
 								</svg>
 							</div>
 							<div class="profile-upload-controls">
-								<button class="btn btn-primary" style="margin-bottom: 0.5rem">
+								<input
+									type="file"
+									id="logoUpload"
+									accept="image/*"
+									style="display: none"
+								/>
+								<button
+									class="btn btn-primary"
+									style="margin-bottom: 0.5rem"
+									onclick="document.getElementById('logoUpload').click()"
+								>
 									<svg
 										class="icon"
 										viewBox="0 0 24 24"
@@ -289,7 +326,6 @@
 								</p>
 							</div>
 						</div>
-
 						<div class="profile-form">
 							<div
 								class="form-grid"
@@ -501,14 +537,48 @@
 						<h3 class="card-title">Tech Stack & Tools</h3>
 						<button
 							class="btn btn-primary"
-							onclick="addTechStack()"
-							style="padding: 0.5rem 1rem"
+							onclick="saveTechStack()"
+							style="padding: 0.5rem 1.5rem"
 						>
-							<span style="font-size: 1.2rem; margin-right: 0.25rem">+</span>
-							Add Technology
+							<svg
+								class="icon"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"
+								></path>
+								<polyline points="17 21 17 13 7 13 7 21"></polyline>
+								<polyline points="7 3 7 8 15 8"></polyline>
+							</svg>
+							Save Tech Stack
 						</button>
 					</div>
 					<div class="card-content">
+						<div style="margin-bottom: 1.5rem">
+							<div style="display: flex; gap: 0.5rem; margin-bottom: 1rem">
+								<input
+									type="text"
+									id="techInput"
+									class="form-input"
+									placeholder="Enter technology/tool name (e.g., React, Python, AWS...)"
+									style="flex: 1"
+									onkeypress="if(event.key === 'Enter') { event.preventDefault(); addTechStack(); }"
+								/>
+								<button
+									class="btn btn-primary"
+									onclick="addTechStack()"
+									style="padding: 0.5rem 1.5rem; white-space: nowrap"
+								>
+									<span style="font-size: 1.2rem; margin-right: 0.25rem"
+										>+</span
+									>
+									Add
+								</button>
+							</div>
+						</div>
 						<div
 							id="techstack-list"
 							style="display: flex; flex-wrap: wrap; gap: 0.5rem"
@@ -529,7 +599,6 @@
 						</div>
 					</div>
 				</div>
-
 				<!-- Office Locations -->
 				<div class="card mb-lg">
 					<div
@@ -541,14 +610,36 @@
 						"
 					>
 						<h3 class="card-title">Office Locations</h3>
-						<button
-							class="btn btn-primary"
-							onclick="addOffice()"
-							style="padding: 0.5rem 1rem"
-						>
-							<span style="font-size: 1.2rem; margin-right: 0.25rem">+</span>
-							Add Office
-						</button>
+						<div style="display: flex; gap: 0.5rem">
+							<button
+								class="btn btn-primary"
+								onclick="saveOffices()"
+								style="padding: 0.5rem 1.5rem"
+							>
+								<svg
+									class="icon"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"
+									></path>
+									<polyline points="17 21 17 13 7 13 7 21"></polyline>
+									<polyline points="7 3 7 8 15 8"></polyline>
+								</svg>
+								Save Offices
+							</button>
+							<button
+								class="btn btn-primary"
+								onclick="addOffice()"
+								style="padding: 0.5rem 1rem"
+							>
+								<span style="font-size: 1.2rem; margin-right: 0.25rem">+</span>
+								Add Office
+							</button>
+						</div>
 					</div>
 					<div class="card-content">
 						<div id="offices-list">
@@ -578,14 +669,36 @@
 						"
 					>
 						<h3 class="card-title">Benefits & Perks</h3>
-						<button
-							class="btn btn-primary"
-							onclick="addBenefit()"
-							style="padding: 0.5rem 1rem"
-						>
-							<span style="font-size: 1.2rem; margin-right: 0.25rem">+</span>
-							Add Benefit
-						</button>
+						<div style="display: flex; gap: 0.5rem">
+							<button
+								class="btn btn-primary"
+								onclick="saveBenefits()"
+								style="padding: 0.5rem 1.5rem"
+							>
+								<svg
+									class="icon"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"
+									></path>
+									<polyline points="17 21 17 13 7 13 7 21"></polyline>
+									<polyline points="7 3 7 8 15 8"></polyline>
+								</svg>
+								Save Benefits
+							</button>
+							<button
+								class="btn btn-primary"
+								onclick="addBenefit()"
+								style="padding: 0.5rem 1rem"
+							>
+								<span style="font-size: 1.2rem; margin-right: 0.25rem">+</span>
+								Add Benefit
+							</button>
+						</div>
 					</div>
 					<div class="card-content">
 						<div id="benefits-list">
@@ -616,14 +729,36 @@
 						"
 					>
 						<h3 class="card-title">Social Media & Links</h3>
-						<button
-							class="btn btn-primary"
-							onclick="addSocialLink()"
-							style="padding: 0.5rem 1rem"
-						>
-							<span style="font-size: 1.2rem; margin-right: 0.25rem">+</span>
-							Add Link
-						</button>
+						<div style="display: flex; gap: 0.5rem">
+							<button
+								class="btn btn-primary"
+								onclick="saveSocialLinks()"
+								style="padding: 0.5rem 1.5rem"
+							>
+								<svg
+									class="icon"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"
+									></path>
+									<polyline points="17 21 17 13 7 13 7 21"></polyline>
+									<polyline points="7 3 7 8 15 8"></polyline>
+								</svg>
+								Save Links
+							</button>
+							<button
+								class="btn btn-primary"
+								onclick="addSocialLink()"
+								style="padding: 0.5rem 1rem"
+							>
+								<span style="font-size: 1.2rem; margin-right: 0.25rem">+</span>
+								Add Link
+							</button>
+						</div>
 					</div>
 					<div class="card-content">
 						<div id="social-links-list">
@@ -741,6 +876,8 @@
 		<script type="module" src="../../js/site.js"></script>
 		<script src="../../js/modules/company-profile-form.js"></script>
 		<script src="../../js/modules/company-profile-loader.js"></script>
+		<script src="../../js/modules/company-profile-save.js"></script>
+		<script src="../../js/modules/notification.js"></script>
 		<script src="../../js/company-profile.js"></script>
 	</body>
 </html>

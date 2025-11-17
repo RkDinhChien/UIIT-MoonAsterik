@@ -228,22 +228,12 @@ function togglePassword(inputId) {
 
 // Show Error Message
 function showError(message) {
-	alert('⚠️ ' + message);
+	console.error('Error:', message);
 }
 
 // Show Success Message
 function showSuccessMessage(user) {
-	const message = `
-    ✓ Account Created Successfully!
-    
-    Welcome ${user.fullname}!
-    Username: ${user.username}
-    Email: ${user.gmail}
-    Account Type: ${user.accountType}
-    
-    You can now sign in to your account.
-  `;
-	alert(message);
+	console.log('Account created successfully for:', user.username);
 }
 
 // Generate unique user ID
@@ -269,7 +259,7 @@ function saveUserAccount(user, accountType) {
 		// Check if email already exists
 		const emailExists = accounts.some((acc) => acc.gmail === user.gmail);
 		if (emailExists) {
-			alert('Email already registered!');
+			console.error('Email already registered!');
 			return false;
 		}
 
@@ -283,7 +273,6 @@ function saveUserAccount(user, accountType) {
 		return true;
 	} catch (error) {
 		console.error('Error saving user account:', error);
-		alert('Error saving account. Please try again.');
 		return false;
 	}
 }

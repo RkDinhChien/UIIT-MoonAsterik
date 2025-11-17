@@ -1,1 +1,47 @@
-[]
+[
+	{
+		"userid": "student001",
+		"username": "nguyenvana",
+		"email": "nguyenvana@student.uit.edu.vn",
+		"password": "123456",
+		"fullname": "Nguyễn Văn A",
+		"accountType": "student",
+		"createdAt": "2024-09-01T10:00:00Z"
+	},
+	{
+		"userid": "student002",
+		"username": "tranthib",
+		"email": "tranthib@student.uit.edu.vn",
+		"password": "123456",
+		"fullname": "Trần Thị B",
+		"accountType": "student",
+		"createdAt": "2024-09-05T14:30:00Z"
+	},
+	{
+		"userid": "student003",
+		"username": "levanc",
+		"email": "levanc@student.uit.edu.vn",
+		"password": "123456",
+		"fullname": "Lê Văn C",
+		"accountType": "student",
+		"createdAt": "2024-09-10T09:15:00Z"
+	},
+	{
+		"userid": "student004",
+		"username": "phamthid",
+		"email": "phamthid@student.uit.edu.vn",
+		"password": "123456",
+		"fullname": "Phạm Thị D",
+		"accountType": "student",
+		"createdAt": "2024-09-12T11:45:00Z"
+	},
+	{
+		"userid": "student005",
+		"username": "hoangvane",
+		"email": "hoangvane@student.uit.edu.vn",
+		"password": "123456",
+		"fullname": "Hoàng Văn E",
+		"accountType": "student",
+		"createdAt": "2024-09-15T16:20:00Z"
+	}
+]

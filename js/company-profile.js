@@ -11,17 +11,29 @@ if (mobileToggle && navbarMenu) {
 
 // Logout function
 function logout() {
-	if (confirm('Are you sure you want to logout?')) {
-		localStorage.removeItem('currentUser');
-		localStorage.removeItem('isLoggedIn');
-		alert('Logged out successfully!');
-		window.location.href = '../../index.html';
-	}
+	window.notify
+		.confirm('Bạn có chắc chắn muốn đăng xuất?', 'Xác nhận đăng xuất', {
+			confirmText: 'Đăng xuất',
+			cancelText: 'Hủy',
+		})
+		.then((confirmed) => {
+			if (confirmed) {
+				localStorage.removeItem('currentUser');
+				localStorage.removeItem('isLoggedIn');
+				window.notify.success('Đăng xuất thành công!');
+				setTimeout(() => {
+					window.location.href = '../../index.html';
+				}, 1000);
+			}
+		});
 }
 
 // Load user info for dropdown
 function loadUserInfo() {
 	const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+	const userId = currentUser.userid || currentUser.userId || currentUser.id;
+	const profileKey = `companyProfile_${userId}`;
+	const profile = JSON.parse(localStorage.getItem(profileKey) || '{}');
 
 	if (currentUser.username) {
 		const userNameEl = document.getElementById('userName');
@@ -29,14 +41,21 @@ function loadUserInfo() {
 		const dropdownUserEmailEl = document.getElementById('dropdownUserEmail');
 
 		if (userNameEl) {
-			userNameEl.textContent = currentUser.fullname || currentUser.username;
+			userNameEl.textContent =
+				profile.companyName || currentUser.fullname || currentUser.username;
 		}
 		if (dropdownUserNameEl) {
 			dropdownUserNameEl.textContent =
-				currentUser.fullname || currentUser.username;
+				profile.companyName || currentUser.fullname || currentUser.username;
 		}
 		if (dropdownUserEmailEl) {
 			dropdownUserEmailEl.textContent = currentUser.email || '';
+		}
+
+		// Update logo/avatar in navbar
+		const navbarAvatar = document.querySelector('.user-dropdown .user-avatar');
+		if (navbarAvatar && profile.logo) {
+			navbarAvatar.innerHTML = `<img src="${profile.logo}" alt="Company Logo" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.parentElement.innerHTML='<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\"></rect><path d=\"M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16\"></path></svg>';" />`;
 		}
 	}
 }
@@ -44,24 +63,29 @@ function loadUserInfo() {
 // Initialize user dropdown
 function initUserDropdown() {
 	const dropdownToggle = document.getElementById('userDropdownToggle');
-	const dropdownMenu = document.getElementById('userDropdownMenu');
+	const dropdown = dropdownToggle?.closest('.user-dropdown');
 
-	if (dropdownToggle && dropdownMenu) {
-		dropdownToggle.addEventListener('click', function (e) {
-			e.stopPropagation();
-			dropdownMenu.classList.toggle('show');
-		});
+	if (!dropdownToggle || !dropdown) return;
 
-		// Close dropdown when clicking outside
-		document.addEventListener('click', function (e) {
-			if (
-				!dropdownToggle.contains(e.target) &&
-				!dropdownMenu.contains(e.target)
-			) {
-				dropdownMenu.classList.remove('show');
-			}
+	dropdownToggle.addEventListener('click', function (e) {
+		e.stopPropagation();
+		dropdown.classList.toggle('active');
+	});
+
+	// Close dropdown when clicking outside
+	document.addEventListener('click', function (e) {
+		if (!dropdown.contains(e.target)) {
+			dropdown.classList.remove('active');
+		}
+	});
+
+	// Close dropdown when clicking menu items
+	const dropdownItems = dropdown.querySelectorAll('.dropdown-item');
+	dropdownItems.forEach((item) => {
+		item.addEventListener('click', function () {
+			dropdown.classList.remove('active');
 		});
-	}
+	});
 }
 
 // Initialize on page load
@@ -78,7 +102,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (!isLoggedIn || !currentUser.userid) {
 		console.warn('Company not logged in, redirecting to login page');
-		alert('Please login first to access your company profile');
 		window.location.href = '../../index.html';
 		return;
 	}
@@ -86,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Check if this is a company account
 	if (currentUser.accountType !== 'company') {
 		console.warn('Not a company account, redirecting');
-		alert('This page is for company accounts only');
 		window.location.href = '../../index.html';
 		return;
 	}
@@ -114,3 +136,23 @@ document.addEventListener('DOMContentLoaded', () => {
 		console.log('loadCompanyProfile() completed');
 	}, 100);
 });
+
+// Listen for profile updates from other tabs/windows
+window.addEventListener('companyProfileUpdated', function () {
+	loadUserInfo();
+});
+
+// Check for profile updates when tab gets focus
+window.addEventListener('focus', function () {
+	loadUserInfo();
+});
+
+// Periodically check for updates
+setInterval(function () {
+	const lastCheck = localStorage.getItem('companyProfileLastChecked') || '0';
+	const lastUpdate = localStorage.getItem('companyProfileLastUpdated') || '0';
+	if (lastUpdate > lastCheck) {
+		loadUserInfo();
+		localStorage.setItem('companyProfileLastChecked', Date.now().toString());
+	}
+}, 5000);
