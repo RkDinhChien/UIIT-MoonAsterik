@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moon* - Company Dashboard</title>
+  <link rel="stylesheet" href="../../styles/main.css" />
+  <link rel="stylesheet" href="../../styles/index.css" />
+  <link rel="stylesheet" href="../../styles/profile-styles.css" />
+  <link rel="stylesheet" href="../../styles/company-profile.css" />
+  <link rel="stylesheet" href="../../styles/company-dashboard.css" />
+  <link rel="stylesheet" href="../../styles/company-modals.css" />
+  <link rel="stylesheet" href="../../styles/company-forms.css" />
+</head>
+<body>
+  <!-- Company Navbar -->
+  <nav class="simple-navbar" style="background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100;">
+    <div class="container">
+      <a href="../../index.html" class="navbar-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="navbar-logo-text">Moon<span class="asterisk">*</span></span>
+      </a>
+      
+      <div class="navbar-center" id="navbarMenu">
+        <a href="company-dashboard.html" class="navbar-link" style="color: #00BCD4; font-weight: 600;">Dashboard</a>
+        <a href="company-applicants.html" class="navbar-link" >All Applicants</a>
+        <a href="company-detail.html" class="navbar-link">Company Profile</a>
+      </div>
+      
+      <div class="navbar-actions">
+        <button class="btn btn-primary navbar-logout-btn" onclick="logout()">
+          Logout
+        </button>
+      </div>
+      
+      <button class="mobile-toggle" id="mobileToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="dashboard">
+      <div class="container">
+        <div class="dashboard-header">
+          <div class="dashboard-header-content">
+            <h1>Company Dashboard</h1>
+            <p>Welcome back, TechViet Solutions</p>
+          </div>
+          <button class="btn btn-primary" onclick="openPostJobModal()">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Post New Job
+          </button>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+          <div class="card stat-card">
+            <div class="stat-card-content">
+              <p>Active Jobs</p>
+              <h2>3</h2>
+            </div>
+            <svg class="icon-xl stat-card-icon" viewBox="0 0 24 24" fill="none" stroke="#00BCD4" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path>
+            </svg>
+          </div>
+
+          <div class="card stat-card">
+            <div class="stat-card-content">
+              <p>Total Applicants</p>
+              <h2>97</h2>
+            </div>
+            <svg class="icon-xl stat-card-icon" viewBox="0 0 24 24" fill="none" stroke="#4DD0E1" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"></path>
+            </svg>
+          </div>
+
+          <div class="card stat-card">
+            <div class="stat-card-content">
+              <p>New Applicants</p>
+              <h2>35</h2>
+            </div>
+            <svg class="icon-xl stat-card-icon" viewBox="0 0 24 24" fill="none" stroke="#00BCD4" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+          </div>
+
+          <div class="card stat-card">
+            <div class="stat-card-content">
+              <p>Profile Views</p>
+              <h2>1,234</h2>
+            </div>
+            <svg class="icon-xl stat-card-icon" viewBox="0 0 24 24" fill="none" stroke="#4DD0E1" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+        </div>
+
+        <div class="dashboard-main-grid">
+          <!-- Active Job Listings -->
+          <div>
+            <div class="card">
+              <div class="active-jobs-header">
+                <h3>Active Job Listings</h3>
+                <button class="btn btn-ghost btn-ghost-primary"></button>
+              </div>
+              <div id="active-jobs" class="active-jobs-list">
+                <!-- Jobs will be loaded dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Applicants -->
+          <div>
+            <div class="card">
+              <h3 class="recent-applicants-header">Recent Applicants</h3>
+              <div id="recent-applicants" class="recent-applicants-list">
+                <!-- Applicants will be loaded dynamically -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Post Job Modal -->
+  <div id="postJobModal" class="company-modal">
+    <div class="company-modal-content">
+      <!-- Modal Header -->
+      <div class="company-modal-header">
+        <h2>Post New Job</h2>
+        <button onclick="closePostJobModal()" class="company-modal-close">&times;</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="company-modal-body">
+        <form id="postJobForm">
+          <!-- Job Title -->
+          <div class="company-form-group">
+            <label>Job Title <span class="form-required">*</span></label>
+            <input type="text" id="jobTitle" class="company-form-input" placeholder="e.g. Frontend Developer Intern" required />
+          </div>
+
+          <!-- Position & Location Grid -->
+          <div class="form-grid-2">
+            <div class="company-form-group">
+              <label>Position <span class="form-required">*</span></label>
+              <select id="jobPosition" class="company-form-select" required>
+                <option value="">Chọn vị trí</option>
+                <option value="Intern">Intern</option>
+                <option value="Fresher">Fresher</option>
+                <option value="Junior">Junior</option>
+                <option value="Middle">Middle</option>
+                <option value="Senior">Senior</option>
+                <option value="Lead">Lead</option>
+              </select>
+            </div>
+
+            <div class="company-form-group">
+              <label>Work Location <span class="form-required">*</span></label>
+              <input type="text" id="jobLocation" class="company-form-input" placeholder="e.g. Ho Chi Minh City" required />
+            </div>
+          </div>
+
+          <!-- Number of Openings & Target Students -->
+          <div class="form-grid-2">
+            <div class="company-form-group">
+              <label>Number of Openings <span class="form-required">*</span></label>
+              <input type="number" id="jobOpenings" class="company-form-input" placeholder="1" min="1" required />
+            </div>
+
+            <div class="company-form-group">
+              <label>Target Students <span class="form-required">*</span></label>
+              <select id="jobTarget" class="company-form-select" required>
+                <option value="">Chọn đối tượng</option>
+                <option value="All">Tất cả sinh viên</option>
+                <option value="IT">Sinh viên IT</option>
+                <option value="Year1-2">Năm 1-2</option>
+                <option value="Year3-4">Năm 3-4</option>
+                <option value="Graduate">Mới tốt nghiệp</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Job Description -->
+          <div class="company-form-group">
+            <label>Job Description <span class="form-required">*</span></label>
+            <textarea id="jobDescription" class="company-form-textarea" rows="4" placeholder="Describe the job duties and responsibilities..." required></textarea>
+          </div>
+
+          <!-- Requirements -->
+          <div class="company-form-group">
+            <label>Requirements <span class="form-required">*</span></label>
+            <textarea id="jobRequirements" class="company-form-textarea" rows="4" placeholder="Skills, experience, qualifications required..." required></textarea>
+          </div>
+
+          <!-- Technical Requirements -->
+          <div class="company-form-group">
+            <label>Technical Requirements</label>
+            <button type="button" class="btn btn-outline" onclick="addTechRequirement()">
+              <span>+</span> Add
+            </button>
+            <div id="tech-requirements-list" class="tech-requirements-list">
+              <p id="no-tech-requirements" class="tech-requirements-empty">No technical requirements added yet.</p>
+            </div>
+          </div>
+
+          <!-- Start & End Date -->
+          <div class="form-grid-2">
+            <div class="company-form-group">
+              <label>Start Date <span class="form-required">*</span></label>
+              <input type="date" id="jobStartDate" class="company-form-input" required />
+            </div>
+
+            <div class="company-form-group">
+              <label>End Date</label>
+              <input type="date" id="jobEndDate" class="company-form-input" />
+            </div>
+          </div>
+
+          <!-- Benefits -->
+          <div class="company-form-group">
+            <label>Employee Benefits <span class="form-required">*</span></label>
+            <textarea id="jobBenefits" class="company-form-textarea" rows="3" placeholder="Benefits such as: insurance, scholarships, career growth..." required></textarea>
+          </div>
+
+          <!-- Days Off & Paid Leave & Salary -->
+          <div class="form-grid-3">
+            <div class="company-form-group">
+              <label>Days Off (days/year)</label>
+              <input type="number" id="jobDaysOff" class="company-form-input" placeholder="12" min="0" />
+            </div>
+
+            <div class="company-form-group">
+              <label>Paid Leave (days/year)</label>
+              <input type="number" id="jobPaidLeave" class="company-form-input" placeholder="12" min="0" />
+            </div>
+
+            <div class="company-form-group">
+              <label>Salary Increase (%/year)</label>
+              <input type="number" id="jobSalaryIncrease" class="company-form-input" placeholder="10" min="0" step="0.1" />
+            </div>
+          </div>
+
+          <!-- Salary & Bonus -->
+          <div class="form-grid-2">
+            <div class="company-form-group">
+              <label>Monthly Salary (VNĐ) <span class="form-required">*</span></label>
+              <input type="text" id="jobSalary" class="company-form-input" placeholder="e.g. 10,000,000 - 15,000,000" required />
+            </div>
+
+            <div class="company-form-group">
+              <label>Bonus</label>
+              <input type="text" id="jobBonus" class="company-form-input" placeholder="e.g. 13th month, KPI, Performance" />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="company-modal-footer">
+        <button class="btn btn-outline" onclick="closePostJobModal()">
+          Cancel
+        </button>
+        <button class="btn btn-primary" onclick="submitJobPosting()">
+          Post Job
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Job Modal -->
+  <div id="editJobModal" class="company-modal">
+    <div class="company-modal-content">
+      <!-- Modal Header -->
+      <div class="company-modal-header">
+        <h2>Edit Job</h2>
+        <button onclick="closeEditJobModal()" class="company-modal-close">&times;</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="company-modal-body">
+        <form id="editJobForm">
+          <!-- Job Title -->
+          <div class="company-form-group">
+            <label>Job Title <span class="form-required">*</span></label>
+            <input type="text" id="editJobTitle" class="company-form-input" placeholder="e.g. Frontend Developer Intern" required />
+          </div>
+
+          <!-- Position & Location Grid -->
+          <div class="form-grid-2">
+            <div class="company-form-group">
+              <label>Position <span class="form-required">*</span></label>
+              <select id="editJobPosition" class="company-form-select" required>
+                <option value="">Select position</option>
+                <option value="Intern">Intern</option>
+                <option value="Fresher">Fresher</option>
+                <option value="Junior">Junior</option>
+                <option value="Middle">Middle</option>
+                <option value="Senior">Senior</option>
+                <option value="Lead">Lead</option>
+              </select>
+            </div>
+
+            <div class="company-form-group">
+              <label>Work Location <span class="form-required">*</span></label>
+              <input type="text" id="editJobLocation" class="company-form-input" placeholder="e.g. Ho Chi Minh City" required />
+            </div>
+          </div>
+
+          <!-- Number of Openings & Target Students -->
+          <div class="form-grid-2">
+            <div class="company-form-group">
+              <label>Number of Openings <span class="form-required">*</span></label>
+              <input type="number" id="editJobOpenings" class="company-form-input" placeholder="1" min="1" required />
+            </div>
+
+            <div class="company-form-group">
+              <label>Target Students <span class="form-required">*</span></label>
+              <select id="editJobTarget" class="company-form-select" required>
+                <option value="">Select target</option>
+                <option value="All">All Students</option>
+                <option value="IT">IT Students</option>
+                <option value="Year1-2">Year 1-2</option>
+                <option value="Year3-4">Year 3-4</option>
+                <option value="Graduate">Recent Graduates</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Job Description -->
+          <div class="company-form-group">
+            <label>Job Description <span class="form-required">*</span></label>
+            <textarea id="editJobDescription" class="company-form-textarea" rows="4" placeholder="Describe the job duties and responsibilities..." required></textarea>
+          </div>
+
+          <!-- Requirements -->
+          <div class="company-form-group">
+            <label>Requirements <span class="form-required">*</span></label>
+            <textarea id="editJobRequirements" class="company-form-textarea" rows="4" placeholder="Skills, experience, qualifications required..." required></textarea>
+          </div>
+
+          <!-- Technical Requirements -->
+          <div class="company-form-group">
+            <label>Technical Requirements</label>
+            <button type="button" class="btn btn-outline" onclick="addEditTechRequirement()">
+              <span>+</span> Add
+            </button>
+            <div id="edit-tech-requirements-list" class="tech-requirements-list">
+              <p id="edit-no-tech-requirements" class="tech-requirements-empty">No technical requirements added yet.</p>
+            </div>
+          </div>
+
+          <!-- Start & End Date -->
+          <div class="form-grid-2">
+            <div class="company-form-group">
+              <label>Start Date <span class="form-required">*</span></label>
+              <input type="date" id="editJobStartDate" class="company-form-input" required />
+            </div>
+
+            <div class="company-form-group">
+              <label>End Date</label>
+              <input type="date" id="editJobEndDate" class="company-form-input" />
+            </div>
+          </div>
+
+          <!-- Benefits -->
+          <div class="company-form-group">
+            <label>Employee Benefits <span class="form-required">*</span></label>
+            <textarea id="editJobBenefits" class="company-form-textarea" rows="3" placeholder="Benefits such as: insurance, scholarships, career growth..." required></textarea>
+          </div>
+
+          <!-- Days Off & Paid Leave & Salary -->
+          <div class="form-grid-3">
+            <div class="company-form-group">
+              <label>Days Off (days/year)</label>
+              <input type="number" id="editJobDaysOff" class="company-form-input" placeholder="12" min="0" />
+            </div>
+
+            <div class="company-form-group">
+              <label>Paid Leave (days/year)</label>
+              <input type="number" id="editJobPaidLeave" class="company-form-input" placeholder="12" min="0" />
+            </div>
+
+            <div class="company-form-group">
+              <label>Salary Increase (%/year)</label>
+              <input type="number" id="editJobSalaryIncrease" class="company-form-input" placeholder="10" min="0" step="0.1" />
+            </div>
+          </div>
+
+          <!-- Salary & Bonus -->
+          <div class="form-grid-2">
+            <div class="company-form-group">
+              <label>Monthly Salary (VNĐ) <span class="form-required">*</span></label>
+              <input type="text" id="editJobSalary" class="company-form-input" placeholder="e.g. 10,000,000 - 15,000,000" required />
+            </div>
+
+            <div class="company-form-group">
+              <label>Bonus</label>
+              <input type="text" id="editJobBonus" class="company-form-input" placeholder="e.g. 13th month, KPI, Performance" />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="company-modal-footer">
+        <button class="btn btn-outline" onclick="closeEditJobModal()">
+          Cancel
+        </button>
+        <button class="btn btn-primary" onclick="submitJobUpdate()">
+          Update Job
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <div class="footer-brand">
+            <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="brand-text">Moon<span class="brand-accent">*</span></span>
+          </div>
+          <p class="footer-description">Connecting IT students with their dream careers.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Platform</h4>
+          <ul class="footer-links">
+            <li><a href="jobs.html">Browse Jobs</a></li>
+            <li><a href="#">For Students</a></li>
+            <li><a href="#">For Companies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Company</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-heading">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2025 Moon*. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../../js/site.js"></script>
+  <script src="../../js/modules/company-job-post.js"></script>
+  <script src="../../js/modules/company-job-edit.js"></script>
+  <script src="../../js/company-dashboard.js"></script>
+</body>
+</html>
